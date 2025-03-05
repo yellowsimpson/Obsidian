@@ -2,7 +2,7 @@
 
 
 현재 저장소 위치</br>
-/Users/simseunghwan/Library/Mobile Documents/com~apple~CloudDocs/obsidian_valut
+/Users/simseunghwan/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian
 
 내용 작성하고 git push 할때 여기서 하면됨!!</br>
 
@@ -17,6 +17,6 @@ $git push origin main</br>
 
 
 
-/Users/simseunghwan/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian
+
 
 

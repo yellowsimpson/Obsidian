@@ -11,10 +11,14 @@
             "id": "34ef3811d7844a38",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "README"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "백링크"
+              "title": "README 의 백링크"
             }
           },
           {
@@ -108,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "나가는 링크"
+              "title": "README 의 나가는 링크"
             }
           },
           {
@@ -136,12 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "개요"
+              "title": "README 의 개요"
             }
           }
         ]
@@ -163,6 +170,9 @@
   },
   "active": "34ef3811d7844a38",
   "lastOpenFiles": [
+    "Deep Learning/Deep Learning.md",
+    "Deep Learning/딥러닝 학습 코드 공통 사항.md",
+    "공부방법/공부 방법.md",
     "Open CV/NumPy.md",
     "Open CV/코드 저장소.md",
     "Obsidian 사용법/Obsidian 사용법.md",
@@ -188,9 +198,6 @@
     "Deep Learning/12장/12.4 변이형 오토인코더를 사용한 이미지 생성.md",
     "Deep Learning/12장/12.1 텍스트 생성.md",
     "Deep Learning/12장",
-    "Deep Learning/1장/1.3 왜 딥러닝일까 왜 지금일까.md",
-    "Deep Learning/1장/1.2 딥러닝 이전 머신러닝의 간략한 역사.md",
-    "Deep Learning/1장/1.1 인공지능과 머신러닝, 딥러닝.md",
     "Deep Learning/1장",
     "Deep Learning/5장",
     "Deep Learning/4장",
