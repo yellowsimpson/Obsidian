@@ -11,14 +11,10 @@
             "id": "34ef3811d7844a38",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "test.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "test"
+              "title": "새 탭"
             }
           }
         ]
@@ -94,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "test.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +99,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "test 의 백링크"
+              "title": "백링크"
             }
           },
           {
@@ -113,12 +108,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "test.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "test 의 나가는 링크"
+              "title": "나가는 링크"
             }
           },
           {
@@ -142,13 +136,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "test.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "test 의 개요"
+              "title": "개요"
             }
           }
         ]
@@ -169,5 +162,52 @@
     }
   },
   "active": "34ef3811d7844a38",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "Open CV/NumPy.md",
+    "Open CV/코드 저장소.md",
+    "Obsidian 사용법/Obsidian 사용법.md",
+    "Obsidian 사용법/Markdown 사용법.md",
+    "Obsidian 사용법/주의 사항.md",
+    "iot/1장. 라즈베리파이와 LED 모듈의 연결 방법.md",
+    "iot/라즈베리파이4.md",
+    "iot/과제/Practice Quiz 5.md",
+    "iot/과제/Practice Quiz 1.md",
+    "iot/과제/Practice Quiz 4.md",
+    "iot/과제/Practice Quiz 12.md",
+    "iot/과제/Practice Quiz 10.md",
+    "iot/과제/Practice Quiz 9.md",
+    "iot/과제/Practice Quiz 8.md",
+    "iot/과제/Practice Quiz 7.md",
+    "iot/과제/Practice Quiz 6.md",
+    "iot/과제/Practice Quiz 3.md",
+    "iot/과제/Practice Quiz 2.md",
+    "iot/과제/Practice Quiz 11.md",
+    "iot/과제",
+    "Deep Learning/12장/12.6 요약.md",
+    "Deep Learning/12장/12.5 생성적 적대 신경망 소개.md",
+    "Deep Learning/12장/12.4 변이형 오토인코더를 사용한 이미지 생성.md",
+    "Deep Learning/12장/12.1 텍스트 생성.md",
+    "Deep Learning/12장",
+    "Deep Learning/1장/1.3 왜 딥러닝일까 왜 지금일까.md",
+    "Deep Learning/1장/1.2 딥러닝 이전 머신러닝의 간략한 역사.md",
+    "Deep Learning/1장/1.1 인공지능과 머신러닝, 딥러닝.md",
+    "Deep Learning/1장",
+    "Deep Learning/5장",
+    "Deep Learning/4장",
+    "Deep Learning/7장",
+    "Deep Learning/3장",
+    "Deep Learning/2장",
+    "Deep Learning/강의노트",
+    "Deep Learning/6장",
+    "attached file/스크린샷 2025-01-22 오후 7.50.08 1.png",
+    "attached file/스크린샷 2025-02-06 오후 7.18.50.png",
+    "attached file/스크린샷 2025-02-06 오후 6.34.56.png",
+    "attached file/스크린샷 2025-01-23 오전 10.35.57.png",
+    "attached file/스크린샷 2025-02-06 오후 3.56.32.png",
+    "attached file/스크린샷 2025-02-17 오후 1.11.15.png",
+    "attached file/스크린샷 2025-02-11 오전 10.01.20.png",
+    "attached file/스크린샷 2025-02-06 오후 4.11.46.png",
+    "attached file/스크린샷 2025-01-22 오후 7.51.23.png",
+    "attached file/스크린샷 2025-02-18 오전 10.56.59.png"
+  ]
 }
