@@ -4,67 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "77ae7a87e6e0cb27",
+        "id": "cad3d791a08f4d6a",
         "type": "tabs",
         "children": [
           {
-            "id": "b75b36f52c996360",
+            "id": "5583af9e3437012e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "코드트리/C++/Trail 1/소수점 맞춰 출력하기.md",
+                "file": "Deep Learning/8장/8.1 합성곱 신경망 소개.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "소수점 맞춰 출력하기"
-            }
-          },
-          {
-            "id": "d9a0df32f725c402",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "코드트리/C++/Trail 1/Chapter 1/Lesson 1/단어 출력.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "단어 출력"
-            }
-          },
-          {
-            "id": "bb8fb3659f5f5b64",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "코드트리/C++/Trail 1/Chapter 1/Lesson 1/단어 출력.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "단어 출력"
-            }
-          },
-          {
-            "id": "a7d578f2827932be",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "코드트리/C++/C++.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "C++"
+              "title": "8.1 합성곱 신경망 소개"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -211,8 +168,16 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "f2980b66b2f1eaed",
+  "active": "5583af9e3437012e",
   "lastOpenFiles": [
+    "Deep Learning/Deep Learning.md",
+    "Deep Learning/8장/8.1 합성곱 신경망 소개.md",
+    "Deep Learning/8장",
+    "Machine Learning/Machine Learning.md",
+    "Machine Learning",
+    "코드트리/C++/Trail 1/소수점 맞춰 출력하기.md",
+    "코드트리/C++/C++.md",
+    "코드트리/C++/Trail 1/Chapter 1/Lesson 1/단어 출력.md",
     "코드트리/C++/Trail 1/Chapter 9/Lesson 12",
     "코드트리/C++/Trail 1/Chapter 9/Lesson 11",
     "코드트리/C++/Trail 1/Chapter 9/Lesson 10",
@@ -221,18 +186,12 @@
     "코드트리/C++/Trail 1/Chapter 9/Lesson 7",
     "코드트리/C++/Trail 1/Chapter 9/Lesson 6",
     "코드트리/C++/Trail 1/Chapter 9/Lesson 5",
-    "코드트리/C++/Trail 1/Chapter 9/Lesson 4",
-    "코드트리/C++/Trail 1/Chapter 9/Lesson 3",
-    "코드트리/C++/Trail 1/Chapter 9/Lesson 2",
     "코드트리/C++/Trail 1/Chapter 4/Lesson 1/단어 출력.md",
     "코드트리/C++/Trail 1/Chapter 2/Lesson 1/단어 출력.md",
     "코드트리/코드트리.md",
-    "코드트리/C++/Trail 1/소수점 맞춰 출력하기.md",
-    "코드트리/C++/Trail 1/Chapter 1/Lesson 1/단어 출력.md",
-    "무제 1.md",
+    "Machine Learning/무제 1.md",
     "코드트리/C++/Trail 0/Trail 0. Coodetree 101.md",
     "코드트리/C++/Trail 0/Trail0.md",
-    "코드트리/C++/C++.md",
     "통신공학/Day1.md",
     "코드트리/Python/Trail 1/Chapter 1/소수점 맞춰 출력하기.md",
     "코드트리/Python/Trail 1/소수점 맞춰 출력하기.md",
@@ -244,11 +203,9 @@
     "통신공학/통신공학.md",
     "Open CV/코드 저장소.md",
     "README.md",
-    "Deep Learning/Deep Learning.md",
     "Deep Learning/딥러닝 학습 코드 공통 사항.md",
     "공부방법/공부 방법.md",
     "Open CV/NumPy.md",
-    "Obsidian 사용법/Obsidian 사용법.md",
     "attached file/스크린샷 2025-01-22 오후 7.50.08 1.png",
     "attached file/스크린샷 2025-02-06 오후 7.18.50.png",
     "attached file/스크린샷 2025-02-06 오후 6.34.56.png",
