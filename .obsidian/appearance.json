@@ -1,3 +1,6 @@
 {
-  "cssTheme": "Things"
+  "cssTheme": "AnuPpuccin",
+  "enabledCssSnippets": [
+    "color-extend"
+  ]
 }

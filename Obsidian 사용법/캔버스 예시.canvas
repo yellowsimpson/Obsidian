@@ -1,0 +1,11 @@
+{
+	"nodes":[
+		{"id":"11200c9beffaacda","x":371,"y":-800,"width":360,"height":400,"type":"file","file":"Deep Learning/1장/1.1 인공지능과 머신러닝, 딥러닝.md"},
+		{"id":"e5ae6cadfa285239","x":-29,"y":0,"width":400,"height":400,"type":"file","file":"Deep Learning/1장/1.2 딥러닝 이전 머신러닝의 간략한 역사.md"},
+		{"id":"377eb916636e1e42","x":731,"y":0,"width":400,"height":400,"type":"file","file":"Deep Learning/1장/1.3 왜 딥러닝일까 왜 지금일까.md"}
+	],
+	"edges":[
+		{"id":"2de54e63e75870f8","fromNode":"11200c9beffaacda","fromSide":"right","toNode":"e5ae6cadfa285239","toSide":"left"},
+		{"id":"3f2e29637b6863ff","fromNode":"e5ae6cadfa285239","fromSide":"right","toNode":"377eb916636e1e42","toSide":"left"}
+	]
+}
