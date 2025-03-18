@@ -1,7 +1,5 @@
-GPT(Generative pre-trained transformer)
-
 *3 Kinds of Machine Learning
-1. Supervised (지도 학습)
+1. [[Supervised (지도 학습)]]
 	- Linear Regression = Least Squares Regression
 		- Continuous value prediction
 	- Logistic Regression = Sigmoid Regression = Minimum Cross Entropy Regression
@@ -19,11 +17,12 @@ GPT(Generative pre-trained transformer)
 	= 목적 함수(objective function)
 	= 평가 함수(evaluation function)
 
-2. Unsupervised (비지도 학습)
+2.  [[Unsupervised (비지도 학습)]]
 	-  Variational Auto Encoder(VAE)
 	-  Principal Component Analysis(PCA)
 	- K-Means Clustering
 	- GAN
 
-3. Reinforcement (강화 학습)
+3. [[Reinforcement (강화 학습)]]
 	- Temporal Differnce, SARSA, Q-Learning
+
