@@ -1,6 +1,9 @@
-![[Pasted image 20250327133908.png]]
+![[Pasted image 20250327202426.png]]
 
-![[Pasted image 20250327133939.png]]
+![[Pasted image 20250327202452.png]]
+
+![[Pasted image 20250327202543.png]]
+![[Pasted image 20250327202601.png]]
 
 <pir.c>
 ```c
@@ -23,3 +26,4 @@ int main(void) {
 }
 
 ```
+

@@ -1,3 +1,6 @@
+![[5.pdf]]
+
+
 
 라즈베리파이 특징
 - 라즈베리파이는 작은 single board computer 이다.
