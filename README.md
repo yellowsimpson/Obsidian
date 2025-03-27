@@ -1,4 +1,4 @@
-# obsidian_vault
+# obsidian
 
 
 현재 저장소 위치</br>
