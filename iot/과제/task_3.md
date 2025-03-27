@@ -5,6 +5,8 @@
 
 - Combine the PIR sensor and LED projects so that the LED turns on when the PIR sensor detects motion. The LED will turn off once the motion is no longer detected.
 
+![[Pasted image 20250327214225.png]]
+
 <led_pir_combine.c>
 ```c
 #include <wiringPi.h>

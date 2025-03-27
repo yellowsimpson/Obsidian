@@ -2,16 +2,23 @@
 	[[고정 ip 설정]]
 	[[ipconfig의 내용]]
 	
-- 강의 내용 정리
+- 강의 자료
+	[[Lecture 1]]
+	[[Lecture 2]]
+	[[Lecture 3]]
+	[[Lecture 4]]
 	[[Lecture 5]]
 	[[리눅스 명령어]]
 
 - 센서별 코드
 	[[LED]]
 	[[PIR]]
+	[[BUZZER]]
+	[[SWITCH]]
 	
 - 과제
 	[[task_1]]
+	[[task_2]]
 	[[task_3]]
 
 

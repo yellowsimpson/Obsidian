@@ -1,3 +1,4 @@
+[[0. 강의계획]]
 [[1. 머신러닝 기본 개념]]
 [[2. Linear Algebra]]
 [[3. Probability]]

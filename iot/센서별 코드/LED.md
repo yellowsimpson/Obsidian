@@ -1,5 +1,9 @@
+![[Pasted image 20250327212230.png]]
+![[Pasted image 20250327212250.png]]
+![[Pasted image 20250327212308.png]]
 
 
+<led.c>
 ```c
 #include <wiringPi.h>
 #include <stdio.h>
@@ -26,6 +30,21 @@ int main(void) {
     return 0;
 }
 
+```
+
+<led_py>
+```python
+import RPi.GPIO as GPIO
+import time
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(17,GPIO.OUT)
+
+while(True):
+GPIO.output(17,False)
+time.sleep(2)
+GPIO.output(17,True)
+time.sleep(2)
 ```
 
 

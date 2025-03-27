@@ -4,81 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "d856ad57156fd7ff",
+        "id": "2b78ea9016b435e2",
         "type": "tabs",
         "children": [
           {
-            "id": "3ef9c3ddefcae285",
+            "id": "044971bc23e1cf44",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "iot/과제/task_1.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "task_1"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "그래프 뷰"
             }
           },
           {
-            "id": "15536c3f3b227346",
+            "id": "92ce374027e968a8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "iot/과제/task_2.md",
+                "file": "Machine Learning/Machine Learning.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "task_2"
-            }
-          },
-          {
-            "id": "60d0a3794a37049e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "iot/수업 강의 노트/Lecture 1.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Lecture 1"
-            }
-          },
-          {
-            "id": "145251ce45b842bf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "iot/수업 강의 노트/Lecture 3.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Lecture 3"
-            }
-          },
-          {
-            "id": "352ce417f4f2550b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "iot/수업 강의 노트/Lecture 5.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Lecture 5"
+              "title": "Machine Learning"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -225,53 +179,53 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "352ce417f4f2550b",
+  "active": "92ce374027e968a8",
   "lastOpenFiles": [
-    "iot/수업 강의 노트/Lecture 4.md",
-    "attachments/4_1.pdf",
+    "Machine Learning/강의자료 정리/0. 강의계획.md",
+    "attachments/#0_강의계획_머신러닝2024 1.pdf",
+    "attachments/#0_강의계획_머신러닝2024.pdf",
+    "Machine Learning/강의자료 정리/1. 머신러닝 기본 개념.md",
+    "attachments/#1_머신러닝_기본개념 5.pdf",
+    "attachments/#1_머신러닝_기본개념 4.pdf",
+    "attachments/#1_머신러닝_기본개념 3.pdf",
+    "iot/센서별 코드/SWITCH.md",
+    "iot/센서별 코드/BUZZER.md",
+    "iot/IOT.md",
+    "iot/환경설정/사이트 주소.md",
+    "iot/환경설정/ipconfig의 내용.md",
+    "iot/환경설정/고정 ip 설정.md",
+    "iot/과제/task_3.md",
+    "iot/과제/task_2.md",
+    "iot/과제/task_1.md",
+    "iot/수업 강의 노트/라즈베리파이4.md",
     "iot/수업 강의 노트/Lecture 5.md",
-    "attachments/5.pdf",
+    "iot/수업 강의 노트/Lecture 4.md",
     "iot/수업 강의 노트/Lecture 3.md",
+    "iot/수업 강의 노트/Lecture 2.md",
+    "iot/수업 강의 노트/Lecture 1.md",
+    "attachments/Pasted image 20250327214225.png",
+    "attachments/Pasted image 20250327214137.png",
+    "iot/센서별 코드/PIR.md",
+    "attachments/Pasted image 20250327213714.png",
+    "attachments/Pasted image 20250327213657.png",
+    "attachments/Pasted image 20250327213640.png",
+    "attachments/Pasted image 20250327213623.png",
+    "iot/센서별 코드/LED.md",
+    "attachments/Pasted image 20250327213337.png",
+    "attachments/Pasted image 20250327213318.png",
+    "attachments/Pasted image 20250327213300.png",
+    "attachments/Pasted image 20250327213238.png",
+    "attachments/IoT실습관련.pdf",
+    "iot/센서별 코드/1장. 라즈베리파이와 LED 모듈의 연결 방법.md",
+    "C언어/C compile.md",
+    "attachments/4_1.pdf",
+    "attachments/5.pdf",
     "attachments/4.pdf",
     "attachments/3.pdf",
-    "iot/수업 강의 노트/Lecture 2.md",
-    "attachments/2.pdf",
-    "iot/수업 강의 노트/Lecture 1.md",
-    "attachments/1 1.pdf",
-    "attachments/1.pdf",
-    "iot/과제/task_2.md",
-    "iot/과제/task_3.md",
-    "attachments/Pasted image 20250327210510.png",
-    "iot/과제/task_1.md",
-    "attachments/Pasted image 20250327205842.png",
-    "attachments/Pasted image 20250327205809.png",
-    "Machine Learning/강의자료 정리/1. 머신러닝 기본 개념.md",
     "Machine Learning/강의자료 정리/2. Linear Algebra.md",
     "Machine Learning/강의자료 정리/11. MLP_4_추가.md",
     "Machine Learning/강의자료 정리/12. FCN_Python.md",
     "Machine Learning/강의자료 정리/13. FullyConnectedDeepNetwork.md",
-    "Machine Learning/강의자료 정리/11. MLP_4.md",
-    "Machine Learning/강의자료 정리/17. CNN_TensorFlow.md",
-    "Machine Learning/Machine Learning.md",
-    "iot/과제/Practice Quiz 12.md",
-    "iot/과제/Practice Quiz 11.md",
-    "iot/과제/Practice Quiz 10.md",
-    "iot/과제/Practice Quiz 9.md",
-    "iot/과제/Practice Quiz 8.md",
-    "iot/과제/Practice Quiz 7.md",
-    "iot/과제/Practice Quiz 6.md",
-    "iot/과제/Practice Quiz 5.md",
-    "iot/과제/Practice Quiz 4.md",
-    "attachments/Pasted image 20250327202601.png",
-    "attachments/Pasted image 20250327202543.png",
-    "attachments/Pasted image 20250327202452.png",
-    "attachments/Pasted image 20250327202426.png",
-    "iot/센서별 코드",
-    "attachments/Pasted image 20250325204853.png",
-    "attachments/Pasted image 20250325180559.png",
-    "attachments/Pasted image 20250325180752.png",
-    "iot/환경설정",
-    "attachments/IMG_0117 4.heic",
     "Obsidian 사용법/캔버스 예시.canvas"
   ]
 }
