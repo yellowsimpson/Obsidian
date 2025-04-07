@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OpenSource/OpenSource.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "OpenSource"
+              "title": "README"
             }
           }
         ]
@@ -170,6 +170,7 @@
   },
   "active": "5a5012010a16fe43",
   "lastOpenFiles": [
+    "OpenSource/OpenSource.md",
     "무제.md",
     "정보통신개론/정보통신개론.md",
     "attachments/~$01_Introduction_part1.pptx",
@@ -182,7 +183,6 @@
     "정보통신개론/강의자료/제1장 정보통신개론 강의개요.md",
     "attachments/2301 제1장 정보통신개론 강의개요.pdf",
     "정보통신개론/강의자료/무제 15.md",
-    "OpenSource/OpenSource.md",
     "OpenSource/강의자료/1장.md",
     "OpenSource/강의자료/2장.md",
     "연습장.md",
