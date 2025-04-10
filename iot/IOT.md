@@ -8,7 +8,10 @@
 	[[Lecture 3]]
 	[[Lecture 4]]
 	[[Lecture 5]]
+	[[week5]]
+	[[week6]]
 	[[리눅스 명령어]]
+	[[IoT Project Idea]]
 
 - 센서별 코드
 	[[LED]]
