@@ -4,6 +4,7 @@
 1. [[ML DL Basics]]
 2. [[ML Training Basics]]
 3. [[logistic_regression_background]]
+4. [[nn_backpropagation]]
 
 - 수업 내용 정리
 	1장. 딥러닝이란 무엇인가?

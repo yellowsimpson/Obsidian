@@ -1,0 +1,2 @@
+![[nn_backpropagation.pdf]]
+
