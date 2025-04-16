@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "iot/센서별 코드/BUZZER.md",
+                "file": "Deep Learning/강의자료/1. ML_DL Basics.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "BUZZER"
+              "title": "1. ML_DL Basics"
             }
           }
         ]
@@ -155,6 +155,7 @@
   },
   "active": "9892ad3b2e269d81",
   "lastOpenFiles": [
+    "iot/센서별 코드/BUZZER.md",
     "iot/과제/Practice Quiz 1.md",
     "통신공학/1. 서론/디지털 통신 시스템 블록도.md",
     "통신공학/Day1.md",

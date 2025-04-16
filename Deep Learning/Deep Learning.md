@@ -1,10 +1,10 @@
 [[딥러닝 용어 정리]]
 
 - 강의자료
-1. [[ML_DL Basics]]
-2. [[ML Training Basics]]
-3. [[logistic_regression_background]]
-4. [[nn_backpropagation]]
+1. [[1. ML_DL Basics]]
+2. [[2. ML Training Basics]]
+3. [[3. logistic_regression_background]]
+4. [[4. nn_backpropagation]]
 
 - 수업 내용 정리
 	1장. 딥러닝이란 무엇인가?

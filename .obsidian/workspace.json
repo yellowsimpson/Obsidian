@@ -13,15 +13,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Deep Learning/강의자료/ML Training Basics.md",
+                "file": "Deep Learning/5장/5.1 머신러닝의 목표(일반화).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ML Training Basics"
+              "title": "5.1 머신러닝의 목표(일반화)"
+            }
+          },
+          {
+            "id": "5a9fd884484224b8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Deep Learning/5장/5.3 훈련 성능 향상하기.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "5.3 훈련 성능 향상하기"
+            }
+          },
+          {
+            "id": "faf2684966c9cdca",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Deep Learning/7장/7.2 케라스 모델을 만드는 여러 방법.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "7.2 케라스 모델을 만드는 여러 방법"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -168,54 +197,54 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "41254a109570ad18",
+  "active": "faf2684966c9cdca",
   "lastOpenFiles": [
+    "드롭아웃과 가지치기의 차이점.md",
+    "attachments/Pasted image 20250416185333.png",
+    "Deep Learning/5장/드롭아웃 추가.md",
+    "Deep Learning/강의자료/드롭아웃 추가.md",
+    "드롭아웃 추가.md",
+    "attachments/Pasted image 20250416184821.png",
+    "무제.md",
+    "Deep Learning/5장/파라미터 값을 규제(L1, L2 규제).md",
+    "Deep Learning/강의자료/파라미터 값을 규제(L1, L2 규제).md",
+    "파라미터 값을 규제(L1, L2 규제).md",
+    "attachments/Pasted image 20250416183228.png",
+    "attachments/Pasted image 20250416183009.png",
+    "Deep Learning/5장/모델 용량 규제(커페시터 규제).md",
+    "모델 용량 규제(커페시터 규제).md",
+    "Deep Learning/강의녹음/Day8.md",
+    "Deep Learning/강의녹음/Day10.md",
+    "Deep Learning/강의녹음/Day11.md",
+    "Day11.md",
+    "Deep Learning/강의녹음/Day9.md",
+    "Day9.md",
+    "Deep Learning/강의녹음/무제.md",
+    "Deep Learning/7장/7.1 다양한 워크플로.md",
+    "Deep Learning/강의자료 정리/딥러닝 용어 정리.md",
+    "Deep Learning/5장/5.3 훈련 성능 향상하기.md",
+    "Deep Learning/5장/5.2 머신러닝 모델 평가.md",
+    "Deep Learning/강의자료 정리/Pre-training & Fine-tuning의 차이점.md",
+    "Deep Learning/1장/1.1 인공지능과 머신러닝, 딥러닝.md",
+    "Deep Learning/5장/5.1 머신러닝의 목표(일반화).md",
+    "Deep Learning/강의자료/4. nn_backpropagation.md",
+    "Deep Learning/강의자료/3. logistic_regression_background.md",
+    "KAIROS/수업 강의자료/딥러닝개론.pdf",
+    "KAIROS/수업 강의자료/파이썬.pdf",
     "KAIROS/수업 강의자료",
     "수업 강의자료",
     "무제",
-    "Deep Learning/강의자료/ML_DL Basics.md",
     "attachments/ml_dl_basics.pdf",
-    "Deep Learning/강의자료/logistic_regression_background.md",
-    "연습장.md",
-    "Deep Learning/강의자료/ML Training Basics.md",
-    "Deep Learning/강의자료 정리/3 Kinds of Machine Learning.md",
-    "Deep Learning/강의자료 정리/노트 정리.md",
-    "Deep Learning/강의자료/nn_backpropagation.md",
-    "Deep Learning/1장/1.1 인공지능과 머신러닝, 딥러닝.md",
-    "Deep Learning/Deep Learning.md",
-    "진로 취업 특강.md",
     "attachments/nn_backpropagation.pdf",
-    "Deep Learning/강의자료/무제.md",
     "Deep Learning/강의자료/nn_backpropagation.pdf",
-    "README.md",
-    "iot/IOT.md",
-    "Deep Learning/5장/5.1 머신러닝의 목표(일반화).md",
-    "Deep Learning/5장/5.2 머신러닝 모델 평가.md",
-    "Deep Learning/4장/4.4 요약.md",
-    "Deep Learning/4장/4.3 주택 가격예측_회귀 문제.md",
-    "Deep Learning/4장/4.2 뉴스 기사 분류_다중 분류 문제.md",
-    "Deep Learning/4장/4.1 영화 리뷰 분류_이진분류 문제.md",
-    "Deep Learning/3장/3.1 텐서플로란.md",
-    "Deep Learning/2장/동영상.md",
-    "Deep Learning/2장/2.6 요약.md",
-    "Deep Learning/2장/2.4 신경망엔진 그레이디언트 기반 최적화.md",
-    "Deep Learning/2장/2.3 신경망의 톱니바퀴_ 텐서 연산.md",
-    "Deep Learning/2장/2.1 신경망과의 첫 만남.md",
     "attachments/스크린샷 2025-04-14 오후 1.40.49.png",
     "attachments/스크린샷 2025-04-14 오후 1.41.14.png",
     "attachments/스크린샷 2025-04-14 오후 1.33.47.png",
     "attachments/8.pdf",
     "attachments/IoT Project Idea.pdf",
-    "attachments/9.pdf",
-    "KAIROS/시험문제",
-    "KAIROS",
     "attachments/Pasted image 20250327214225.png",
     "attachments/Pasted image 20250327214137.png",
     "attachments/Pasted image 20250327213714.png",
-    "attachments/Pasted image 20250327213657.png",
-    "attachments/Pasted image 20250327213640.png",
-    "attachments/Pasted image 20250327213623.png",
-    "attachments/Pasted image 20250327213337.png",
     "Obsidian 사용법/캔버스 예시.canvas"
   ]
 }
