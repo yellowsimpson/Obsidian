@@ -13,44 +13,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Deep Learning/5장/5.1 머신러닝의 목표(일반화).md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "5.1 머신러닝의 목표(일반화)"
+              "title": "README"
             }
           },
           {
-            "id": "5a9fd884484224b8",
+            "id": "dbb8bcf22682ad64",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Deep Learning/5장/5.3 훈련 성능 향상하기.md",
+                "file": "Deep Learning/4장/4.2 뉴스 기사 분류_다중 분류 문제.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "5.3 훈련 성능 향상하기"
+              "title": "4.2 뉴스 기사 분류_다중 분류 문제"
             }
           },
           {
-            "id": "faf2684966c9cdca",
+            "id": "0e6226ba293d6d91",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Deep Learning/7장/7.2 케라스 모델을 만드는 여러 방법.md",
+                "file": "Deep Learning/4장/4.1 영화 리뷰 분류_이진분류 문제.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "7.2 케라스 모델을 만드는 여러 방법"
+              "title": "4.1 영화 리뷰 분류_이진분류 문제"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -107,7 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.5004348754883
+    "width": 221.50260543823242
   },
   "right": {
     "id": "34f46f4b9983c0ed",
@@ -197,43 +197,43 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "faf2684966c9cdca",
+  "active": "dbb8bcf22682ad64",
   "lastOpenFiles": [
-    "드롭아웃과 가지치기의 차이점.md",
+    "Deep Learning/4장/4.1 영화 리뷰 분류_이진분류 문제.md",
+    "Deep Learning/4장/4.2 뉴스 기사 분류_다중 분류 문제.md",
+    "Deep Learning/4장/4.3 주택 가격예측_회귀 문제.md",
+    "Deep Learning/4장/4.4 요약.md",
+    "Deep Learning/강의자료 정리/딥러닝 용어 정리.md",
+    "Deep Learning/Deep Learning.md",
+    "Deep Learning/3장/3.5 텐서플로 시작하기.md",
+    "Deep Learning/3장/3.6 신경망의 구조_ 핵심 Keras API 이해하기.md",
+    "Deep Learning/3장/3.4 딥러닝 작업 환경 설정하기.md",
+    "Deep Learning/3장/3.3 케라스와 텐서플로의 간략한 역사.md",
+    "Deep Learning/3장/3.2 케라스란.md",
+    "Deep Learning/3장/3.1 텐서플로란.md",
+    "Deep Learning/2장/2.1 신경망과의 첫 만남.md",
+    "Deep Learning/7장/7.3 내장된 훈련 루프와 평가 루프 사용하기.md",
+    "Deep Learning/7장/7.2 케라스 모델을 만드는 여러 방법.md",
+    "Deep Learning/7장/7.1 다양한 워크플로.md",
+    "README.md",
+    "Deep Learning/6장/구조에 대한 올바른 가정.md",
+    "Deep Learning/6장/추론 모델 최적화.md",
+    "Deep Learning/6장/장치로 모델 배포하기.md",
+    "Deep Learning/6장/브라우저에 모델 배포하기.md",
+    "연습장.md",
+    "진로 취업 특강.md",
+    "Deep Learning/6장/6.4 요약.md",
+    "Deep Learning/6장/6.3 모델 배포.md",
+    "REST API로 모델 배포하기.md",
+    "attachments/Pasted image 20250416191735.png",
+    "attachments/Pasted image 20250416191134.png",
     "attachments/Pasted image 20250416185333.png",
-    "Deep Learning/5장/드롭아웃 추가.md",
-    "Deep Learning/강의자료/드롭아웃 추가.md",
-    "드롭아웃 추가.md",
     "attachments/Pasted image 20250416184821.png",
-    "무제.md",
-    "Deep Learning/5장/파라미터 값을 규제(L1, L2 규제).md",
-    "Deep Learning/강의자료/파라미터 값을 규제(L1, L2 규제).md",
-    "파라미터 값을 규제(L1, L2 규제).md",
     "attachments/Pasted image 20250416183228.png",
     "attachments/Pasted image 20250416183009.png",
-    "Deep Learning/5장/모델 용량 규제(커페시터 규제).md",
-    "모델 용량 규제(커페시터 규제).md",
-    "Deep Learning/강의녹음/Day8.md",
-    "Deep Learning/강의녹음/Day10.md",
-    "Deep Learning/강의녹음/Day11.md",
-    "Day11.md",
-    "Deep Learning/강의녹음/Day9.md",
-    "Day9.md",
-    "Deep Learning/강의녹음/무제.md",
-    "Deep Learning/7장/7.1 다양한 워크플로.md",
-    "Deep Learning/강의자료 정리/딥러닝 용어 정리.md",
-    "Deep Learning/5장/5.3 훈련 성능 향상하기.md",
-    "Deep Learning/5장/5.2 머신러닝 모델 평가.md",
-    "Deep Learning/강의자료 정리/Pre-training & Fine-tuning의 차이점.md",
-    "Deep Learning/1장/1.1 인공지능과 머신러닝, 딥러닝.md",
-    "Deep Learning/5장/5.1 머신러닝의 목표(일반화).md",
-    "Deep Learning/강의자료/4. nn_backpropagation.md",
-    "Deep Learning/강의자료/3. logistic_regression_background.md",
     "KAIROS/수업 강의자료/딥러닝개론.pdf",
     "KAIROS/수업 강의자료/파이썬.pdf",
     "KAIROS/수업 강의자료",
-    "수업 강의자료",
-    "무제",
     "attachments/ml_dl_basics.pdf",
     "attachments/nn_backpropagation.pdf",
     "Deep Learning/강의자료/nn_backpropagation.pdf",
@@ -242,9 +242,9 @@
     "attachments/스크린샷 2025-04-14 오후 1.33.47.png",
     "attachments/8.pdf",
     "attachments/IoT Project Idea.pdf",
+    "attachments/9.pdf",
+    "KAIROS/시험문제",
     "attachments/Pasted image 20250327214225.png",
-    "attachments/Pasted image 20250327214137.png",
-    "attachments/Pasted image 20250327213714.png",
     "Obsidian 사용법/캔버스 예시.canvas"
   ]
 }
