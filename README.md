@@ -1,6 +1,5 @@
 # obsidian
 
-
 현재 저장소 위치</br>
 /(루트)/Users/simseunghwan/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian
 
