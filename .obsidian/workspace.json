@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "통신공학/강의자료/통신공학 1강.md",
+                "file": "통신공학/강의자료/통신공학 4강.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "통신공학 1강"
+              "title": "통신공학 4강"
             }
           }
         ]
@@ -170,13 +170,16 @@
   },
   "active": "847997ff078194f9",
   "lastOpenFiles": [
+    "attachments/통신공학 4강.pdf",
+    "통신공학/강의자료/통신공학 3강.md",
+    "attachments/통신공학 3강.pdf",
+    "통신공학/강의자료/통신공학 2강.md",
+    "attachments/통신공학 2강.pdf",
+    "통신공학/강의자료/통신공학 1강.md",
     "attachments/통신공학 1강.pdf",
     "통신공학/통신공학.md",
     "통신공학/강의자료/통신공학 4강.md",
-    "통신공학/강의자료/통신공학 3강.md",
-    "통신공학/강의자료/통신공학 2강.md",
     "통신공학/강의자료/무제 1.md",
-    "통신공학/강의자료/통신공학 1강.md",
     "통신공학/강의자료/무제 1 복사본 3.md",
     "통신공학/강의자료/무제 1 복사본 2.md",
     "통신공학/강의자료/무제 1 복사본.md",
@@ -209,9 +212,6 @@
     "KAIROS/수업 강의자료",
     "수업 강의자료",
     "무제",
-    "attachments/ml_dl_basics.pdf",
-    "attachments/nn_backpropagation.pdf",
-    "Deep Learning/강의자료/nn_backpropagation.pdf",
     "attachments/스크린샷 2025-04-14 오후 1.40.49.png",
     "attachments/스크린샷 2025-04-14 오후 1.41.14.png",
     "attachments/스크린샷 2025-04-14 오후 1.33.47.png",
