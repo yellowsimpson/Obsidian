@@ -8,31 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a6b6503064843167",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "iot/수업 강의 노트/week6.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "week6"
-            }
-          },
-          {
             "id": "419a9592c3204c51",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "iot/수업 강의 노트/week7.md",
+                "file": "iot/센서별 코드/SWITCH.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "week7"
+              "title": "SWITCH"
+            }
+          },
+          {
+            "id": "715faa16b2209911",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "iot/센서별 코드/PWM.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "PWM"
             }
           }
         ],
@@ -183,54 +183,54 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "419a9592c3204c51",
+  "active": "715faa16b2209911",
   "lastOpenFiles": [
+    "iot/센서별 코드/Ultrasonic sensor.md",
+    "iot/센서별 코드/Variable Resistor.md",
+    "iot/센서별 코드/c파일 gcc하는법.md",
+    "iot/센서별 코드/BUZZER.md",
+    "iot/센서별 코드/PWM.md",
+    "iot/센서별 코드/SWITCH.md",
+    "iot/수업 강의 노트/Lecture 5.md",
+    "iot/수업 강의 노트/week7.md",
+    "iot/과제/task_3.md",
+    "iot/센서별 코드/CDS(Light).md",
+    "iot/센서별 코드/VARIABLE RESISTORddd.md",
+    "attachments/스크린샷 2025-04-21 오후 9.54.15.png",
+    "attachments/스크린샷 2025-04-21 오후 9.54.06.png",
+    "iot/센서별 코드/Soil Moisture sensor.md",
+    "iot/센서별 코드/GAS.md",
+    "iot/수업 강의 노트/week6.md",
+    "iot/센서별 코드/SOUND sensor.md",
+    "attachments/스크린샷 2025-04-21 오후 7.54.12 1.png",
+    "attachments/스크린샷 2025-04-21 오후 9.38.22.png",
+    "attachments/스크린샷 2025-04-21 오후 9.38.33.png",
+    "attachments/스크린샷 2025-04-21 오후 9.38.44.png",
+    "iot/과제/task_1.md",
+    "iot/센서별 코드/STEP MOTOR.md",
+    "iot/수업 강의 노트/week5.md",
+    "iot/센서별 코드/DC MOTOR.md",
+    "iot/수업 강의 노트/Lecture 4.md",
+    "attachments/스크린샷 2025-04-21 오후 7.54.12.png",
+    "attachments/스크린샷 2025-04-21 오후 7.53.56.png",
+    "attachments/스크린샷 2025-04-21 오후 7.53.38.png",
+    "attachments/스크린샷 2025-04-21 오후 7.53.49.png",
+    "iot/과제/task_2.md",
+    "iot/센서별 코드/PIR.md",
+    "iot/센서별 코드/LED.md",
+    "iot/수업 강의 노트/라즈베리파이4.md",
+    "iot/수업 강의 노트/Lecture 3.md",
+    "iot/수업 강의 노트/Lecture 2.md",
     "attachments/11.pdf",
     "attachments/10.pdf",
-    "iot/수업 강의 노트/week6.md",
-    "iot/수업 강의 노트/week7.md",
-    "iot/수업 강의 노트/라즈베리파이4.md",
-    "iot/수업 강의 노트/Lecture 1.md",
-    "iot/수업 강의 노트/Lecture 2.md",
-    "iot/수업 강의 노트/Lecture 3.md",
-    "iot/수업 강의 노트/Lecture 4.md",
-    "iot/수업 강의 노트/Lecture 5.md",
-    "iot/수업 강의 노트/week5.md",
-    "iot/수업 강의 노트/IoT Project Idea.md",
-    "iot/센서별 코드/BUZZER.md",
-    "Machine Learning/Machine Learning.md",
     "Machine Learning/강의자료/#10_MLP_3_169.pdf",
-    "Deep Learning/강의자료 정리/딥러닝 용어 정리.md",
-    "Deep Learning/2장/2.4 신경망엔진 그레이디언트 기반 최적화.md",
-    "Deep Learning/강의자료 정리/딥러닝 예상 문제.md",
     "Machine Learning/강의자료/#1_머신러닝_기본개념.pdf",
     "Machine Learning/강의자료/#2_LinearAlgebra_169.pdf",
     "Machine Learning/강의자료/#8_MLP_1_169.pdf",
     "Machine Learning/강의자료/#9_MLP_2_169.pdf",
     "Machine Learning/강의자료/#11_MLP_4_169.pdf",
     "Machine Learning/강의자료/#0_강의계획_머신러닝2024.pdf",
-    "Deep Learning/2장/2.2 신경망을 위한 데이터 표현.md",
-    "Deep Learning/2장/벡터 데이터.md",
-    "14. a_ErrorBackPropagation.md",
-    "연습장.md",
     "Machine Learning/강의자료/#16_CNN_Python_Visualization.pdf",
-    "Machine Learning/강의자료/#17_CNN_TensorFlow.pdf",
-    "Machine Learning/강의자료/0. 강의계획.md",
-    "Machine Learning/강의자료/8. MLP_1.md",
-    "Machine Learning/강의자료/6. LocalLearning.md",
-    "Machine Learning/강의자료/1. 머신러닝 기본 개념.md",
-    "Deep Learning/강의자료/1. ML_DL Basics.md",
-    "Machine Learning/강의자료/10. MLP_3.md",
-    "attachments/23259AF5-395C-4684-8150-0DDD1A5DC563_4_5005_c.jpeg",
-    "attachments/Pasted image 20250418155139.png",
-    "attachments/스크린샷 2025-04-18 오전 1.38.07.png",
-    "attachments/스크린샷 2025-04-18 오전 1.36.26.png",
-    "attachments/스크린샷 2025-04-18 오전 1.32.26.png",
-    "attachments/스크린샷 2025-04-18 오전 1.17.42.png",
-    "attachments/스크린샷 2025-04-18 오전 1.17.13.png",
-    "attachments/스크린샷 2025-04-17 오후 11.32.06.png",
-    "attachments/스크린샷 2025-04-17 오후 11.30.23.png",
-    "attachments/스크린샷 2025-04-17 오후 11.29.11.png",
     "Obsidian 사용법/캔버스 예시.canvas"
   ]
 }
