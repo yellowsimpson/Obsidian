@@ -4,65 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "de871c3ca4ee0d59",
+        "id": "a15dfadf84ca30fa",
         "type": "tabs",
         "children": [
           {
-            "id": "0da5e518d0685036",
+            "id": "a6b6503064843167",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Deep Learning/강의자료 정리/딥러닝 용어 정리.md",
+                "file": "iot/수업 강의 노트/week6.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "딥러닝 용어 정리"
+              "title": "week6"
             }
           },
           {
-            "id": "5abbb35a99398877",
+            "id": "419a9592c3204c51",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Deep Learning/강의자료 정리/딥러닝 예상 문제.md",
+                "file": "iot/수업 강의 노트/week7.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "딥러닝 예상 문제"
-            }
-          },
-          {
-            "id": "91d154e2477728b6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "연습장.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "연습장"
-            }
-          },
-          {
-            "id": "147c6323aafb61ab",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Machine Learning/강의자료/#2_LinearAlgebra_169.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "#2_LinearAlgebra_169"
+              "title": "week7"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -209,45 +183,46 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "147c6323aafb61ab",
+  "active": "419a9592c3204c51",
   "lastOpenFiles": [
+    "attachments/11.pdf",
+    "attachments/10.pdf",
+    "iot/수업 강의 노트/week6.md",
+    "iot/수업 강의 노트/week7.md",
+    "iot/수업 강의 노트/라즈베리파이4.md",
+    "iot/수업 강의 노트/Lecture 1.md",
+    "iot/수업 강의 노트/Lecture 2.md",
+    "iot/수업 강의 노트/Lecture 3.md",
+    "iot/수업 강의 노트/Lecture 4.md",
+    "iot/수업 강의 노트/Lecture 5.md",
+    "iot/수업 강의 노트/week5.md",
+    "iot/수업 강의 노트/IoT Project Idea.md",
+    "iot/센서별 코드/BUZZER.md",
+    "Machine Learning/Machine Learning.md",
+    "Machine Learning/강의자료/#10_MLP_3_169.pdf",
+    "Deep Learning/강의자료 정리/딥러닝 용어 정리.md",
+    "Deep Learning/2장/2.4 신경망엔진 그레이디언트 기반 최적화.md",
+    "Deep Learning/강의자료 정리/딥러닝 예상 문제.md",
+    "Machine Learning/강의자료/#1_머신러닝_기본개념.pdf",
+    "Machine Learning/강의자료/#2_LinearAlgebra_169.pdf",
+    "Machine Learning/강의자료/#8_MLP_1_169.pdf",
+    "Machine Learning/강의자료/#9_MLP_2_169.pdf",
+    "Machine Learning/강의자료/#11_MLP_4_169.pdf",
+    "Machine Learning/강의자료/#0_강의계획_머신러닝2024.pdf",
+    "Deep Learning/2장/2.2 신경망을 위한 데이터 표현.md",
+    "Deep Learning/2장/벡터 데이터.md",
+    "14. a_ErrorBackPropagation.md",
+    "연습장.md",
     "Machine Learning/강의자료/#16_CNN_Python_Visualization.pdf",
     "Machine Learning/강의자료/#17_CNN_TensorFlow.pdf",
-    "Machine Learning/강의자료/#15_CNN_Python.pdf",
-    "Machine Learning/강의자료/#14_Hyperparameter_Python_New.pdf",
-    "Machine Learning/강의자료/#14_a_ErrorBackPropagation.pdf",
-    "Machine Learning/강의자료/#13_FullyConnectedDeepNetwork.pdf",
-    "Machine Learning/강의자료/#12_FCN_Python.pdf",
-    "Machine Learning/강의자료/#11_MLP_4_169.pdf",
-    "Machine Learning/강의자료/#11_MLP_4_169_추가.pdf",
-    "Machine Learning/강의자료/#10_MLP_3_169.pdf",
-    "Machine Learning/강의자료/#9_MLP_2_169.pdf",
-    "Machine Learning/Machine Learning.md",
     "Machine Learning/강의자료/0. 강의계획.md",
     "Machine Learning/강의자료/8. MLP_1.md",
     "Machine Learning/강의자료/6. LocalLearning.md",
     "Machine Learning/강의자료/1. 머신러닝 기본 개념.md",
-    "Deep Learning/2장/2.4 신경망엔진 그레이디언트 기반 최적화.md",
-    "Deep Learning/강의자료 정리/딥러닝 용어 정리.md",
     "Deep Learning/강의자료/1. ML_DL Basics.md",
     "Machine Learning/강의자료/10. MLP_3.md",
-    "Machine Learning/강의자료/9. MLP_2.md",
-    "Machine Learning/강의자료/7. PCA.md",
-    "Machine Learning/강의자료/5. Regression.md",
-    "Machine Learning/강의자료/4. Regression.md",
-    "Machine Learning/강의자료/3. Probability Theory.md",
-    "Machine Learning/강의자료/3. Probability.md",
-    "Machine Learning/강의자료/2. Linear Algebra.md",
-    "Deep Learning/2장/2.3 신경망의 톱니바퀴_ 텐서 연산.md",
     "attachments/23259AF5-395C-4684-8150-0DDD1A5DC563_4_5005_c.jpeg",
     "attachments/Pasted image 20250418155139.png",
-    "Deep Learning/2장/2.2 신경망을 위한 데이터 표현.md",
-    "Deep Learning/2장/이미지.md",
-    "Deep Learning/2장/벡터 데이터.md",
-    "Deep Learning/2장/시계열 데이터 or 시퀀스 데이터.md",
-    "' 가  1개.md",
-    "Deep Learning/2장/2.1 신경망과의 첫 만남.md",
-    "Deep Learning/1장/1.3 왜 딥러닝일까 왜 지금일까.md",
     "attachments/스크린샷 2025-04-18 오전 1.38.07.png",
     "attachments/스크린샷 2025-04-18 오전 1.36.26.png",
     "attachments/스크린샷 2025-04-18 오전 1.32.26.png",
