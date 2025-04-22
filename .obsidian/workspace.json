@@ -4,25 +4,26 @@
     "type": "split",
     "children": [
       {
-        "id": "a15dfadf84ca30fa",
+        "id": "f4bb0f3acc94dec9",
         "type": "tabs",
+        "dimension": 48.588588588588586,
         "children": [
           {
-            "id": "419a9592c3204c51",
+            "id": "5544f3d51228f411",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "iot/센서별 코드/SWITCH.md",
+                "file": "iot/강의자료/week5.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SWITCH"
+              "title": "week5"
             }
           },
           {
-            "id": "715faa16b2209911",
+            "id": "a8d245f63cc1fd57",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -34,37 +35,30 @@
               "icon": "lucide-file",
               "title": "PWM"
             }
-          },
-          {
-            "id": "0cec0c4c3a3ebd7a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "iot/센서별 코드/Variable Resistor.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Variable Resistor"
-            }
-          },
-          {
-            "id": "af79f4cb6ed3606c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "iot/과제/task_4.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "task_4"
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
+      },
+      {
+        "id": "7363e3f20e97fb30",
+        "type": "tabs",
+        "dimension": 51.411411411411414,
+        "children": [
+          {
+            "id": "228c726cf80472d8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "iot/센서별 코드/GAS.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "GAS"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -121,7 +115,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 323.5
+    "width": 238.50043487548828
   },
   "right": {
     "id": "34f46f4b9983c0ed",
@@ -211,28 +205,31 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "af79f4cb6ed3606c",
+  "active": "a8d245f63cc1fd57",
   "lastOpenFiles": [
-    "iot/센서별 코드/Variable Resistor.md",
-    "iot/과제/task_4.md",
+    "iot/센서별 코드/BUZZER.md",
+    "iot/강의자료/week5.md",
+    "iot/센서별 코드/GAS.md",
+    "iot/센서별 코드/DC MOTOR.md",
+    "iot/센서별 코드/CDS(Light).md",
     "iot/센서별 코드/PWM.md",
-    "iot/환경설정/사이트 주소.md",
+    "iot/강의자료/Lecture 5.md",
+    "iot/과제/task_4.md",
+    "iot/센서별 코드/c파일 gcc하는법.md",
+    "iot/센서별 코드/LED.md",
     "iot/센서별 코드/SWITCH.md",
+    "iot/센서별 코드/Variable Resistor.md",
+    "iot/강의자료/week7.md",
+    "iot/환경설정/사이트 주소.md",
     "iot/환경설정/ipconfig의 내용.md",
     "iot/IOT.md",
     "iot/센서별 코드/Ultrasonic sensor.md",
-    "iot/센서별 코드/c파일 gcc하는법.md",
-    "iot/센서별 코드/BUZZER.md",
-    "iot/수업 강의 노트/Lecture 5.md",
-    "iot/수업 강의 노트/week7.md",
     "iot/과제/task_3.md",
-    "iot/센서별 코드/CDS(Light).md",
     "iot/센서별 코드/VARIABLE RESISTORddd.md",
     "attachments/스크린샷 2025-04-21 오후 9.54.15.png",
     "attachments/스크린샷 2025-04-21 오후 9.54.06.png",
     "iot/센서별 코드/Soil Moisture sensor.md",
-    "iot/센서별 코드/GAS.md",
-    "iot/수업 강의 노트/week6.md",
+    "iot/강의자료/week6.md",
     "iot/센서별 코드/SOUND sensor.md",
     "attachments/스크린샷 2025-04-21 오후 7.54.12 1.png",
     "attachments/스크린샷 2025-04-21 오후 9.38.22.png",
@@ -240,15 +237,12 @@
     "attachments/스크린샷 2025-04-21 오후 9.38.44.png",
     "iot/과제/task_1.md",
     "iot/센서별 코드/STEP MOTOR.md",
-    "iot/수업 강의 노트/week5.md",
-    "iot/센서별 코드/DC MOTOR.md",
-    "iot/수업 강의 노트/Lecture 4.md",
+    "iot/강의자료/Lecture 4.md",
     "attachments/스크린샷 2025-04-21 오후 7.54.12.png",
     "attachments/스크린샷 2025-04-21 오후 7.53.56.png",
     "attachments/스크린샷 2025-04-21 오후 7.53.38.png",
     "attachments/스크린샷 2025-04-21 오후 7.53.49.png",
     "iot/과제/task_2.md",
-    "iot/센서별 코드/PIR.md",
     "attachments/11.pdf",
     "attachments/10.pdf",
     "Machine Learning/강의자료/#10_MLP_3_169.pdf",

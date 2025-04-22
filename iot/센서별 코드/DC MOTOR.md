@@ -10,7 +10,7 @@
 #define PIN_INB 23
 
 int main(){
-	if(wiringPiSetup() == -1) return 1;
+	if(wiringPiSetup() == -1) return 1;  //wiringPi 라이브러리 초기화
 
 	pindMode(PIN_INA, OUTPUT);
 	pindMode(PIN_INB, OUTPUT);
@@ -22,3 +22,4 @@ int main(){
 	delay(2000);
 	digitalWrite(PIN_INB, LOW);
 }
+```
