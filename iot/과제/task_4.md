@@ -46,5 +46,20 @@ int main(void) {
 	}
 	return 0;
 }
+
+```
+```c
+#include <stdio.h>
+#include <stdio.h>
+
+#define SPI_CH 0
+#define ADC_CH 4
+#define SPI_CS 29
+#define SPI_SPEED 500000
+
+int main(void){
+	int value = 0, i;
+	unsigned char buf[3];
+}
 ```
 
