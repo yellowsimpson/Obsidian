@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "d033744c3401d479",
+        "id": "f695a31a529d9f71",
         "type": "tabs",
         "children": [
           {
-            "id": "cf225bdb8b3a7735",
+            "id": "85b8065f19c4d6aa",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "README"
             }
           }
         ]
@@ -74,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 238.50043487548828
+    "width": 324.5004348754883
   },
   "right": {
     "id": "34f46f4b9983c0ed",
@@ -164,41 +168,42 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "cf225bdb8b3a7735",
+  "active": "85b8065f19c4d6aa",
   "lastOpenFiles": [
-    "iot/센서별 코드/GAS.md",
-    "iot/강의 노트 정리/GPIO 읽는법.md",
-    "iot/강의자료/week5.md",
-    "iot/센서별 코드/CDS(Light).md",
-    "iot/과제/task_4.md",
-    "iot/센서별 코드/PWM.md",
-    "iot/센서별 코드/DC MOTOR.md",
+    "iot/환경설정/고정 ip 설정.md",
+    "README.md",
+    "Deep Learning/7장/7.2 케라스 모델을 만드는 여러 방법.md",
+    "Deep Learning/Deep Learning.md",
+    "Deep Learning/7장/7.1 다양한 워크플로.md",
+    "Deep Learning/강의자료 정리/딥러닝 용어 정리.md",
+    "Deep Learning/5장/5.3 훈련 성능 향상하기.md",
+    "Deep Learning/7장/7.3 내장된 훈련 루프와 평가 루프 사용하기.md",
+    "Deep Learning/5장/5.2 머신러닝 모델 평가.md",
+    "Deep Learning/5장/모델 용량 규제(커페시터 규제).md",
+    "Deep Learning/5장/드롭아웃 추가(네트워크 규제).md",
+    "Deep Learning/5장/드롭아웃과 가지치기의 차이점.md",
+    "Deep Learning/5장/5.4 일반화 성능 향상하기.md",
+    "Deep Learning/4장/4.1 영화 리뷰 분류_이진분류 문제.md",
+    "Deep Learning/2장/2.5 첫 번째 예제 다시 살펴보기.md",
+    "Deep Learning/2장/2.6 요약.md",
+    "Deep Learning/2장/2.2 신경망을 위한 데이터 표현.md",
+    "Deep Learning/2장/2.3 신경망의 톱니바퀴_ 텐서 연산.md",
+    "Deep Learning/2장/2.4 신경망엔진 그레이디언트 기반 최적화.md",
+    "Deep Learning/2장/벡터 데이터.md",
+    "Deep Learning/3장/3.6 신경망의 구조_ 핵심 Keras API 이해하기.md",
+    "Deep Learning/3장/3.5 텐서플로 시작하기.md",
+    "Deep Learning/3장/3.4 딥러닝 작업 환경 설정하기.md",
+    "Deep Learning/3장/3.3 케라스와 텐서플로의 간략한 역사.md",
+    "Deep Learning/4장/4.3 주택 가격예측_회귀 문제.md",
+    "Deep Learning/4장/4.2 뉴스 기사 분류_다중 분류 문제.md",
     "attachments/스크린샷 2025-04-22 오전 9.43.33.png",
-    "iot/강의 노트 정리/통신방법 3가지.md",
     "iot/강의 노트 정리",
-    "iot/센서별 코드/BUZZER.md",
-    "iot/강의자료/Lecture 5.md",
-    "iot/센서별 코드/c파일 gcc하는법.md",
-    "iot/센서별 코드/LED.md",
-    "iot/센서별 코드/SWITCH.md",
-    "iot/센서별 코드/Variable Resistor.md",
-    "iot/강의자료/week7.md",
-    "iot/환경설정/사이트 주소.md",
-    "iot/환경설정/ipconfig의 내용.md",
-    "iot/IOT.md",
-    "iot/센서별 코드/Ultrasonic sensor.md",
-    "iot/과제/task_3.md",
-    "iot/센서별 코드/VARIABLE RESISTORddd.md",
     "attachments/스크린샷 2025-04-21 오후 9.54.15.png",
     "attachments/스크린샷 2025-04-21 오후 9.54.06.png",
-    "iot/센서별 코드/Soil Moisture sensor.md",
-    "iot/강의자료/week6.md",
-    "iot/센서별 코드/SOUND sensor.md",
     "attachments/스크린샷 2025-04-21 오후 7.54.12 1.png",
     "attachments/스크린샷 2025-04-21 오후 9.38.22.png",
     "attachments/스크린샷 2025-04-21 오후 9.38.33.png",
     "attachments/스크린샷 2025-04-21 오후 9.38.44.png",
-    "iot/과제/task_1.md",
     "attachments/스크린샷 2025-04-21 오후 7.54.12.png",
     "attachments/스크린샷 2025-04-21 오후 7.53.56.png",
     "attachments/스크린샷 2025-04-21 오후 7.53.38.png",
