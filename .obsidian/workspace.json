@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "무제.md",
+                "file": "iot/IOT.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "무제"
+              "title": "IOT"
+            }
+          },
+          {
+            "id": "a9792d5ed29cc4fe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Today's task/2025.5.13.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2025.5.13"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -168,54 +183,54 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "9da80141a0dd4d30",
+  "active": "a9792d5ed29cc4fe",
   "lastOpenFiles": [
-    "Deep Learning/딥러닝 기말고사.md",
-    "Deep Learning/딥러닝 서버.md",
-    "README.md",
-    "코드트리/Trail 3. Novice High/수도코드란?.md",
-    "코드트리/Trail 3. Novice High/Lesson3. 시간복잡도의 정의.md",
-    "코드트리/Trail 0/Trail 0. Coodetree 101.md",
-    "코드트리/Trail 3. Novice High/Lesson1. 수도코드.md",
-    "코드트리/Trail 3. Novice High/Lesson2. 점근 표기법.md",
-    "코드트리/Trail 1/Chapter 1/Lesson 1/단어 출력.md",
-    "코드트리/Trail 3. Novice High/Trail 3. Novice High.md",
-    "코드트리/Trail 3. Novice High",
-    "코드트리/Trail 0",
-    "코드트리/Trail 1/Chapter 1/Lesson 1",
-    "코드트리/Trail 1/Chapter 1",
-    "코드트리/Trail 1/소수점 맞춰 출력하기.md",
-    "코드트리/코드트리.md",
-    "코드트리/Trail 1",
-    "Today's task/2025.3.10.md",
     "Today's task/2025.5.7.md",
-    "Today's task/2025.3.8.md",
+    "Today's task/2025.5.13.md",
+    "Today's task/앞으로 나의 삶에서 필요한것.md",
+    "무제 1.md",
+    "iot/IOT.md",
+    "iot/과제/Practice Quiz 12.md",
+    "딥러닝 기말고사.md",
+    "README.md",
+    "Deep Learning/딥러닝 서버.md",
+    "Deep Learning/딥러닝 기말고사.md",
+    "코드트리/코드트리.md",
     "Today's task/매일 해야되는 리스트.md",
-    "Today's task/2025.5.5.md",
-    "Today's task/2025.5.6.md",
     "Today's task/2025.3.26.md",
     "Today's task/2025.3.25.md",
-    "Today's task/앞으로 나의 삶에서 필요한것.md",
     "Today's task/2025.3.17.md",
-    "iot/환경설정/라즈베리파이 samba접속.md",
-    "iot/강의자료/week9.md",
-    "패스트캠퍼스/올인원 패키지 C++실력완성/Chpater 7.md",
-    "패스트캠퍼스/올인원 패키지 C++실력완성/Chpater 1.md",
-    "패스트캠퍼스/올인원 패키지 C++실력완성",
-    "코드트리/C++/Trail 0",
+    "Today's task/2025.3.10.md",
+    "Today's task/2025.3.8.md",
+    "코드트리/Python/Trail 1/Chapter 1/소수점 맞춰 출력하기.md",
     "코드트리/Python/Trail 1/Chapter 1",
+    "코드트리/Python/Python.md",
     "코드트리/Python/Trail 1",
-    "통신공학/1. 서론",
-    "attachments/스크린샷 2025-02-12 오후 12.44.15.png",
-    "attachments/스크린샷 2025-02-17 오후 8.10.47.png",
-    "attachments/스크린샷 2025-02-17 오후 1.11.15.png",
-    "attachments/스크린샷 2025-04-18 오전 1.17.13.png",
-    "attachments/스크린샷 2025-02-12 오후 2.53.09.png",
-    "attachments/스크린샷 2025-03-14 오후 3.10.22.png",
-    "attachments/스크린샷 2025-02-12 오후 2.17.16.png",
-    "attachments/스크린샷 2025-03-14 오후 3.23.41.png",
-    "attachments/스크린샷 2025-02-13 오전 12.26.03.png",
-    "attachments/Pasted image 20250325180559.png",
+    "코드트리/Python",
+    "코드트리/C++/Trail 1/Chapter 1/Lesson 1/단어 출력.md",
+    "코드트리/C++/Trail 1/Chapter 1/Lesson 1",
+    "코드트리/C++/Trail 1/소수점 맞춰 출력하기.md",
+    "코드트리/C++/Trail 1/Chapter 1",
+    "코드트리/C++/Trail 0/Trail 0. Coodetree 101.md",
+    "코드트리/C++/Trail 1",
+    "코드트리/C++/Trail 0",
+    "코드트리/C++/C++.md",
+    "코드트리/C++",
+    "Today's task/2025.5.6.md",
+    "딥러닝 서버.md",
+    "attachments/nn_backpropagation 1.pdf",
+    "Deep Learning/강의자료/5. Deep Computer Vision Using Convolutional Neural Networks(CNN).md",
+    "attachments/dl_cnn.pdf",
+    "attachments/스크린샷 2025-05-03 오후 1.10.34.png",
+    "attachments/스크린샷 2025-05-03 오후 1.09.25.png",
+    "attachments/스크린샷 2025-05-03 오후 1.07.51.png",
+    "attachments/스크린샷 2025-04-22 오전 9.43.33.png",
+    "attachments/스크린샷 2025-04-21 오후 9.54.15.png",
+    "attachments/스크린샷 2025-04-21 오후 9.54.06.png",
+    "attachments/스크린샷 2025-04-21 오후 7.54.12 1.png",
+    "attachments/스크린샷 2025-04-21 오후 9.38.22.png",
+    "attachments/스크린샷 2025-04-21 오후 9.38.33.png",
+    "attachments/스크린샷 2025-04-21 오후 9.38.44.png",
     "Obsidian 사용법/캔버스 예시.canvas"
   ]
 }
