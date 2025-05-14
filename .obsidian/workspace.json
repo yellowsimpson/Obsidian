@@ -27,16 +27,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "iot/환경설정/라즈베리파이 samba접속.md",
+                "file": "Deep Learning/8장/8.1 합성곱 신경망 소개.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "라즈베리파이 samba접속"
+              "title": "8.1 합성곱 신경망 소개"
+            }
+          },
+          {
+            "id": "590cc4efccd9db27",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Deep Learning/강의자료/5. dl_cnn.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "5. dl_cnn"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -93,7 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 324.5004348754883
+    "width": 281.5
   },
   "right": {
     "id": "34f46f4b9983c0ed",
@@ -183,8 +197,19 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "a9792d5ed29cc4fe",
+  "active": "590cc4efccd9db27",
   "lastOpenFiles": [
+    "attachments/dl_cnn.pdf",
+    "Deep Learning/8장/8.1 합성곱 신경망 소개.md",
+    "Deep Learning/강의자료/5. dl_cnn.md",
+    "Deep Learning/강의자료/4. nn_backpropagation.md",
+    "Deep Learning/강의자료/3. logistic_regression_background.md",
+    "Deep Learning/딥러닝 개발 도구/케라스.md",
+    "Deep Learning/진도표.md",
+    "Deep Learning/딥러닝 서버.md",
+    "Open CV/NumPy.md",
+    "Open CV/코드 저장소.md",
+    "iot/환경설정/라즈베리파이 samba접속.md",
     "iot/IOT.md",
     "iot/강의자료/week10.md",
     "attachments/14.pdf",
@@ -199,25 +224,15 @@
     "iot/과제/Practice Quiz 12.md",
     "딥러닝 기말고사.md",
     "README.md",
-    "Deep Learning/딥러닝 서버.md",
     "Deep Learning/딥러닝 기말고사.md",
     "코드트리/코드트리.md",
     "Today's task/매일 해야되는 리스트.md",
     "Today's task/2025.3.26.md",
-    "Today's task/2025.3.25.md",
-    "Today's task/2025.3.17.md",
-    "Today's task/2025.3.10.md",
-    "Today's task/2025.3.8.md",
-    "코드트리/Python/Trail 1/Chapter 1/소수점 맞춰 출력하기.md",
     "코드트리/Python/Trail 1/Chapter 1",
-    "코드트리/Python/Python.md",
     "코드트리/Python/Trail 1",
     "코드트리/Python",
-    "코드트리/C++/Trail 1/Chapter 1/Lesson 1/단어 출력.md",
     "코드트리/C++/Trail 1/Chapter 1/Lesson 1",
-    "코드트리/C++/Trail 1/소수점 맞춰 출력하기.md",
     "코드트리/C++/Trail 1/Chapter 1",
-    "코드트리/C++/Trail 0/Trail 0. Coodetree 101.md",
     "코드트리/C++/Trail 1",
     "코드트리/C++/Trail 0",
     "attachments/스크린샷 2025-05-03 오후 1.10.34.png",
