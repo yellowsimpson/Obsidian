@@ -50,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -197,8 +197,9 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "46ebc6e5421ad83b",
+  "active": "52cd468ca66ec720",
   "lastOpenFiles": [
+    "Deep Learning/8장/8.1 합성곱 신경망 소개.md",
     "iot/환경설정/주소지 변경.md",
     "Deep Learning/9장/9.3 최신 컨브넷 아키텍쳐 패턴.md",
     "iot/환경설정/사이트 주소.md",
@@ -206,7 +207,6 @@
     "iot/환경설정/고정 ip 설정.md",
     "iot/환경설정/ipconfig의 내용.md",
     "iot/IOT.md",
-    "Deep Learning/8장/8.1 합성곱 신경망 소개.md",
     "Deep Learning/8장/8.2 소규모 데이터셋에서 밑바닥부터 컨브넷 훈련하기.md",
     "명령어 모음집/리눅스 명령어.md",
     "Today's task/2025.5.19.md",
