@@ -59,12 +59,37 @@
 	[[8.2 소규모 데이터셋에서 밑바닥부터 컨브넷 훈련하기]]
 	[[8.3 사전 훈련된 모델 활용하기]]
 	[[8.4 요약]]
+
+	9장. 컴퓨터 비전을 위한 고급 딥러닝
+    [[9.2 이미지 분할 예제]]
+    [[9.3 최신 컨브넷 아키텍처 패턴]]
+    [[9.4 컨브넷이 학습한 것 해석하기]]
+
+	10장. [시계열을 위한 딥러닝](https://github.com/rickiepark/deep-learning-with-python-2nd/blob/main/chapter10_dl-for-timeseries.ipynb)
 	
+	11장 텍스트를 위한 딥러닝
+    - 11.2, 11.3 [텍스트 데이터 준비, 단어 그룹을 표현하는 두 가지 방법: 집합과 시퀀스](https://github.com/rickiepark/deep-learning-with-python-2nd/blob/main/chapter11_part01_introduction.ipynb)
+    - 11.3.3 [단어를 시퀀스로 처리하기: 시퀀스 모델 방식](https://github.com/rickiepark/deep-learning-with-python-2nd/blob/main/chapter11_part02_sequence-models.ipynb)
+    - 11.4 [트랜스포머 아키텍처](https://github.com/rickiepark/deep-learning-with-python-2nd/blob/main/chapter11_part03_transformer.ipynb)
+    - 11.5 [텍스트 분류를 넘어: 시퀀스-투-시퀀스 학습](https://github.com/rickiepark/deep-learning-with-python-2nd/blob/main/chapter11_part04_sequence-to-sequence-learning.ipynb)
+
 	12장. 생성 모델을 위한 딥러닝
 	[[12.1 텍스트 생성]]
+    [[12.2 딥드림]]
+    [[12.3 뉴럴 스타일 트랜스퍼]]
 	[[12.4 변이형 오토인코더를 사용한 이미지 생성]]
 	[[12.5 생성적 적대 신경망 소개]]
 	[[12.6 요약]]
+	
+- 13장 [실전 문제 해결을 위한 모범 사례](https://github.com/rickiepark/deep-learning-with-python-2nd/blob/main/chapter13_best-practices-for-the-real-world.ipynb)
+- 14장 [결론](https://github.com/rickiepark/deep-learning-with-python-2nd/blob/main/chapter14_conclusions.ipynb)
+	
+
+
+
+
+
+
 
 
 [[진도표]]
@@ -78,6 +103,19 @@
 	[[Day5]]
 	[[Day6]]
 	[[Day7]]
+	[[Day8]]
+	[[Day9]]
+	[[Day10]]
+	[[Day11]]
+	[[Day12]]
+	[[Day13]]
+	[[Day14]]
+	[[Day15]]
+	[[Day16]]
+	[[Day17]]
+	[[Day18]]
+	[[Day19]]
+	
 
 
 
