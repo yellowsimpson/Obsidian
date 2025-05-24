@@ -8,17 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "89a53061b6ec0350",
+            "id": "74feb254a237ad31",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Deep Learning/8장/8.3 사전 훈련된 모델 활용하기.md",
+                "file": "코드트리/Trail 3. Novice High/Chapter2. 배열, 연결 리스트/Lesson1. 배열.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "8.3 사전 훈련된 모델 활용하기"
+              "title": "Lesson1. 배열"
             }
           },
           {
@@ -33,6 +33,20 @@
               },
               "icon": "lucide-file",
               "title": "노트 정리"
+            }
+          },
+          {
+            "id": "58f8efd437269062",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Today's task/2025.5.24.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2025.5.24"
             }
           }
         ]
@@ -182,45 +196,46 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "89a53061b6ec0350",
+  "active": "f2980b66b2f1eaed",
   "lastOpenFiles": [
-    "Deep Learning/Deep Learning.md",
-    "Deep Learning/8장/8.3 사전 훈련된 모델 활용하기.md",
-    "Deep Learning/8장/8.2 소규모 데이터셋에서 밑바닥부터 컨브넷 훈련하기.md",
+    "코드트리/Trail 2. Novice Mid",
+    "Today's task/2025.5.24.md",
+    "코드트리/Trail 3. Novice High/Chapter2. 배열, 연결 리스트/Lesson1. 배열.md",
+    "코드트리/Trail 3. Novice High/Chapter2. 배열, 연결 리스트/Lesson6. 원형 연결 리스트.md",
+    "코드트리/Trail 3. Novice High/Chapter2. 배열, 연결 리스트/Lesson5. Iterator.md",
+    "코드트리/Trail 3. Novice High/Chapter2. 배열, 연결 리스트/Lesson4. Doubly-LinkedList.md",
+    "코드트리/Trail 3. Novice High/Chapter2. 배열, 연결 리스트/Lesson3. 단일 연결 리스트.md",
+    "코드트리/Trail 3. Novice High/Chapter2. 배열, 연결 리스트/Lesson2. Dynamic Array.md",
+    "코드트리/Trail 3. Novice High/Chapter1. 시간, 공간복잡도/Lesson1. 수도코드.md",
+    "코드트리/Trail 3. Novice High/Chapter2/Lesson2. 점근 표기법 복사본 2.md",
+    "코드트리/Trail 3. Novice High/Chapter2/Lesson2. 점근 표기법 복사본.md",
+    "코드트리/Trail 3. Novice High/Chapter2/Lesson6. 공간복잡도.md",
+    "코드트리/Trail 3. Novice High/Chapter2/Lesson5. 재귀함수의 시간복잡도.md",
+    "코드트리/Trail 3. Novice High/Chapter2/Lesson2. 점근 표기법.md",
+    "코드트리/Trail 3. Novice High/Chapter2/Lesson1. 수도코드.md",
+    "코드트리/Trail 3. Novice High/Chapter1. 시간, 공간복잡도/Lesson6. 공간복잡도.md",
+    "코드트리/Trail 3. Novice High/Trail 3. Novice High.md",
+    "코드트리/코드트리.md",
+    "코드트리/Trail 3. Novice High/Chapter1. 시간, 공간복잡도/Lesson5. 재귀함수의 시간복잡도.md",
+    "자료구조/강의자료/강의자료4.md",
+    "코드트리/Trail 3. Novice High/Chapter1. 시간, 공간복잡도/Lesson4. 반복문의 시간복잡도.md",
+    "코드트리/Trail 3. Novice High/Chapter1. 시간, 공간복잡도/재귀함수.md",
+    "코드트리/Trail 3. Novice High/Chapter1. 시간, 공간복잡도/수도코드.md",
+    "코드트리/Trail 3. Novice High/Chapter10",
+    "코드트리/Trail 3. Novice High/Chapter9",
+    "코드트리/Trail 3. Novice High/Chapter8",
+    "코드트리/Trail 3. Novice High/Chapter7",
+    "코드트리/Trail 3. Novice High/Chapter6",
+    "코드트리/Trail 3. Novice High/Chapter5",
+    "코드트리/Trail 3. Novice High/Chapter4",
+    "코드트리/Trail 3. Novice High/Chapter3",
+    "코드트리/Trail 3. Novice High/Chapter2 복사본 8",
+    "코드트리/Trail 3. Novice High/Chapter2 복사본 7",
     "Deep Learning/강의자료 정리/노트 정리.md",
+    "자료구조/강의자료/강의자료7.md",
+    "자료구조/강의자료/강의자료8.md",
     "attachments/스크린샷 2025-05-24 오전 3.03.03.png",
-    "Deep Learning/강의자료 정리/딥러닝 용어 정리.md",
-    "Deep Learning/강의자료 정리/딥러닝 학습 코드 공통 사항.md",
-    "Deep Learning/강의자료 정리/딥러닝에서 자주 사용되는 함수.md",
-    "Deep Learning/강의자료 정리/Pre-training & Fine-tuning의 차이점.md",
-    "Deep Learning/강의자료 정리/Reinforcement (강화 학습).md",
-    "Deep Learning/강의자료 정리/Supervised Learning(지도 학습).md",
-    "Deep Learning/강의자료 정리/Unsupervised Learning(비지도 학습).md",
-    "Deep Learning/진도표.md",
-    "Deep Learning/강의자료/6.numpy_ basics.md",
-    "attachments/6.numpy_ basics.pdf",
-    "Deep Learning/강의자료/5. dl_cnn.md",
     "attachments/5. dl_cnn_참고자료.png",
-    "Deep Learning/강의자료/1. ML_DL Basics.md",
-    "Deep Learning/강의자료/2. ML Training Basics.md",
-    "Deep Learning/강의자료/3. logistic_regression_background.md",
-    "Deep Learning/강의자료/4. nn_backpropagation.md",
-    "Deep Learning/8장/8.1 합성곱 신경망 소개.md",
-    "README.md",
-    "Deep Learning/강의녹음/Day12.md",
-    "Deep Learning/강의녹음/Day13.md",
-    "Deep Learning/강의녹음/Day14.md",
-    "Deep Learning/강의녹음/Day15.md",
-    "Deep Learning/강의녹음/Day16.md",
-    "Deep Learning/9장",
-    "attachments/dl_cnn.pdf",
-    "attachments/14.pdf",
-    "attachments/13.pdf",
-    "attachments/12.pdf",
-    "코드트리/Python/Trail 1/Chapter 1",
-    "코드트리/Python/Trail 1",
-    "코드트리/Python",
-    "코드트리/C++/Trail 1/Chapter 1/Lesson 1",
     "attachments/스크린샷 2025-05-03 오후 1.10.34.png",
     "attachments/스크린샷 2025-05-03 오후 1.09.25.png",
     "attachments/스크린샷 2025-05-03 오후 1.07.51.png",
