@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c2d486484ff0b9e1",
+        "id": "1db4dc990e5f1cc4",
         "type": "tabs",
         "children": [
           {
-            "id": "74feb254a237ad31",
+            "id": "4e76ca9252517103",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,34 +19,6 @@
               },
               "icon": "lucide-file",
               "title": "Lesson1. 배열"
-            }
-          },
-          {
-            "id": "9f6937c76ed13179",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Deep Learning/강의자료 정리/노트 정리.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "노트 정리"
-            }
-          },
-          {
-            "id": "58f8efd437269062",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Today's task/2025.5.24.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2025.5.24"
             }
           }
         ]
@@ -196,44 +168,45 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "f2980b66b2f1eaed",
+  "active": "4e76ca9252517103",
   "lastOpenFiles": [
-    "코드트리/Trail 2. Novice Mid",
-    "Today's task/2025.5.24.md",
-    "코드트리/Trail 3. Novice High/Chapter2. 배열, 연결 리스트/Lesson1. 배열.md",
-    "코드트리/Trail 3. Novice High/Chapter2. 배열, 연결 리스트/Lesson6. 원형 연결 리스트.md",
-    "코드트리/Trail 3. Novice High/Chapter2. 배열, 연결 리스트/Lesson5. Iterator.md",
-    "코드트리/Trail 3. Novice High/Chapter2. 배열, 연결 리스트/Lesson4. Doubly-LinkedList.md",
-    "코드트리/Trail 3. Novice High/Chapter2. 배열, 연결 리스트/Lesson3. 단일 연결 리스트.md",
-    "코드트리/Trail 3. Novice High/Chapter2. 배열, 연결 리스트/Lesson2. Dynamic Array.md",
-    "코드트리/Trail 3. Novice High/Chapter1. 시간, 공간복잡도/Lesson1. 수도코드.md",
-    "코드트리/Trail 3. Novice High/Chapter2/Lesson2. 점근 표기법 복사본 2.md",
-    "코드트리/Trail 3. Novice High/Chapter2/Lesson2. 점근 표기법 복사본.md",
-    "코드트리/Trail 3. Novice High/Chapter2/Lesson6. 공간복잡도.md",
-    "코드트리/Trail 3. Novice High/Chapter2/Lesson5. 재귀함수의 시간복잡도.md",
-    "코드트리/Trail 3. Novice High/Chapter2/Lesson2. 점근 표기법.md",
-    "코드트리/Trail 3. Novice High/Chapter2/Lesson1. 수도코드.md",
-    "코드트리/Trail 3. Novice High/Chapter1. 시간, 공간복잡도/Lesson6. 공간복잡도.md",
-    "코드트리/Trail 3. Novice High/Trail 3. Novice High.md",
-    "코드트리/코드트리.md",
-    "코드트리/Trail 3. Novice High/Chapter1. 시간, 공간복잡도/Lesson5. 재귀함수의 시간복잡도.md",
-    "자료구조/강의자료/강의자료4.md",
-    "코드트리/Trail 3. Novice High/Chapter1. 시간, 공간복잡도/Lesson4. 반복문의 시간복잡도.md",
-    "코드트리/Trail 3. Novice High/Chapter1. 시간, 공간복잡도/재귀함수.md",
-    "코드트리/Trail 3. Novice High/Chapter1. 시간, 공간복잡도/수도코드.md",
-    "코드트리/Trail 3. Novice High/Chapter10",
-    "코드트리/Trail 3. Novice High/Chapter9",
-    "코드트리/Trail 3. Novice High/Chapter8",
-    "코드트리/Trail 3. Novice High/Chapter7",
-    "코드트리/Trail 3. Novice High/Chapter6",
-    "코드트리/Trail 3. Novice High/Chapter5",
-    "코드트리/Trail 3. Novice High/Chapter4",
-    "코드트리/Trail 3. Novice High/Chapter3",
-    "코드트리/Trail 3. Novice High/Chapter2 복사본 8",
-    "코드트리/Trail 3. Novice High/Chapter2 복사본 7",
-    "Deep Learning/강의자료 정리/노트 정리.md",
-    "자료구조/강의자료/강의자료7.md",
-    "자료구조/강의자료/강의자료8.md",
+    "iot/강의자료/iot 교재.md",
+    "iot/센서별 코드/iot 교재.md",
+    "iot/환경설정/iot 교재.md",
+    "iot/환경설정/무제.md",
+    "IoTSmartServerV1_0_1.pdf",
+    "무제.md",
+    "attachments/17.pdf",
+    "attachments/16.pdf",
+    "attachments/15.pdf",
+    "attachments/18.pdf",
+    "iot/강의자료/week12.md",
+    "iot/강의자료/week11.md",
+    "iot/강의자료/week13.md",
+    "18.pdf",
+    "week13.md",
+    "17.pdf",
+    "week12.md",
+    "16.pdf",
+    "15.pdf",
+    "week11.md",
+    "Deep Learning/강의녹음/Day20.md",
+    "Deep Learning/Day20.md",
+    "Day20.md",
+    "Deep Learning/8장/8.4 요약.md",
+    "Deep Learning/8장/무제.md",
+    "Today's task/2025.5.26.md",
+    "Today's task/무제.md",
+    "iot/강의 노트 정리/GPIO 읽는법.md",
+    "iot/강의 노트 정리/통신방법 3가지.md",
+    "iot/환경설정/ipconfig의 내용.md",
+    "iot/환경설정/주소지 변경.md",
+    "iot/환경설정/라즈베리파이 samba접속.md",
+    "iot/환경설정/고정 ip 설정.md",
+    "Machine Learning/강의자료/#0_강의계획_머신러닝2024.pdf",
+    "HTML/HTML.md",
+    "KAIROS/KAIROS.md",
+    "Obsidian 사용법/캔버스 예시.canvas",
     "attachments/스크린샷 2025-05-24 오전 3.03.03.png",
     "attachments/5. dl_cnn_참고자료.png",
     "attachments/스크린샷 2025-05-03 오후 1.10.34.png",
@@ -243,7 +216,6 @@
     "attachments/스크린샷 2025-04-21 오후 9.54.15.png",
     "attachments/스크린샷 2025-04-21 오후 9.54.06.png",
     "attachments/스크린샷 2025-04-21 오후 7.54.12 1.png",
-    "attachments/스크린샷 2025-04-21 오후 9.38.22.png",
-    "Obsidian 사용법/캔버스 예시.canvas"
+    "attachments/스크린샷 2025-04-21 오후 9.38.22.png"
   ]
 }
