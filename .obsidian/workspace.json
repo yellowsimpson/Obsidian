@@ -4,21 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "1db4dc990e5f1cc4",
+        "id": "feed2175ae2b2d28",
         "type": "tabs",
         "children": [
           {
-            "id": "4e76ca9252517103",
+            "id": "11d3a3507ccb37ef",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "코드트리/Trail 3. Novice High/Chapter2. 배열, 연결 리스트/Lesson1. 배열.md",
+                "file": "Deep Learning/8장/8.2 소규모 데이터셋에서 밑바닥부터 컨브넷 훈련하기.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lesson1. 배열"
+              "title": "8.2 소규모 데이터셋에서 밑바닥부터 컨브넷 훈련하기"
+            }
+          },
+          {
+            "id": "291640aaa7466d99",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Deep Learning/강의녹음/Day20.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Day20"
             }
           }
         ]
@@ -168,14 +182,26 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "4e76ca9252517103",
+  "active": "11d3a3507ccb37ef",
   "lastOpenFiles": [
+    "Deep Learning/강의녹음/Day21.md",
+    "Deep Learning/8장/8.2 소규모 데이터셋에서 밑바닥부터 컨브넷 훈련하기.md",
+    "Deep Learning/강의녹음/Day20.md",
+    "Deep Learning/8장/8.1 합성곱 신경망 소개.md",
+    "스크린샷 2025-05-28 오후 6.05.22.png",
+    "iot/강의 노트 정리/GPIO 읽는법.md",
+    "Today's task/2025.5.28.md",
+    "Today's task/무제.md",
+    "코드트리/Trail 3. Novice High/Chapter2. 배열, 연결 리스트/Lesson1. 배열.md",
+    "iot/강의 노트 정리/블루투스 제어.md",
+    "iot/강의 노트 정리/무제.md",
+    "iot/강의자료/무제.md",
+    "attachments/IoTSmartServerV1_0_1.pdf",
     "iot/강의자료/iot 교재.md",
     "iot/센서별 코드/iot 교재.md",
     "iot/환경설정/iot 교재.md",
     "iot/환경설정/무제.md",
     "IoTSmartServerV1_0_1.pdf",
-    "무제.md",
     "attachments/17.pdf",
     "attachments/16.pdf",
     "attachments/15.pdf",
@@ -190,22 +216,11 @@
     "16.pdf",
     "15.pdf",
     "week11.md",
-    "Deep Learning/강의녹음/Day20.md",
     "Deep Learning/Day20.md",
     "Day20.md",
     "Deep Learning/8장/8.4 요약.md",
     "Deep Learning/8장/무제.md",
     "Today's task/2025.5.26.md",
-    "Today's task/무제.md",
-    "iot/강의 노트 정리/GPIO 읽는법.md",
-    "iot/강의 노트 정리/통신방법 3가지.md",
-    "iot/환경설정/ipconfig의 내용.md",
-    "iot/환경설정/주소지 변경.md",
-    "iot/환경설정/라즈베리파이 samba접속.md",
-    "iot/환경설정/고정 ip 설정.md",
-    "Machine Learning/강의자료/#0_강의계획_머신러닝2024.pdf",
-    "HTML/HTML.md",
-    "KAIROS/KAIROS.md",
     "Obsidian 사용법/캔버스 예시.canvas",
     "attachments/스크린샷 2025-05-24 오전 3.03.03.png",
     "attachments/5. dl_cnn_참고자료.png",
@@ -215,7 +230,6 @@
     "attachments/스크린샷 2025-04-22 오전 9.43.33.png",
     "attachments/스크린샷 2025-04-21 오후 9.54.15.png",
     "attachments/스크린샷 2025-04-21 오후 9.54.06.png",
-    "attachments/스크린샷 2025-04-21 오후 7.54.12 1.png",
-    "attachments/스크린샷 2025-04-21 오후 9.38.22.png"
+    "attachments/스크린샷 2025-04-21 오후 7.54.12 1.png"
   ]
 }
