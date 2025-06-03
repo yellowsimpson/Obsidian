@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Today's task/2025.5.31.md",
+                "file": "iot/센서별 코드/STEP MOTOR.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025.5.31"
+              "title": "STEP MOTOR"
             }
           }
         ]
@@ -170,8 +170,8 @@
   },
   "active": "96cb291c1fe28f61",
   "lastOpenFiles": [
-    "Today's task/2025.5.30.md",
     "Today's task/2025.5.31.md",
+    "Today's task/2025.5.30.md",
     "Deep Learning/8장/8.3 사전 훈련된 모델 활용하기.md",
     "Deep Learning/8장/8.2 소규모 데이터셋에서 밑바닥부터 컨브넷 훈련하기.md",
     "Today's task/2025.5.29.md",
