@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "dac337bba2e3a3f1",
+        "id": "b8ac8e7486aff0ec",
         "type": "tabs",
         "children": [
           {
-            "id": "96cb291c1fe28f61",
+            "id": "b1d064f4bbe60b78",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "iot/센서별 코드/STEP MOTOR.md",
+                "file": "Deep Learning/8장/8.2 소규모 데이터셋에서 밑바닥부터 컨브넷 훈련하기.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "STEP MOTOR"
+              "title": "8.2 소규모 데이터셋에서 밑바닥부터 컨브넷 훈련하기"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 281.5
+    "width": 200
   },
   "right": {
     "id": "34f46f4b9983c0ed",
@@ -168,54 +168,54 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "96cb291c1fe28f61",
+  "active": "b1d064f4bbe60b78",
   "lastOpenFiles": [
+    "Deep Learning/7장/7.2 케라스 모델을 만드는 여러 방법.md",
+    "Today's task/2025.6.16.md",
+    "2025.6.16.md",
+    "무제.md",
+    "Deep Learning/7장/7.1 다양한 워크플로.md",
+    "Deep Learning/11장/11.3 단어 그룹을 표현하는 두가지 방법 집합과 시퀀스.md",
+    "Deep Learning/3장/3.5 텐서플로 시작하기.md",
+    "Deep Learning/3장/3.2 케라스란.md",
+    "Deep Learning/3장/3.3 케라스와 텐서플로의 간략한 역사.md",
+    "Deep Learning/3장/3.4 딥러닝 작업 환경 설정하기.md",
+    "Deep Learning/5장/5.3 훈련 성능 향상하기.md",
+    "Deep Learning/5장/5.2 머신러닝 모델 평가.md",
+    "Deep Learning/5장/5.4 일반화 성능 향상하기.md",
+    "Deep Learning/5장/드문 특성과 가짜 상관관계.md",
+    "Deep Learning/5장/5.5 요약.md",
+    "Deep Learning/11장/11.2 텍스트 데이터 준비.md",
+    "Deep Learning/11장/11.4 트랜스포머 아키텍처.md",
+    "attachments/Pasted image 20250611153253.png",
+    "Pasted image 20250611153253.png",
+    "Deep Learning/13장/13.2 대규모 모델 훈련하기.md",
+    "Deep Learning/13장/ㅇㅇ.md",
+    "Deep Learning/강의녹음/Day25.md",
+    "Deep Learning/강의녹음/Day24.md",
+    "Day25.md",
+    "무제 1.md",
+    "ㅇㅇ.md",
+    "Deep Learning/13장",
+    "13장",
+    "무제",
+    "Deep Learning/11장/11.1 자연어 처리 소개.md",
+    "Deep Learning/8장/8.3 사전 훈련된 모델 활용하기.md",
     "attachments/IMG_0077 2.jpg",
     "attachments/Pasted image 20250604135800.png",
-    "Deep Learning/강의녹음/Day23.md",
-    "Deep Learning/Day23.md",
-    "Day23.md",
-    "Deep Learning/강의자료/8.dl_attentionTransformers.md",
-    "Deep Learning/강의자료/7.tf_vs_torch.md",
-    "Deep Learning/7.tf_vs_torch.md",
     "attachments/8.dl_attentionTransformers.pdf",
     "attachments/7.tf_vs_torch.pdf",
-    "8.dl_attentionTransformers.md",
     "8.dl_attentionTransformers.pdf",
-    "무제.md",
-    "7.tf_vs_torch.md",
     "7.tf_vs_torch.pdf",
     "IMG_0077 2.jpg",
     "Pasted image 20250604135800.png",
-    "Deep Learning/11장/11.6 요약.md",
-    "Deep Learning/11장/11.5 텍스트 분류를 넘어_시퀀스-투-시퀀스 학습.md",
-    "Deep Learning/11장/11.4 트랜스포머 아키텍처.md",
-    "Deep Learning/11장/11.3 단어 그룹을 표현하는 두가지 방법_집합과 시퀀스.md",
-    "Deep Learning/11장/11.2 텍스트 데이터 준비.md",
-    "Deep Learning/11장/11.1 자연어 처리 소개 복사본 4.md",
-    "Deep Learning/11장/11.1 자연어 처리 소개 복사본 5.md",
-    "Deep Learning/11장/11.1 자연어 처리 소개 복사본 3.md",
-    "Deep Learning/11장/11.1 자연어 처리 소개 복사본 2.md",
-    "Deep Learning/11장/11.1 자연어 처리 소개 복사본.md",
-    "Deep Learning/11장/11.1 자연어 처리 소개.md",
-    "Deep Learning/11장/11.1.md",
-    "Deep Learning/11장/ㅇㅇㅇㅇ.md",
-    "Deep Learning/ㅇㅇㅇㅇ.md",
-    "ㅇㅇㅇㅇ.md",
     "Deep Learning/11장",
     "11장",
     "11자ㅇ",
-    "11wkd",
-    "무제",
-    "Deep Learning/강의녹음/Day22.md",
     "attachments/스크린샷 2025-05-29 오전 10.05.13.png",
     "attachments/스크린샷 2025-05-28 오후 6.05.22.png",
     "attachments/스크린샷 2025-05-29 오전 10.04.11.png",
     "attachments/스크린샷 2025-05-29 오전 10.03.39.png",
-    "attachments/스크린샷 2025-05-29 오전 10.02.54.png",
-    "attachments/스크린샷 2025-05-29 오전 10.04.55.png",
-    "attachments/스크린샷 2025-05-29 오전 10.03.13.png",
-    "attachments/IoTSmartServerV1_0_1.pdf",
     "Obsidian 사용법/캔버스 예시.canvas"
   ]
 }
