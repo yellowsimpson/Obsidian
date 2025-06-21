@@ -13,15 +13,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Deep Learning/8장/8.2 소규모 데이터셋에서 밑바닥부터 컨브넷 훈련하기.md",
+                "file": "Today's task/2025.6.16.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "8.2 소규모 데이터셋에서 밑바닥부터 컨브넷 훈련하기"
+              "title": "2025.6.16"
+            }
+          },
+          {
+            "id": "75d35737db58cf4e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "인생조언/공부 방법.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "공부 방법"
+            }
+          },
+          {
+            "id": "daf5f6a8daef9da3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "인생조언/공부 방법.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "공부 방법"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -78,7 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 374.5004348754883
   },
   "right": {
     "id": "34f46f4b9983c0ed",
@@ -168,12 +197,15 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "b1d064f4bbe60b78",
+  "active": "daf5f6a8daef9da3",
   "lastOpenFiles": [
-    "Deep Learning/7장/7.2 케라스 모델을 만드는 여러 방법.md",
+    "인생조언/인생에서 중요한것.md",
+    "인생조언/공부 방법.md",
+    "Today's task/2025.6.21.md",
     "Today's task/2025.6.16.md",
+    "Deep Learning/8장/8.2 소규모 데이터셋에서 밑바닥부터 컨브넷 훈련하기.md",
+    "Deep Learning/7장/7.2 케라스 모델을 만드는 여러 방법.md",
     "2025.6.16.md",
-    "무제.md",
     "Deep Learning/7장/7.1 다양한 워크플로.md",
     "Deep Learning/11장/11.3 단어 그룹을 표현하는 두가지 방법 집합과 시퀀스.md",
     "Deep Learning/3장/3.5 텐서플로 시작하기.md",
@@ -195,12 +227,9 @@
     "Deep Learning/강의녹음/Day24.md",
     "Day25.md",
     "무제 1.md",
-    "ㅇㅇ.md",
     "Deep Learning/13장",
     "13장",
     "무제",
-    "Deep Learning/11장/11.1 자연어 처리 소개.md",
-    "Deep Learning/8장/8.3 사전 훈련된 모델 활용하기.md",
     "attachments/IMG_0077 2.jpg",
     "attachments/Pasted image 20250604135800.png",
     "attachments/8.dl_attentionTransformers.pdf",
