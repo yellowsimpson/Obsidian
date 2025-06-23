@@ -1,5 +1,5 @@
 # 수도코드
-[[수도코드]]
+[[코드트리/Trail 3. Novice High/Chapter1. 시간, 공간복잡도/수도코드]]
 
 Novice Low, Novice Mid를 거치면서 여러분들은 C++이나 Python, 또는 Java에 익숙해졌을 것 입니다.
 

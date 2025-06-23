@@ -8,49 +8,35 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b1d064f4bbe60b78",
+            "id": "41af5b864ace8c21",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Today's task/2025.6.16.md",
+                "file": "Today's task/2025.6.21.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025.6.16"
+              "title": "2025.6.21"
             }
           },
           {
-            "id": "75d35737db58cf4e",
+            "id": "2ff803e9428da9f4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "인생조언/공부 방법.md",
+                "file": "Today's task/2025.6.23.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "공부 방법"
-            }
-          },
-          {
-            "id": "daf5f6a8daef9da3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "인생조언/공부 방법.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "공부 방법"
+              "title": "2025.6.23"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -107,7 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 374.5004348754883
+    "width": 238.50043487548828
   },
   "right": {
     "id": "34f46f4b9983c0ed",
@@ -197,50 +183,50 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "daf5f6a8daef9da3",
+  "active": "2ff803e9428da9f4",
   "lastOpenFiles": [
-    "인생조언/인생에서 중요한것.md",
-    "인생조언/공부 방법.md",
     "Today's task/2025.6.21.md",
+    "Today's task/2025.6.23.md",
+    "인생조언/부모님께 배울점.md",
+    "Today's task/2025.5.30.md",
+    "인생조언/공부 방법.md",
+    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 1. 기본 출력/단어 출력.md",
+    "Today's task/2025.5.26.md",
     "Today's task/2025.6.16.md",
-    "Deep Learning/8장/8.2 소규모 데이터셋에서 밑바닥부터 컨브넷 훈련하기.md",
-    "Deep Learning/7장/7.2 케라스 모델을 만드는 여러 방법.md",
-    "2025.6.16.md",
-    "Deep Learning/7장/7.1 다양한 워크플로.md",
-    "Deep Learning/11장/11.3 단어 그룹을 표현하는 두가지 방법 집합과 시퀀스.md",
-    "Deep Learning/3장/3.5 텐서플로 시작하기.md",
-    "Deep Learning/3장/3.2 케라스란.md",
-    "Deep Learning/3장/3.3 케라스와 텐서플로의 간략한 역사.md",
-    "Deep Learning/3장/3.4 딥러닝 작업 환경 설정하기.md",
-    "Deep Learning/5장/5.3 훈련 성능 향상하기.md",
-    "Deep Learning/5장/5.2 머신러닝 모델 평가.md",
-    "Deep Learning/5장/5.4 일반화 성능 향상하기.md",
-    "Deep Learning/5장/드문 특성과 가짜 상관관계.md",
-    "Deep Learning/5장/5.5 요약.md",
-    "Deep Learning/11장/11.2 텍스트 데이터 준비.md",
-    "Deep Learning/11장/11.4 트랜스포머 아키텍처.md",
+    "Today's task/2025.5.19.md",
+    "Today's task/2025.5.5.md",
+    "Today's task/2025.5.7.md",
+    "Today's task/매일 해야되는 리스트.md",
+    "Today's task/2025.3.8.md",
+    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 1. 기본 출력/공백을 사이에 두고 출력.md",
+    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 1. 기본 출력/따옴표 출력.md",
+    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 1. 기본 출력/문장 출력 복사본 12.md",
+    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 1. 기본 출력/문장 출력 복사본 11.md",
+    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 1. 기본 출력/문장 출력 복사본 10.md",
+    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 1. 기본 출력/문장 출력 복사본 9.md",
+    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 1. 기본 출력/문장 출력 복사본 8.md",
+    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 1. 기본 출력/문장 출력 복사본 7.md",
+    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 1. 기본 출력/문장 출력 복사본 6.md",
+    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 1. 기본 출력/문장 출력 복사본 5.md",
+    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 1. 기본 출력/문장 출력 복사본 4.md",
+    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 1. 기본 출력/문장 출력 복사본 3.md",
+    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 1. 기본 출력/문장 출력 복사본 2.md",
+    "코드트리/Trail 2. Novice Mid/Chapter10",
+    "코드트리/Trail 2. Novice Mid/Chapter9",
+    "코드트리/Trail 2. Novice Mid/Chapter8",
+    "코드트리/Trail 2. Novice Mid/Chapter7",
+    "코드트리/Trail 2. Novice Mid/Chapter6",
+    "코드트리/Trail 2. Novice Mid/Chapter5",
+    "코드트리/Trail 2. Novice Mid/Chapter4",
+    "코드트리/Trail 2. Novice Mid/Chapter3",
+    "코드트리/Trail 2. Novice Mid/Chapter2. 배열, 연결 리스트",
+    "코드트리/Trail 2. Novice Mid/Chapter1. 함수",
     "attachments/Pasted image 20250611153253.png",
     "Pasted image 20250611153253.png",
-    "Deep Learning/13장/13.2 대규모 모델 훈련하기.md",
-    "Deep Learning/13장/ㅇㅇ.md",
-    "Deep Learning/강의녹음/Day25.md",
-    "Deep Learning/강의녹음/Day24.md",
-    "Day25.md",
-    "무제 1.md",
-    "Deep Learning/13장",
-    "13장",
-    "무제",
     "attachments/IMG_0077 2.jpg",
     "attachments/Pasted image 20250604135800.png",
-    "attachments/8.dl_attentionTransformers.pdf",
-    "attachments/7.tf_vs_torch.pdf",
-    "8.dl_attentionTransformers.pdf",
-    "7.tf_vs_torch.pdf",
     "IMG_0077 2.jpg",
     "Pasted image 20250604135800.png",
-    "Deep Learning/11장",
-    "11장",
-    "11자ㅇ",
     "attachments/스크린샷 2025-05-29 오전 10.05.13.png",
     "attachments/스크린샷 2025-05-28 오후 6.05.22.png",
     "attachments/스크린샷 2025-05-29 오전 10.04.11.png",
