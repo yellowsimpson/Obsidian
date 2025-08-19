@@ -11,30 +11,17 @@
             "id": "d59d093c6e68878d",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/강의 교안/Ch02-02. 로봇 모션 (MoveJ, MoveL, Spline).pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Ch02-02. 로봇 모션 (MoveJ, MoveL, Spline)"
-            }
-          },
-          {
-            "id": "3a1085dbe335f5e7",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part1 산업,협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/협동로봇 개발을 위한 다관절 로봇 티칭과 구현.md",
+                "file": "Today's task/To do list.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "협동로봇 개발을 위한 다관절 로봇 티칭과 구현"
+              "title": "To do list"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -91,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 206.50390243530273
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "34f46f4b9983c0ed",
@@ -107,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Deep Learning/12장/12.1 텍스트 생성.md",
+                "file": "Today's task/To do list.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +105,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "12.1 텍스트 생성 의 백링크"
+              "title": "To do list 의 백링크"
             }
           },
           {
@@ -181,11 +169,34 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "3a1085dbe335f5e7",
+  "active": "d59d093c6e68878d",
   "lastOpenFiles": [
+    "Today's task/Tasks 사용법.md",
+    "Today's task/Tasks.md",
+    "Today's task/To do list.md",
+    "코드트리/Trail 2. Novice Mid/Chapter1. 함수/Lesson1. 값을 반환하지 않는 함수.md",
+    "대학원.md",
+    "연습장.md",
+    "README.md",
+    "컴퓨터 꿀팁 모음.md",
+    "책 읽는 방법.md",
+    "코드트리/코드트리.md",
     "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/강의 교안/Ch02-02. 로봇 모션 (MoveJ, MoveL, Spline).pdf",
-    "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/강의 교안/Ch02-01. 로봇 좌표계의 개념.pdf",
+    "iot/강의 노트 정리/블루투스 제어.md",
+    "진로설정과 취업/진로 취업 특강.md",
+    "코드트리/Trail 2. Novice Mid/Chapter1. 함수/Lesson1. 함수.md",
+    "코드트리/Trail 2. Novice Mid/Chapter6/Lesson1. 한자리 수의 완전 탐색.md",
+    "코드트리/Trail 2. Novice Mid/Chapter6/Lesson1. 함수의 정의.md",
+    "무제 5.md",
+    "코드트리/Trail 2. Novice Mid/Chapter6/무제.md",
+    "무제 4.md",
+    "무제 3.md",
+    "무제 2.md",
+    "무제 1.md",
+    "코드트리/Trail 2. Novice Mid/Chapter1. 함수/Lesson6. 완전탐색1.md",
+    "iot/강의자료/week13.md",
     "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part1 산업,협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/협동로봇 개발을 위한 다관절 로봇 티칭과 구현.md",
+    "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/강의 교안/Ch02-01. 로봇 좌표계의 개념.pdf",
     "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/강의 교안/Ch01-05. 강의 목표 및 학습 로드맵 소개.pdf",
     "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/강의 교안/Ch03-06. 이미지 객체 탐색 Template Matching 실습.pdf",
     "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/강의 교안/Ch01-04. 로봇과 비전 기술의 융합 사례.pdf",
@@ -197,7 +208,6 @@
     "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/강의 교안/Ch01-01. 로봇의 정의와 주요 특징.pdf",
     "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/강의 교안/Ch03-05. 이미지 객체 탐색 Template Matching.pdf",
     "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/강의 교안/Ch03-02. 이미지 전처리의 종류와 기능.pdf",
-    "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/강의 교안/Ch02-06. 역기구학(Inverse Kinematics).pdf",
     "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/실습 파일/Ch03-04, Ch03-06/resource/template2.jpg",
     "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/실습 파일/Ch03-04, Ch03-06/resource/template.jpg",
     "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/실습 파일/Ch03-04, Ch03-06/resource/plane.jpg",
@@ -205,29 +215,7 @@
     "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 2. Coppeliasim 시뮬레이터를 활용한 실시간 로봇 인식 및 제어/실습 파일/Ch03-02. 가상 카메라 데이터 기반 이미지 처리/cylinder_template.jpg",
     "attachments/스크린샷 2025-08-04 오전 9.05.05.png",
     "attachments/스크린샷 2025-08-04 오전 9.05.13.png",
-    "월별 목표/목표 리스트.md",
-    "책 읽는 방법.md",
-    "연습장.md",
     "attachments/스크린샷 2025-07-02 오전 10.18.19.png",
-    "대학원.md",
-    "Today's task/앞으로 나의 삶에서 필요한것.md",
-    "Today's task/To do list.md",
-    "Today's task/매일 해야되는 리스트.md",
-    "Today's task/2025.5.30.md",
-    "Today's task/2025.6.21.md",
-    "인생조언/부모님께 배울점.md",
-    "인생조언/공부 방법.md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 1. 기본 출력/단어 출력.md",
-    "Today's task/2025.5.26.md",
-    "Today's task/2025.6.16.md",
-    "Today's task/2025.5.19.md",
-    "Today's task/2025.5.5.md",
-    "Today's task/2025.5.7.md",
-    "Today's task/2025.3.8.md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 1. 기본 출력/공백을 사이에 두고 출력.md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 1. 기본 출력/따옴표 출력.md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 1. 기본 출력/문장 출력 복사본 12.md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 1. 기본 출력/문장 출력 복사본 11.md",
     "attachments/Pasted image 20250611153253.png",
     "Obsidian 사용법/캔버스 예시.canvas"
   ]
