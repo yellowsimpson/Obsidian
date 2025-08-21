@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Today's task/To do list.md",
+                "file": "코드트리/Trail 1. Novice Low/Chapter 2 입출력/Lesson1. 정수 입력.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "To do list"
+              "title": "Lesson1. 정수 입력"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 245.50260543823242
   },
   "right": {
     "id": "34f46f4b9983c0ed",
@@ -95,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Today's task/To do list.md",
+                "file": "코드트리/Trail 1. Novice Low/Chapter 2 입출력/Lesson1. 정수 입력.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "To do list 의 백링크"
+              "title": "Lesson1. 정수 입력 의 백링크"
             }
           },
           {
@@ -161,6 +160,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:새 베이스 생성하기": false,
       "switcher:빠른 전환기 열기": false,
       "graph:그래프 뷰 열기": false,
       "canvas:새 캔버스 만들기": false,
@@ -171,7 +171,29 @@
   },
   "active": "d59d093c6e68878d",
   "lastOpenFiles": [
+    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/강의 노트.md",
+    "스크린샷 2025-08-21 오전 11.15.10.png",
+    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅페이스 1차 오픈 자료/Transformer-XL 논문.pdf",
+    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅페이스 1차 오픈 자료/XLNet 논문.pdf",
+    "패스트캠퍼스/Midjourney와 Stable diffusion으로 만드는 감쪽같은 AI 가상 모델/진도표.md",
+    "패스트캠퍼스/Midjourney와 Stable diffusion으로 만드는 감쪽같은 AI 가상 모델/사용법.md",
+    "스크린샷 2025-08-21 오전 10.30.19.png",
+    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅페이스 1차 오픈 자료/ALBERT 논문.pdf",
+    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅페이스 1차 오픈 자료/트랜스포머 논문.pdf",
+    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅페이스 1차 오픈 자료/BERT 논문.pdf",
+    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅 페이스 트랜스포머 2차 오픈 자료/논문/BART.pdf",
+    "코드트리/Trail 1. Novice Low/Chapter 2 입출력/Lesson1. 정수 입력.md",
+    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/무제.md",
+    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅-페이스-트랜스포머-1-2차-오픈-자료/허깅-페이스-트랜스포머-2차-오픈-자료.zip",
+    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅-페이스-트랜스포머-1-2차-오픈-자료/허깅페이스-1차-오픈-자료.zip",
+    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅-페이스-3-4차-오픈-자료/허깅-페이스-강의-3차-오픈-자료 (1).zip",
+    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅-페이스-3-4차-오픈-자료/허깅-페이스-4차-오픈-자료 (1).zip",
     "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 8. 변수값 동시에 복사.md",
+    "Today's task/To do list.md",
+    "Today's task/Tasks 사용법.md",
+    "Today's task/Tasks.md",
+    "Today's task/앞으로 나의 삶에서 필요한것.md",
+    "Today's task/목표 리스트.md",
     "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 8. 변수값 동시에 변경.md",
     "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 7. 두 변수 값을 교환.md",
     "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 7. 두 변수 값 변경.md",
@@ -186,28 +208,7 @@
     "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 2. 변수와 자료형.md",
     "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 1. 기본 출력.md",
     "코드트리/Trail 1. Novice Low/Chapter 1 출력/문장 출력 복사본 11.md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/문장 출력 복사본 10.md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/문장 출력 복사본 9.md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/문장 출력 복사본 8.md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/문장 출력 복사본 3.md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/문장 출력 복사본 5.md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/문장 출력 복사본 4.md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/문장 출력 복사본 6.md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/문장 출력 복사본 7.md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/문장 출력 복사본 2.md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/문장 출력 복사본 12.md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/단어 출력.md",
-    "코드트리/Trail 1. Novice Low/Chapter 2 입출력",
-    "코드트리/Trail 1. Novice Low/무제",
-    "무제",
-    "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/강의 교안/Ch02-02. 로봇 모션 (MoveJ, MoveL, Spline).pdf",
-    "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/강의 교안/Ch02-01. 로봇 좌표계의 개념.pdf",
-    "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/강의 교안/Ch01-05. 강의 목표 및 학습 로드맵 소개.pdf",
-    "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/강의 교안/Ch03-06. 이미지 객체 탐색 Template Matching 실습.pdf",
-    "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/강의 교안/Ch01-04. 로봇과 비전 기술의 융합 사례.pdf",
-    "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/강의 교안/Ch01-03. 컴퓨터 비전의 개념과 산업적 활용.pdf",
     "attachments/스크린샷 2025-06-26 오전 8.36.28.png",
-    "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/강의 교안/Ch01-02. 로봇의 종류 및 역할.pdf",
     "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/실습 파일/Ch03-04, Ch03-06/resource/template2.jpg",
     "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/실습 파일/Ch03-04, Ch03-06/resource/template.jpg",
     "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/실습 파일/Ch03-04, Ch03-06/resource/plane.jpg",
@@ -215,8 +216,6 @@
     "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 2. Coppeliasim 시뮬레이터를 활용한 실시간 로봇 인식 및 제어/실습 파일/Ch03-02. 가상 카메라 데이터 기반 이미지 처리/cylinder_template.jpg",
     "attachments/스크린샷 2025-08-04 오전 9.05.05.png",
     "attachments/스크린샷 2025-08-04 오전 9.05.13.png",
-    "attachments/스크린샷 2025-07-02 오전 10.18.19.png",
-    "attachments/Pasted image 20250611153253.png",
     "Obsidian 사용법/캔버스 예시.canvas"
   ]
 }
