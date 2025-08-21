@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "코드트리/Trail 1. Novice Low/Chapter 2 입출력/Lesson1. 정수 입력.md",
+                "file": "코드트리/Trail 1. Novice Low/Chapter 2 입출력/Lesson3. 공백을 사이에 두고 입력.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lesson1. 정수 입력"
+              "title": "Lesson3. 공백을 사이에 두고 입력"
             }
           }
         ]
@@ -171,24 +171,26 @@
   },
   "active": "d59d093c6e68878d",
   "lastOpenFiles": [
-    "코드트리/Trail 1. Novice Low/소수점 맞춰 출력하기.md",
     "코드트리/Trail 1. Novice Low/Chapter 2 입출력/Lesson1. 정수 입력.md",
+    "코드트리/Trail 1. Novice Low/Chapter 2 입출력/Lesson3. 공백을 사이에 두고 입력.md",
+    "코드트리/Trail 1. Novice Low/Chapter 2 입출력/Lesson2. 실수 입력.md",
+    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅 페이스 트랜스포머 2차 오픈 자료/코드/xlm_roberta.ipynb",
+    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅 페이스 트랜스포머 2차 오픈 자료/코드/mT5.ipynb",
+    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅 페이스 트랜스포머 2차 오픈 자료/코드/pegasus.ipynb",
+    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅 페이스 트랜스포머 2차 오픈 자료/코드/Electra.ipynb",
+    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅 페이스 트랜스포머 2차 오픈 자료/코드/XLM_ProphetNet.ipynb",
+    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅 페이스 트랜스포머 2차 오픈 자료/코드/LongFormer.ipynb",
+    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅 페이스 트랜스포머 2차 오픈 자료/코드/Git-base - image_captioning_multiModal.ipynb",
+    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅 페이스 트랜스포머 2차 오픈 자료/코드/FlauBERT.ipynb",
+    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅 페이스 트랜스포머 2차 오픈 자료/코드/DPR.ipynb",
+    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅 페이스 트랜스포머 2차 오픈 자료/코드/BART_Finetuning.ipynb",
+    "코드트리/Trail 1. Novice Low/소수점 맞춰 출력하기.md",
     "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/강의 노트.md",
     "스크린샷 2025-08-21 오전 11.15.10.png",
-    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅페이스 1차 오픈 자료/Transformer-XL 논문.pdf",
-    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅페이스 1차 오픈 자료/XLNet 논문.pdf",
     "패스트캠퍼스/Midjourney와 Stable diffusion으로 만드는 감쪽같은 AI 가상 모델/진도표.md",
     "패스트캠퍼스/Midjourney와 Stable diffusion으로 만드는 감쪽같은 AI 가상 모델/사용법.md",
     "스크린샷 2025-08-21 오전 10.30.19.png",
-    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅페이스 1차 오픈 자료/ALBERT 논문.pdf",
-    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅페이스 1차 오픈 자료/트랜스포머 논문.pdf",
-    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅페이스 1차 오픈 자료/BERT 논문.pdf",
-    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅 페이스 트랜스포머 2차 오픈 자료/논문/BART.pdf",
     "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/무제.md",
-    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅-페이스-트랜스포머-1-2차-오픈-자료/허깅-페이스-트랜스포머-2차-오픈-자료.zip",
-    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅-페이스-트랜스포머-1-2차-오픈-자료/허깅페이스-1차-오픈-자료.zip",
-    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅-페이스-3-4차-오픈-자료/허깅-페이스-강의-3차-오픈-자료 (1).zip",
-    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅-페이스-3-4차-오픈-자료/허깅-페이스-4차-오픈-자료 (1).zip",
     "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 8. 변수값 동시에 복사.md",
     "Today's task/To do list.md",
     "Today's task/Tasks 사용법.md",
@@ -207,8 +209,6 @@
     "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 3. 출력 형식.md",
     "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 2. 변수와 자료형dd.md",
     "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 2. 변수와 자료형.md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 1. 기본 출력.md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/문장 출력 복사본 11.md",
     "attachments/스크린샷 2025-06-26 오전 8.36.28.png",
     "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/실습 파일/Ch03-04, Ch03-06/resource/template2.jpg",
     "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/실습 파일/Ch03-04, Ch03-06/resource/template.jpg",
