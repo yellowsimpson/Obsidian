@@ -13,15 +13,58 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "코드트리/Trail 1. Novice Low/Chapter 2 입출력/Lesson3. 공백을 사이에 두고 입력.md",
+                "file": "Today's task/To do list.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lesson3. 공백을 사이에 두고 입력"
+              "title": "To do list"
+            }
+          },
+          {
+            "id": "fd52a957a8312f98",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "패스트캠퍼스/강의자료 리스트/데이터사이언스(162).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "데이터사이언스(162)"
+            }
+          },
+          {
+            "id": "f9a278a4985fbcb8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Today's task/Tasks 사용법.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Tasks 사용법"
+            }
+          },
+          {
+            "id": "8021cdf0c06092b7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "코드트리/Trail 0. Codetree 101/Chapter1 기본/Lesson3.  기본 자료형.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Lesson3.  기본 자료형"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -169,46 +212,46 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "d59d093c6e68878d",
+  "active": "f9a278a4985fbcb8",
   "lastOpenFiles": [
-    "코드트리/Trail 1. Novice Low/Chapter 2 입출력/Lesson1. 정수 입력.md",
-    "코드트리/Trail 1. Novice Low/Chapter 2 입출력/Lesson3. 공백을 사이에 두고 입력.md",
-    "코드트리/Trail 1. Novice Low/Chapter 2 입출력/Lesson2. 실수 입력.md",
+    "Today's task/To do list.md",
+    "Today's task/앞으로 나의 삶에서 필요한것.md",
+    "패스트캠퍼스/패스트 캠퍼스 강의자료.md",
+    "코드트리/Trail 0. Codetree 101/Chapter1 기본/Lesson3.  기본 자료형.md",
+    "attachments/스크린샷 2025-08-21 오전 10.30.19.png",
+    "attachments/스크린샷 2025-08-21 오전 11.15.10.png",
+    "iot/강의 노트 정리/GPIO 읽는법.md",
+    "iot/강의 노트 정리/통신방법 3가지.md",
+    "iot/강의 노트 정리/블루투스 제어.md",
+    "패스트캠퍼스/강의자료 리스트/데이터사이언스(162).md",
+    "코드트리/Trail 0. Codetree 101/Chapter1 기본/Lesson1.  출력 입문.md",
+    "코드트리/Trail 0. Codetree 101/Chapter1 기본/Lesson2.  변수.md",
+    "코드트리/Trail 0. Codetree 101/Chapter1 기본",
+    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 1. 기본 출력.md",
+    "Today's task/목표 리스트.md",
+    "Today's task/Tasks 사용법.md",
+    "Today's task/Tasks.md",
+    "패스트캠퍼스/강의자료 리스트/프로그래밍(157).md",
+    "패스트캠퍼스/강의자료 리스트/생성형 AI(81).md",
+    "패스트캠퍼스/강의자료 리스트/디자인(139).md",
+    "부동산/부동산_금융(186).md",
+    "패스트캠퍼스/강의자료 리스트/외국어(41).md",
+    "패스트캠퍼스/강의자료 리스트/산업별 직무(142).md",
+    "패스트캠퍼스/강의자료 리스트/무제.md",
+    "패스트캠퍼스/강의자료 리스트/마케팅(72).md",
+    "패스트캠퍼스/강의자료 리스트/비즈니스 스킬(123).md",
+    "경영/리더쉽(175).md",
+    "트렌드/트랜드_인사이트(142).md",
+    "패스트캠퍼스/강의자료 리스트/교양(44).md",
+    "패스트캠퍼스/강의자료 리스트",
+    "부동산",
+    "경영",
+    "트렌드",
+    "패스트캠퍼스/강의자료",
     "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅 페이스 트랜스포머 2차 오픈 자료/코드/xlm_roberta.ipynb",
     "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅 페이스 트랜스포머 2차 오픈 자료/코드/mT5.ipynb",
     "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅 페이스 트랜스포머 2차 오픈 자료/코드/pegasus.ipynb",
     "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅 페이스 트랜스포머 2차 오픈 자료/코드/Electra.ipynb",
-    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅 페이스 트랜스포머 2차 오픈 자료/코드/XLM_ProphetNet.ipynb",
-    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅 페이스 트랜스포머 2차 오픈 자료/코드/LongFormer.ipynb",
-    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅 페이스 트랜스포머 2차 오픈 자료/코드/Git-base - image_captioning_multiModal.ipynb",
-    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅 페이스 트랜스포머 2차 오픈 자료/코드/FlauBERT.ipynb",
-    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅 페이스 트랜스포머 2차 오픈 자료/코드/DPR.ipynb",
-    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅 페이스 트랜스포머 2차 오픈 자료/코드/BART_Finetuning.ipynb",
-    "코드트리/Trail 1. Novice Low/소수점 맞춰 출력하기.md",
-    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/강의 노트.md",
-    "스크린샷 2025-08-21 오전 11.15.10.png",
-    "패스트캠퍼스/Midjourney와 Stable diffusion으로 만드는 감쪽같은 AI 가상 모델/진도표.md",
-    "패스트캠퍼스/Midjourney와 Stable diffusion으로 만드는 감쪽같은 AI 가상 모델/사용법.md",
-    "스크린샷 2025-08-21 오전 10.30.19.png",
-    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/무제.md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 8. 변수값 동시에 복사.md",
-    "Today's task/To do list.md",
-    "Today's task/Tasks 사용법.md",
-    "Today's task/Tasks.md",
-    "Today's task/앞으로 나의 삶에서 필요한것.md",
-    "Today's task/목표 리스트.md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 8. 변수값 동시에 변경.md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 7. 두 변수 값을 교환.md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 7. 두 변수 값 변경.md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 6. 다른 변수로부터 변수 값 변경.md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 6..md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 5. 변수 값 변경.md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 5..md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 4. 소수점 맞춰 출력.md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 4..md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 3. 출력 형식.md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 2. 변수와 자료형dd.md",
-    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 2. 변수와 자료형.md",
     "attachments/스크린샷 2025-06-26 오전 8.36.28.png",
     "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/실습 파일/Ch03-04, Ch03-06/resource/template2.jpg",
     "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/실습 파일/Ch03-04, Ch03-06/resource/template.jpg",
