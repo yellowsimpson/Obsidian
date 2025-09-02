@@ -1,0 +1,14 @@
+
+material UrbanTile/MineCart_Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture MineCart_Albedo.png
+        }
+      }
+    }
+  }

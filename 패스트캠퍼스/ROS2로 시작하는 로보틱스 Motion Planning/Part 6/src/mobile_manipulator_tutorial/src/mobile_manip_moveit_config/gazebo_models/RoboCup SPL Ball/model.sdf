@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+    <model name="RoboCup SPL Ball">
+        <static>false</static>
+        <link name="ball">
+            <inertial>
+                <mass>0.0056</mass>
+                <!-- inertia based on solid sphere 2/5 mr^2 -->
+                <inertia>
+                    <ixx>2.37e-6</ixx>
+                    <iyy>2.37e-6</iyy>
+                    <izz>2.37e-6</izz>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyz>0</iyz>
+                </inertia>
+            </inertial>
+            <collision name="collision">
+                <geometry>
+                    <sphere>
+                        <radius>0.0325</radius>
+                    </sphere>
+                </geometry>
+            </collision>
+            <visual name="visual">
+                <geometry>
+                    <sphere>
+                        <radius>0.0325</radius>
+                    </sphere>
+                </geometry>
+                <material>
+                  <ambient>0.87 0.26 0.07 1</ambient>
+                  <diffuse>0.87 0.26 0.07 1</diffuse>
+                  <specular>0.87 0.26 0.07 1</specular>
+                </material>
+            </visual>
+        </link>
+    </model>
+</sdf>

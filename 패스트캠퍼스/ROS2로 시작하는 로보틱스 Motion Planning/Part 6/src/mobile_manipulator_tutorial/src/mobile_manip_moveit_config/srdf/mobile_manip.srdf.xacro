@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="ur_robotiq">
+
+  <xacro:arg name="prefix" default="" />
+  
+  <xacro:include filename="$(find mobile_manip_moveit_config)/srdf/mobile_manip_macro.srdf.xacro"/>
+  <xacro:ur_robotiq_srdf prefix="$(arg prefix)"/>
+  
+</robot>

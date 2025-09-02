@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro"
+       name="mobile_manip" >
+
+  <!-- MiR250 base -->
+  <xacro:include filename="$(find mobile_manip_moveit_config)/urdf/include/mobile_manip_macro.urdf.xacro" />
+
+  <xacro:arg name="tf_prefix" default="" />
+
+  <!-- prefix can not start with a slash like a global namespace! results in TF errors -->
+  <xacro:property name="ns" value="$(arg tf_prefix)" />
+  <xacro:if value="${ns == ''}">
+    <xacro:property name="prefix" value="" />
+  </xacro:if>
+  <xacro:unless value="${ns == ''}">
+    <xacro:property name="prefix" value="${ns}/" />
+  </xacro:unless>
+
+  <xacro:mobile_manip prefix="${prefix}" ns="${ns}"/>
+</robot>
