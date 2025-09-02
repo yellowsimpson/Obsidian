@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find navigation_stack)/urdf/include/common_properties.urdf.xacro" />
+  <xacro:include filename="$(find navigation_stack)/urdf/include/imu.gazebo.urdf.xacro" />
+  <xacro:include filename="$(find navigation_stack)/urdf/include/sick_s300.urdf.xacro" />
+  <xacro:include filename="$(find navigation_stack)/urdf/include/wheel.urdf.xacro" />
+  <xacro:include filename="$(find navigation_stack)/urdf/include/caster.urdf.xacro" />
+  <xacro:include filename="$(find realsense2_description)/urdf/_d435i.urdf.xacro"/>
+  <!-- <xacro:include filename="$(find robotiq_description)/urdf/robotiq_85_gripper.urdf.xacro"/> -->
+  <xacro:include filename="$(find navigation_stack)/urdf/include/mir_250.gazebo" />
+
+  <xacro:property name="deg_to_rad" value="0.017453293" />
+
+  <!-- The inertia for the MiR platform is intentionally chosen to be smaller than
+       the bounding box and also shifted a bit to the back, because most of the mass
+       is in the lower center back (because of the batteries). -->
+  <xacro:property name="mir_base_inertial_x" value="-0.05" />
+  <xacro:property name="mir_base_inertial_y" value="0.0" />
+  <xacro:property name="mir_base_inertial_z" value="0.15" />
+  <xacro:property name="mir_base_inertial_x_length" value="0.50" />
+  <xacro:property name="mir_base_inertial_y_length" value="0.30" />
+  <xacro:property name="mir_base_inertial_z_length" value="0.20" />
+
+  <xacro:property name="mir_250_act_wheel_radius" value="0.100" />
+  <xacro:property name="mir_250_act_wheel_width" value="0.038" />
+  <xacro:property name="mir_250_act_wheel_mass" value="1.0" />
+  <xacro:property name="mir_250_act_wheel_dx" value="-0.004485" />
+  <xacro:property name="mir_250_act_wheel_dy" value="0.2015" />
+
+  <xacro:property name="mir_250_caster_wheel_radius" value="0.0625" />
+  <xacro:property name="mir_250_caster_wheel_width" value="0.032" />
+  <xacro:property name="mir_250_caster_wheel_mass" value="1.0" />
+  <xacro:property name="mir_250_caster_wheel_dx" value="-0.0382" />
+  <xacro:property name="mir_250_caster_wheel_dy" value="0" />
+  <xacro:property name="mir_250_caster_wheel_dz" value="-0.094" />
+  <xacro:property name="mir_250_front_caster_wheel_base_dx" value="0.3037" />
+  <xacro:property name="mir_250_back_caster_wheel_base_dx" value="-0.296" />
+  <xacro:property name="mir_250_caster_wheel_base_dy" value="0.188" />
+  <xacro:property name="mir_250_caster_wheel_base_dz" value="${mir_250_caster_wheel_radius - mir_250_caster_wheel_dz}" />
+
+  <!-- MiR 100 complete mass 78.2kg (8.2kg battery) -->
+  <!-- - 2x2kg sick laser = 4kg-->
+  <!-- - 4x caster wheels + rotation link: 4x 1.31 kg -->
+  <!-- - 2x act wheels: 2kg -->
+  <!--xacro:property name="mir_100_base_mass" value="66.96" /-->
+  <xacro:property name="mir_250_base_mass" value="97.0" /> 
+
+  <xacro:property name="imu_stdev" value="0.00017" />
+
+  <xacro:macro name="mir_250" params="prefix ns">
+    <link name="${prefix}base_footprint" />
+
+    <joint name="${prefix}base_joint" type="fixed">
+      <parent link="${prefix}base_footprint" />
+      <child link="${prefix}base_link" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint>
+
+    <link name="${prefix}base_link">
+      <xacro:box_inertial mass="${mir_250_base_mass}" x="${mir_base_inertial_x_length}" y="${mir_base_inertial_y_length}" z="${mir_base_inertial_z_length}">
+        <origin xyz="${mir_base_inertial_x + mir_250_act_wheel_dx} ${mir_base_inertial_y} ${mir_base_inertial_z}" rpy="0 0 0" />
+      </xacro:box_inertial>
+      <visual>
+        <origin xyz="${mir_250_act_wheel_dx} 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="file://$(find navigation_stack)/meshes/visual/mir_250_base.stl" />
+        </geometry>
+        <!--xacro:insert_block name="material_white" /-->
+        <xacro:insert_block name="material_light_grey" />
+      </visual>
+      <collision>
+        <origin xyz="${mir_250_act_wheel_dx} 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="file://$(find navigation_stack)/meshes/collision/mir_250_base.stl" />
+        </geometry>
+      </collision>
+    </link>
+    <gazebo reference="${prefix}base_link">
+      <!--material>Gazebo/White</material-->
+      <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <!-- IMU -->
+    <joint name="${prefix}base_link_to_imu_joint" type="fixed">
+      <parent link="${prefix}base_link" />
+      <child link="${prefix}imu_link" />
+      <origin xyz="0.0 0.0 0.25" rpy="0 0 0" />  <!-- same as real MiR -->
+    </joint>
+
+    <link name="${prefix}imu_link" />
+
+    <!-- <xacro:imu_gazebo link="${prefix}imu_link" imu_topic="${prefix}imu_data" update_rate="50.0" stdev="${imu_stdev}" /> -->
+
+    <!-- Create an alias for imu_link. This is necessary because the real MiR's
+         TF has imu_link, but the imu_data topic is published in the imu_frame
+         frame. -->
+    <joint name="${prefix}imu_link_to_imu_frame_joint" type="fixed">
+      <parent link="${prefix}imu_link" />
+      <child link="${prefix}imu_frame" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint>
+
+    <link name="${prefix}imu_frame" />
+
+    <!-- Laser scanners -->
+    <!-- virtual link for merged laserscan-->
+    <joint name="${prefix}base_link_to_virtual_laser_joint" type="fixed">
+      <parent link="${prefix}base_link" />
+      <child link="${prefix}scan_link" />
+      <origin xyz="0.0 0.0 0.33" rpy="0.0 0.0 0" />
+    </joint>
+    <!-- <link name="${prefix}scan_link">
+    </link> -->
+
+    <xacro:sick_s300 prefix="${prefix}" link="scan_link" topic="" />
+
+    
+    <!-- wheels -->
+    <xacro:actuated_wheel prefix="${prefix}" locationprefix="left" locationright="-1"/>
+    <xacro:actuated_wheel prefix="${prefix}" locationprefix="right" locationright="1"/>
+    <xacro:caster_wheel prefix="${prefix}" ns="${ns}" locationprefix="fl" locationright="-1" wheel_base_dx="${mir_250_front_caster_wheel_base_dx}"/>
+    <xacro:caster_wheel prefix="${prefix}" ns="${ns}" locationprefix="fr" locationright="1" wheel_base_dx="${mir_250_front_caster_wheel_base_dx}"/>
+    <xacro:caster_wheel prefix="${prefix}" ns="${ns}" locationprefix="bl" locationright="-1" wheel_base_dx="${mir_250_back_caster_wheel_base_dx}"/>
+    <xacro:caster_wheel prefix="${prefix}" ns="${ns}" locationprefix="br" locationright="1" wheel_base_dx="${mir_250_back_caster_wheel_base_dx}"/>
+
+    <joint name="${prefix}base_link_surface_joint" type="fixed">
+      <origin xyz="${mir_250_act_wheel_dx} 0 0.352" rpy="0 0 0" />
+      <parent link="${prefix}base_link" />
+      <child link="${prefix}surface" />
+      <axis xyz="0 0 1" />
+    </joint>
+
+    <link name="${prefix}surface"/>
+
+
+    <joint name="${prefix}power_unit_joint" type="fixed">
+      <parent link="${prefix}base_link" />
+      <child link="${prefix}power_unit" />
+      <origin xyz="0 0 0.2" rpy="0 0 0" />
+    </joint>
+
+    <link name="${prefix}power_unit">
+      <xacro:box_inertial mass="63.7" x="${mir_base_inertial_x_length}" y="${mir_base_inertial_y_length}" z="${mir_base_inertial_z_length}"> 
+        <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+      </xacro:box_inertial>
+      <visual>
+        <origin xyz="0 0 0.245" rpy="0 0 0" />
+        <geometry>
+          <box size="0.73 0.56 0.2"/>
+        </geometry>
+        <xacro:insert_block name="material_light_grey" />
+      </visual>
+      <collision>
+        <origin xyz="0 0 0.245" rpy="0 0 0" />
+        <geometry>
+          <box size="0.73 0.56 0.2"/>
+       </geometry>
+      </collision>
+    </link>
+
+
+
+  </xacro:macro>
+</robot>

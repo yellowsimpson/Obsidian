@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="brick_box_3x1x3">
+    <static>true</static>
+    <link name="chassis">
+      <pose>0 0 1.5 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>3.0 0.5 3.0</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://brick_box_3x1x3/meshes/simple_box.dae</uri>
+            <scale>3.0 0.5 3.0</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>1.0 1.0 1.0</diffuse>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Wood</name>
+          </script>
+          <!-- PBR for Ignition, material scripts for gazebo classic-->
+          <pbr>
+            <metal>
+              <albedo_map>model://brick_box_3x1x3/materials/textures/simple_box.png</albedo_map>
+            </metal>
+          </pbr>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

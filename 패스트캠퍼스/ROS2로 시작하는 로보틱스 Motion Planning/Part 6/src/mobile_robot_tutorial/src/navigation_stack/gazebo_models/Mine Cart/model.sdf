@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="minecart">
+    <link name="chassis">
+      <inertial>
+        <pose>0 0 0.30876 0 0 0</pose>
+        <inertia>
+          <ixx>23.420589124566413</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>14.998925221866416</iyy>
+          <iyz>0</iyz>
+          <izz>24.489875628833333</izz>
+        </inertia>
+        <mass>317.0</mass>
+      </inertial>
+
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>meshes/minecart.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="polySurface1278_visual">
+        <geometry>
+          <mesh>
+            <uri>meshes/minecart.dae</uri>
+            <submesh>
+              <name>polySurface1278</name>
+              <center>false</center>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>1.0 1.0 1.0</diffuse>
+          <specular>1.0 1.0 1.0</specular>
+          <pbr>
+            <metal>
+              <albedo_map>materials/textures/MineCart_Albedo.png</albedo_map>
+              <metalness_map>materials/textures/MineCart_Metalness.png</metalness_map>
+              <roughness_map>materials/textures/MineCart_Roughness.png</roughness_map>
+            </metal>
+          </pbr>
+          <!-- fallback to script if no PBR support-->
+          <script>
+            <uri>materials/scripts/</uri>
+            <uri>materials/textures/</uri>
+            <name>UrbanTile/MineCart_Diffuse</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <link name="front_left_wheel">
+      <pose>0.314885 0.25311 0.0683 0 1.5708  0</pose>
+      <inertial>
+        <inertia>
+          <ixx>0.023453</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.023453</iyy>
+          <iyz>0</iyz>
+          <izz>0.040499</izz>
+        </inertia>
+        <mass>10.0</mass>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <cylinder>
+            <radius>0.09</radius>
+            <length>0.062</length>
+          </cylinder>
+        </geometry>
+      </collision>
+    </link>
+    <link name="rear_left_wheel">
+      <pose>0.314885 -0.25311 0.0683 0 1.5708  0</pose>
+      <inertial>
+        <inertia>
+          <ixx>0.023453</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.023453</iyy>
+          <iyz>0</iyz>
+          <izz>0.040499</izz>
+        </inertia>
+        <mass>10.0</mass>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <cylinder>
+            <radius>0.09</radius>
+            <length>0.062</length>
+          </cylinder>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="front_right_wheel">
+      <pose>-0.314885 0.25311 0.0683 0 1.5708 0</pose>
+      <inertial>
+        <inertia>
+          <ixx>0.023453</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.023453</iyy>
+          <iyz>0</iyz>
+          <izz>0.040499</izz>
+        </inertia>
+        <mass>10.0</mass>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <cylinder>
+            <radius>0.09</radius>
+            <length>0.062</length>
+          </cylinder>
+        </geometry>
+      </collision>
+    </link>
+    <link name="rear_right_wheel">
+      <pose>-0.314885 -0.25311 0.0683 0 1.5708  0</pose>
+      <inertial>
+        <inertia>
+          <ixx>0.023453</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.023453</iyy>
+          <iyz>0</iyz>
+          <izz>0.040499</izz>
+        </inertia>
+        <mass>10.0</mass>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <cylinder>
+            <radius>0.09</radius>
+            <length>0.062</length>
+          </cylinder>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="front_left_joint" type="revolute">
+      <child>front_left_wheel</child>
+      <parent>chassis</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1.79769e+308</lower>
+          <upper>1.79769e+308</upper>
+        </limit>
+      </axis>
+    </joint>
+    <joint name="rear_left_joint" type="revolute">
+      <child>rear_left_wheel</child>
+      <parent>chassis</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1.79769e+308</lower>
+          <upper>1.79769e+308</upper>
+        </limit>
+      </axis>
+    </joint>
+
+    <joint name="front_right_joint" type="revolute">
+      <child>front_right_wheel</child>
+      <parent>chassis</parent>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-1.79769e+308</lower>
+          <upper>1.79769e+308</upper>
+        </limit>
+      </axis>
+    </joint>
+
+    <joint name="rear_right_joint" type="revolute">
+      <child>rear_right_wheel</child>
+      <parent>chassis</parent>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-1.79769e+308</lower>
+          <upper>1.79769e+308</upper>
+        </limit>
+      </axis>
+    </joint>
+  </model>
+</sdf>
