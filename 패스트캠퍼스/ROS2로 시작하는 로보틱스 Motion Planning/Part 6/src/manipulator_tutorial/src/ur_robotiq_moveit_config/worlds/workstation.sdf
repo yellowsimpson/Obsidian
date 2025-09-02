@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="workstation">
+    <scene>
+      <shadows>0</shadows>
+    </scene>
+
+    <gui>
+      <camera name="user_camera">
+        <pose>0.75 -0.75 1.4 0 0.29 2.21</pose>
+      </camera>
+    </gui>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <model name="table1">
+      <static>true</static>
+      <include>
+        <uri>model://table</uri>
+      </include>
+      <pose>-0.8 0.5 0 0 0 1.5708</pose>
+    </model>
+
+    <model name="table2">
+      <static>true</static>
+      <include>
+        <uri>model://table</uri>
+      </include>
+      <pose>0 0.5 0 0 0 1.5708</pose>
+    </model>
+
+    <model name="table3">
+      <static>true</static>
+      <include>
+        <uri>model://table</uri>
+      </include>
+      <pose>0.8 0.5 0 0 0 1.5708</pose>
+    </model>
+
+    <model name="cube">
+      <pose>0 0.5 1.0 0 0 0</pose> <!-- Positioned on table2 -->
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.0005</ixx>
+            <iyy>0.0005</iyy>
+            <izz>0.0005</izz>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyz>0.0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.03 0.03 0.03</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.03 0.03 0.03</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.8 0.2 0.2 1</ambient>
+            <diffuse>0.8 0.2 0.2 1</diffuse>
+            <specular>0.8 0.2 0.2 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="ground_plane">
+      <static>true</static>
+      <include>
+        <uri>model://ground_plane</uri>
+      </include>
+    </model>
+  </world>
+</sdf>
