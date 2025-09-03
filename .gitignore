@@ -1,2 +1,5 @@
 *.DS_Store
 *.zip
+*ros2_robotiq_gripper
+*Universal_Robots_ROS2_Description
+
