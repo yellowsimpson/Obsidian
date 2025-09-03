@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9e87936a74a460e1",
+        "id": "d130d32a5a9a9511",
         "type": "tabs",
         "children": [
           {
-            "id": "b47ee4187481f0c1",
+            "id": "8cc1f2646f0905fd",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -22,7 +22,17 @@
             }
           },
           {
-            "id": "c02ea711ab428d1e",
+            "id": "e9568fcbaf5212ae",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "그래프 뷰"
+            }
+          },
+          {
+            "id": "bfdb01f65e11d642",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -35,7 +45,8 @@
               "title": "To do list"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -92,7 +103,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 251.5
+    "width": 245.50260543823242
   },
   "right": {
     "id": "34f46f4b9983c0ed",
@@ -183,57 +194,54 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "b47ee4187481f0c1",
+  "active": "bfdb01f65e11d642",
   "lastOpenFiles": [
-    "코드트리/Trail 0. Codetree 101/Chapter4 단순 반복문1/Lesson2. For.md",
     "코드트리/Trail 0. Codetree 101/Chapter4 단순 반복문1/Lesson3. While.md",
-    "Today's task/To do list.md",
-    "코드트리/Trail 0. Codetree 101/Chapter4 단순 반복문1/Lesson1. 반복문 입문.md",
-    "Today's task/Tasks.md",
-    "컴퓨터 꿀팁 모음.md",
-    "README.md",
-    "Today's task/월별 목표 리스트.md",
-    "Today's task/Tasks 사용법.md",
-    "인생조언/인생 조언.md",
-    "인생조언/인생에서 중요한것.md",
-    "인생조언/부모님께 배울점.md",
-    "인생조언/공부 방법.md",
-    "책 읽는 방법.md",
-    "연습장.md",
-    "리더쉽(175).md",
-    "부동산_금융(186).md",
     "2025-08-28.md",
-    "코드트리/Trail 0. Codetree 101/Chapter10 2차원 배열/무제.md",
-    "코드트리/Trail 0. Codetree 101/Chapter9 다중 반복문/무제.md",
-    "코드트리/Trail 0. Codetree 101/Chapter8 단순 반복문2/무제.md",
-    "코드트리/Trail 0. Codetree 101/Chapter7 문자열/무제.md",
-    "코드트리/Trail 0. Codetree 101/Chapter6 1차원 배열/무제.md",
-    "코드트리/Trail 0. Codetree 101/Chapter5 조건문2/무제.md",
-    "코드트리/Trail 0. Codetree 101/Chapter3 조건문1/무제.md",
-    "코드트리/Trail 0. Codetree 101/Chapter2 입출력/무제.md",
-    "코드트리/Trail 0. Codetree 101/Chapter10 2차원 배열",
-    "코드트리/Trail 0. Codetree 101/Chapter9 다중 반복문",
-    "코드트리/Trail 0. Codetree 101/Chapter8 단순 반복문2",
-    "코드트리/Trail 0. Codetree 101/Chapter7 문자열",
-    "코드트리/Trail 0. Codetree 101/Chapter6 1차원 배열",
-    "코드트리/Trail 0. Codetree 101/Chapter5 조건문2",
-    "코드트리/Trail 0. Codetree 101/Chapter3 조건문1",
-    "코드트리/Trail 0. Codetree 101/Chapter2 복사본 9",
-    "코드트리/Trail 0. Codetree 101/Chapter2 복사본 8",
-    "코드트리/Trail 0. Codetree 101/Chapter2 복사본 7",
-    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/Part 6/src/mobile_robot_tutorial/src/navigation_stack/gazebo_models/workcell/materials/textures/Yellow.png",
-    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/Part 6/src/mobile_robot_tutorial/src/navigation_stack/gazebo_models/workcell/materials/textures/WorkCell_Render.png",
-    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/Part 6/src/mobile_robot_tutorial/src/navigation_stack/gazebo_models/workcell/materials/textures/Wall_Corrugated.png",
-    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/Part 6/src/mobile_robot_tutorial/src/navigation_stack/gazebo_models/workcell/materials/textures/Wall_Concrete.png",
-    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/Part 6/src/mobile_robot_tutorial/src/navigation_stack/gazebo_models/workcell/materials/textures/Stairs.png",
-    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/Part 6/src/mobile_robot_tutorial/src/navigation_stack/gazebo_models/workcell/materials/textures/Shelves.png",
-    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/Part 6/src/mobile_robot_tutorial/src/navigation_stack/gazebo_models/workcell/materials/textures/RubberMat.png",
-    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/Part 6/src/mobile_robot_tutorial/src/navigation_stack/gazebo_models/workcell/materials/textures/RollupDoor.png",
-    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/Part 6/src/mobile_robot_tutorial/src/navigation_stack/gazebo_models/workcell/materials/textures/Plywood.png",
-    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/Part 6/src/mobile_robot_tutorial/src/navigation_stack/gazebo_models/workcell/materials/textures/Pillar.png",
-    "무제 2.canvas",
-    "무제 1.canvas",
-    "무제.canvas",
+    "코드트리/Trail 0. Codetree 101/Chapter1 기본/Lesson2.  변수.md",
+    "코드트리/Trail 0. Codetree 101/Chapter1 기본/Lesson3.  기본 자료형.md",
+    "코드트리/Trail 0. Codetree 101/Chapter1 기본/Lesson4. 연산자.md",
+    "패스트캠퍼스/자율주행을 위한 컴퓨터비전과 라이다 & 센서퓨전까지/Part1/Chapter1. Face Recognition/1-1. FaceDetection.pdf",
+    "패스트캠퍼스/자율주행을 위한 컴퓨터비전과 라이다 & 센서퓨전까지/Part1/Chapter1. Face Recognition/Chapter1 강의 노트.md",
+    "대학원/대학원.md",
+    "대학원",
+    "패스트캠퍼스/패스트 캠퍼스 강의자료.md",
+    "패스트캠퍼스/강의자료 리스트/생성형 AI(81).md",
+    "패스트캠퍼스/강의자료 리스트/디자인(139).md",
+    "패스트캠퍼스/강의자료 리스트/프로그래밍(157).md",
+    "패스트캠퍼스/자율주행을 위한 컴퓨터비전과 라이다 & 센서퓨전까지/Part1/Chapter1. Face Recognition/1-2. FaceLandmarkDetection.pdf",
+    "패스트캠퍼스/자율주행을 위한 컴퓨터비전과 라이다 & 센서퓨전까지/Part1/Chapter1. Face Recognition/1-3. FaceRecognition.pdf",
+    "패스트캠퍼스/자율주행을 위한 컴퓨터비전과 라이다 & 센서퓨전까지/자율주행을 위한 컴퓨터비전과 라이다 & 센서퓨전까지.md",
+    "패스트캠퍼스/자율주행을 위한 컴퓨터비전과 라이다 & 센서퓨전까지/Part1",
+    "패스트캠퍼스/자율주행을 위한 컴퓨터비전과 라이다 & 센서퓨전까지/Part1/Chapter1. Face Recognition/1. FaceRecognition.pdf",
+    "패스트캠퍼스/자율주행을 위한 컴퓨터비전과 라이다 & 센서퓨전까지/Part1/Chapter1. Face Recognition",
+    "패스트캠퍼스/자율주행을 위한 컴퓨터비전과 라이다 & 센서퓨전까지",
+    "무제 1.base",
+    "무제.base",
+    "Today's task/To do list.md",
+    "Today's task/Tasks 사용법.md",
+    "패스트캠퍼스/강의자료 리스트/데이터사이언스(162).md",
+    "Today's task/앞으로 나의 삶에서 필요한것.md",
+    "attachments/스크린샷 2025-08-21 오전 10.30.19.png",
+    "attachments/스크린샷 2025-08-21 오전 11.15.10.png",
+    "iot/강의 노트 정리/GPIO 읽는법.md",
+    "iot/강의 노트 정리/통신방법 3가지.md",
+    "iot/강의 노트 정리/블루투스 제어.md",
+    "코드트리/Trail 0. Codetree 101/Chapter1 기본/Lesson1.  출력 입문.md",
+    "코드트리/Trail 1. Novice Low/Chapter 1 출력/Lesson 1. 기본 출력.md",
+    "Today's task/목표 리스트.md",
+    "Today's task/Tasks.md",
+    "부동산/부동산_금융(186).md",
+    "패스트캠퍼스/강의자료 리스트/외국어(41).md",
+    "패스트캠퍼스/강의자료 리스트/산업별 직무(142).md",
+    "attachments/스크린샷 2025-06-26 오전 8.36.28.png",
+    "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/실습 파일/Ch03-04, Ch03-06/resource/template2.jpg",
+    "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/실습 파일/Ch03-04, Ch03-06/resource/template.jpg",
+    "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 1. 산업-협동 로봇 개발을 위한 로봇 공학과 컴퓨터 비전/실습 파일/Ch03-04, Ch03-06/resource/plane.jpg",
+    "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 2. Coppeliasim 시뮬레이터를 활용한 실시간 로봇 인식 및 제어/실습 파일/Ch03-02. 가상 카메라 데이터 기반 이미지 처리/vision_sensor_image.jpg",
+    "패스트캠퍼스/협동로봇 개발을 위한 다관절 로봇 티칭과 구현/Part 2. Coppeliasim 시뮬레이터를 활용한 실시간 로봇 인식 및 제어/실습 파일/Ch03-02. 가상 카메라 데이터 기반 이미지 처리/cylinder_template.jpg",
+    "attachments/스크린샷 2025-08-04 오전 9.05.05.png",
+    "attachments/스크린샷 2025-08-04 오전 9.05.13.png",
     "Obsidian 사용법/캔버스 예시.canvas"
   ]
 }
