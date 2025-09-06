@@ -1,4 +1,4 @@
-### Python
+# Python
 While문이란?
 	-> While문은 주어진 조건이  참인 동안 반복적으로 코드를 실행하는 반복문입니다.
 
@@ -17,7 +17,7 @@ while num < x:
     num *= 2
 ```
 
-### C
+# C
 While문 기본 구조
 ```python
 while (조건 검사) {

@@ -1,4 +1,4 @@
-### Python
+# Python
 range()함수란?
 	-> range()함수는 지정된 범위의 수를 생성하는 함수입니다.
 
@@ -27,7 +27,7 @@ range(start, stop, step)
 	  #시작값, 끝값,  증가값
 ```
 
-### C
+# C
 for문 기본 예제
 ```c
 #include <stdio.h>
@@ -51,7 +51,7 @@ for 문 정리
 - for(i = 0; i < stop; i++)
 - for(i = start; i < stop; i++)
 - for(i = start; i < stop; i += stop) 
-### C++
+# C++
 for문 기본 구조
 ```c++
 for (초기화; 조건; 증감) {
