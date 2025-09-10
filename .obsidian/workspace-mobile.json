@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "3e208d5c89ac0084",
+        "id": "47bd7f59df09771f",
         "type": "tabs",
         "children": [
           {
-            "id": "9892ad3b2e269d81",
+            "id": "5ee67dbe060b0ad0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Deep Learning/강의자료/1. ML_DL Basics.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "1. ML_DL Basics"
+              "title": "New tab"
             }
           }
         ]
@@ -145,6 +141,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -153,8 +150,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9892ad3b2e269d81",
+  "active": "5ee67dbe060b0ad0",
   "lastOpenFiles": [
+    "Deep Learning/강의자료/1. ML_DL Basics.md",
     "iot/센서별 코드/BUZZER.md",
     "iot/과제/Practice Quiz 1.md",
     "통신공학/1. 서론/디지털 통신 시스템 블록도.md",
