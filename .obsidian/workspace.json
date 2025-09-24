@@ -13,30 +13,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "코드트리/Trail 0. Codetree 101/Chapter8 단순 반복문2/Lesson4. 무한 루프.md",
+                "file": "코드트리/Trail 0. Codetree 101/Chapter9 다중 반복문/Lesson3. 2중 반복문 응용.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lesson4. 무한 루프"
+              "title": "Lesson3. 2중 반복문 응용"
             }
           },
           {
-            "id": "be44452a62f30a03",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "컴퓨터 구조/Chapter2/2.3 피연산자.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2.3 피연산자"
-            }
-          },
-          {
-            "id": "fbb5e181b0d53a89",
+            "id": "e04f5c861a8f2d32",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -47,6 +33,20 @@
               },
               "icon": "lucide-file",
               "title": "To do list"
+            }
+          },
+          {
+            "id": "fe8319db7fe49a2d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Today's task/월별 목표 리스트.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "월별 목표 리스트"
             }
           }
         ],
@@ -198,17 +198,24 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "be44452a62f30a03",
+  "active": "e04f5c861a8f2d32",
   "lastOpenFiles": [
-    "컴퓨터 구조/Chapter2/2.2 하드웨어 연산.md",
-    "컴퓨터 구조/Chapter2/2.3 피연산자.md",
-    "컴퓨터 구조/Chapter2/2.1 서론.md",
-    "스크린샷 2025-09-22 오후 5.44.16.png",
+    "코드트리/Trail 0. Codetree 101/Chapter9 다중 반복문/Lesson3. 2중 반복문 응용.md",
+    "Today's task/월별 목표 리스트.md",
+    "코드트리/Trail 0. Codetree 101/Chapter9 다중 반복문/Lesson2. 반복 횟수의 제어.md",
     "Today's task/To do list.md",
-    "스크린샷 2025-09-22 오후 5.29.30.png",
+    "Today's task/Tasks 사용법.md",
+    "Today's task/Tasks.md",
+    "attachments/스크린샷 2025-09-22 오후 5.29.30.png",
+    "코드트리/Trail 3. Novice High/Chapter1. 시간, 공간복잡도/Lesson1. 수도코드.md",
+    "코드트리/Trail 0. Codetree 101/Chapter9 다중 반복문/Lesson1. 2중 반복문 입문.md",
+    "코드트리/Trail 0. Codetree 101/Chapter8 단순 반복문2/Lesson4. 무한 루프.md",
+    "컴퓨터 구조/Chapter2/2.3 피연산자.md",
+    "컴퓨터 구조/Chapter2/2.2 하드웨어 연산.md",
+    "컴퓨터 구조/Chapter2/2.1 서론.md",
+    "attachments/스크린샷 2025-09-22 오후 5.44.16.png",
     "attachments/스크린샷 2025-09-22 오후 4.59.48.png",
     "attachments/스크린샷 2025-09-22 오후 4.58.50.png",
-    "코드트리/Trail 0. Codetree 101/Chapter8 단순 반복문2/Lesson4. 무한 루프.md",
     "컴퓨터 구조/컴퓨터 구조.md",
     "컴퓨터 구조/Chapter1/1.10 오류 및 함정.md",
     "컴퓨터 구조/Chapter1/1.9 Intel Core i7 벤치마킹.md",
@@ -224,14 +231,8 @@
     "코드트리/Trail 0. Codetree 101/Chapter1 기본/Lesson1.  출력 입문.md",
     "코드트리/Trail 0. Codetree 101/Chapter2 입출력/Lesson2. 입력 입문.md",
     "코드트리/Trail 0. Codetree 101/Chapter8 단순 반복문2/Lesson3. 반복문에서의 변수 사용.md",
-    "README.md",
-    "컴퓨터 꿀팁 모음.md",
-    "주식 투자.md",
-    "코드트리/Trail 6. Intermediate High/무제/무제.md",
-    "코드트리/Trail 5. Intermediate Mid/무제/무제.md",
     "코드트리/Trail 6. Intermediate High/무제",
     "코드트리/Trail 6. Intermediate High",
-    "코드트리/Trail 4. Intermediate Low/ddd/무제.md",
     "코드트리/Trail 5. Intermediate Mid/무제",
     "코드트리/Trail 5. Intermediate Mid",
     "코드트리/Trail 4. Intermediate Low/ddd",
