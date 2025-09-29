@@ -8,48 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "bfdb01f65e11d642",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "코드트리/Trail 0. Codetree 101/Chapter9 다중 반복문/Lesson5. 2중 반복문에서 변수 사용.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Lesson5. 2중 반복문에서 변수 사용"
-            }
-          },
-          {
             "id": "fe8319db7fe49a2d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Today's task/To do list.md",
-                "mode": "source",
-                "source": false
+                "file": "XYZ 로봇틱스 심화/강의자료/두산 로봇교육 강의자료_0925.pdf"
               },
-              "icon": "lucide-file",
-              "title": "To do list"
+              "icon": "lucide-file-text",
+              "title": "두산 로봇교육 강의자료_0925"
             }
           },
           {
-            "id": "88073e813e3828ac",
+            "id": "225ff5f33ce1a462",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Today's task/월별 목표 리스트.md",
-                "mode": "source",
-                "source": false
+                "file": "XYZ 로봇틱스 심화/강의자료/두산 로봇교육 강의자료_0925.pdf"
               },
-              "icon": "lucide-file",
-              "title": "월별 목표 리스트"
+              "icon": "lucide-file-text",
+              "title": "두산 로봇교육 강의자료_0925"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -197,14 +180,27 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "bfdb01f65e11d642",
+  "active": "225ff5f33ce1a462",
   "lastOpenFiles": [
-    "attachments/스크린샷 2025-09-26 오전 12.21.23.png",
+    "XYZ 로봇틱스 심화/강의자료/산업용_로봇_협동작업_안전교육.pdf",
+    "XYZ 로봇틱스 심화/강의자료/협동-1_1차시_자료.pdf",
+    "XYZ 로봇틱스 심화/Day1.md",
+    "XYZ 로봇틱스 심화/강의자료/두산 로봇교육 강의자료_0925.pdf",
+    "코드트리/Trail 0. Codetree 101/Chapter10 2차원 배열/Lesson2. 2차원 배열 응용.md",
+    "XYZ 로봇틱스 심화/로보틱스 심화.md",
+    "XYZ 로봇틱스 심화/강의자료",
+    "README.md",
+    "XYZ 로봇틱스 심화",
+    "Today's task/To do list.md",
+    "Today's task/월별 목표 리스트.md",
+    "코드트리/Trail 0. Codetree 101/Chapter10 2차원 배열/Lesson1. 2차원 배열 입문.md",
+    "코드트리/Trail 0. Codetree 101/Chapter10 2차원 배열/Lesson3. 2차원 배열에서의 변수 사용.md",
+    "코드트리/Trail 0. Codetree 101/Chapter10 2차원 배열/Lesson4. 2차원 배열 패턴 출력.md",
+    "코드트리/Trail 0. Codetree 101/Chapter9 다중 반복문/Lesson6. 2중 반복문의 continue와 break.md",
     "코드트리/Trail 0. Codetree 101/Chapter9 다중 반복문/Lesson5. 2중 반복문에서 변수 사용.md",
+    "attachments/스크린샷 2025-09-26 오전 12.21.23.png",
     "코드트리/Trail 0. Codetree 101/Chapter9 다중 반복문/Lesson4. 반복문을 반복하기.md",
     "코드트리/Trail 0. Codetree 101/Chapter9 다중 반복문/Lesson3. 2중 반복문 응용.md",
-    "Today's task/월별 목표 리스트.md",
-    "Today's task/To do list.md",
     "Today's task/Tasks 사용법.md",
     "Today's task/Tasks.md",
     "코드트리/Trail 0. Codetree 101/Chapter9 다중 반복문/Lesson2. 반복 횟수의 제어.md",
@@ -221,24 +217,11 @@
     "컴퓨터 구조/컴퓨터 구조.md",
     "컴퓨터 구조/Chapter1/1.10 오류 및 함정.md",
     "컴퓨터 구조/Chapter1/1.9 Intel Core i7 벤치마킹.md",
-    "컴퓨터 구조/Chapter1/1.6 성능.md",
-    "컴퓨터 구조/Chapter1/용어 정리.md",
     "컴퓨터 구조/Chapter2",
-    "코드트리/Trail 0. Codetree 101/Chapter4 단순 반복문1/Lesson3. While.md",
-    "코드트리/Trail 0. Codetree 101/Chapter6 1차원 배열/Lesson2. 1차원 배열 응용.md",
-    "코드트리/Trail 0. Codetree 101/Chapter6 1차원 배열/Lesson1. 1차원 배열 입문.md",
-    "코드트리/Trail 0. Codetree 101/Chapter2 입출력/Lesson4. 입출력 연습.md",
-    "코드트리/Trail 0. Codetree 101/Chapter2 입출력/Lesson3. 입력.md",
-    "코드트리/Trail 0. Codetree 101/Chapter2 입출력/Lesson1. 출력.md",
     "코드트리/Trail 6. Intermediate High/무제",
     "코드트리/Trail 6. Intermediate High",
     "코드트리/Trail 5. Intermediate Mid/무제",
     "코드트리/Trail 5. Intermediate Mid",
-    "코드트리/Trail 4. Intermediate Low/ddd",
-    "코드트리/Trail 4. Intermediate Low",
-    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/Part 3/Chapter 1. 로봇의 정의와 구성요소.pdf",
-    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/Part 3/Chapter 2. 로봇 좌표계의 개념.pdf",
-    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/Part 3/Chapter 3. 로봇 기구학.pdf",
     "attachments/Pasted image 20250611153253.png",
     "attachments/Raspberry Pi 40-pin Info..png",
     "attachments/스크린샷 2025-02-13 오후 8.15.01.png",
