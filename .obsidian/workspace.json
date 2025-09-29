@@ -47,7 +47,8 @@
               "title": "XYZ 로보틱스 심화"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -195,10 +196,10 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "dcb46dcb601e92cd",
+  "active": "fe8319db7fe49a2d",
   "lastOpenFiles": [
-    "XYZ 로봇틱스 심화/강의노트/Day1.md",
     "XYZ 로봇틱스 심화/강의자료/ROS2_기초강의_첫날(0929).pdf",
+    "XYZ 로봇틱스 심화/강의노트/Day1.md",
     "XYZ 로봇틱스 심화/XYZ 로보틱스 심화.md",
     "XYZ 로봇틱스 심화/강의자료/두산 로봇교육 강의자료_0925.pdf",
     "C언어/문법.md",
