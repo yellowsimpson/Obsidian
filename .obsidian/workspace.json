@@ -47,8 +47,7 @@
               "title": "XYZ 로보틱스 심화"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -196,10 +195,11 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "fe8319db7fe49a2d",
+  "active": "dcb46dcb601e92cd",
   "lastOpenFiles": [
-    "XYZ 로봇틱스 심화/강의자료/ROS2_기초강의_첫날(0929).pdf",
     "XYZ 로봇틱스 심화/강의노트/Day1.md",
+    "XYZ 로봇틱스 심화/시간표.pdf",
+    "XYZ 로봇틱스 심화/강의자료/ROS2_기초강의_첫날(0929).pdf",
     "XYZ 로봇틱스 심화/XYZ 로보틱스 심화.md",
     "XYZ 로봇틱스 심화/강의자료/두산 로봇교육 강의자료_0925.pdf",
     "C언어/문법.md",
@@ -237,7 +237,6 @@
     "컴퓨터 구조/Chapter1/1.10 오류 및 함정.md",
     "컴퓨터 구조/Chapter2",
     "코드트리/Trail 6. Intermediate High/무제",
-    "코드트리/Trail 6. Intermediate High",
     "attachments/Pasted image 20250611153253.png",
     "attachments/Raspberry Pi 40-pin Info..png",
     "attachments/스크린샷 2025-02-13 오후 8.15.01.png",

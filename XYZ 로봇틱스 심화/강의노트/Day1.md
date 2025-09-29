@@ -301,4 +301,97 @@ ros2 안에 DDS가 있다!!
 
 
 
+vmware 설치 방법
+https://louis-j.tistory.com/entry/VMWARE-설치-VMware-다운로드-및-설치-방법
+cpu가 처리하는 명령어 에셈블리어
 
+- publisher_member_function.py
+```python
+import rclpy                #rclpy 전체를 불러옴
+from rclpy.node import Node #rclpay 중에서 node 부분만 가져옴
+
+from std_msgs.msg import String 
+# std_msgs는 문자열을 다루는 문자열 인터페이스 ros에서 정의 하는 기본 타입
+
+
+class MinimalPublisher(Node):  #Node는 위에 있는거 상속 받음
+
+    def __init__(self):                 #생성자 (node를 만들면 반드시 생성자 만들어야됨)
+        super().__init__('minimal_publisher') #부모생성자 호출, minimal_publisher: 노드 이름
+        self.publisher_ = self.create_publisher(String, 'topic', 10)                                                            #(메시지 타입, 토픽 이름, 큐 사이즈)
+        #slef.create_publisher는 Node가 만든걸 가져온거
+        timer_period = 0.5  # seconds
+        self.timer = self.create_timer(timer_period, self.timer_callback)
+		#publisher가 계속 변화되는 주기적으로 신호를 업데이트 할 필요가 있을 때 timer 사용
+        self.i = 0
+
+    def timer_callback(self):
+    #주기적으로 뭘 해줘야되? 는 내용이 적혀 있음  
+        msg = String()
+        msg.data = 'Hello World: %d' % self.i
+        self.publisher_.publish(msg)
+        self.get_logger().info('Publishing: "%s"' % msg.data)
+        self.i += 1
+
+def main(args=None):
+    rclpy.init(args=args)
+
+    minimal_publisher = MinimalPublisher()
+	#실제로 사용할 수 있도록 만든다(메모리에 로드해야된다.) = 인스턴스
+	
+    rclpy.spin(minimal_publisher)
+    #프로그램이 돌아가게 해줌
+
+    # Destroy the node explicitly
+    # (optional - otherwise it will be done automatically
+    # when the garbage collector destroys the node object)
+    minimal_publisher.destroy_node()
+    rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
+```
+
+
+
+- subscriber_member_function.py
+```python
+import rclpy
+from rclpy.node import Node
+
+from std_msgs.msg import String
+
+
+class MinimalSubscriber(Node):
+
+    def __init__(self):
+        super().__init__('minimal_subscriber')
+        self.subscription = self.create_subscription(
+            String,
+            'topic',
+            self.listener_callback,
+            10)
+        self.subscription  # prevent unused variable warning
+
+    def listener_callback(self, msg):
+        self.get_logger().info('I heard: "%s"' % msg.data)
+
+
+def main(args=None):
+    rclpy.init(args=args)
+
+    minimal_subscriber = MinimalSubscriber()
+
+    rclpy.spin(minimal_subscriber)
+
+    # Destroy the node explicitly
+    # (optional - otherwise it will be done automatically
+    # when the garbage collector destroys the node object)
+    minimal_subscriber.destroy_node()
+    rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
+```
