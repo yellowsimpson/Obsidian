@@ -4,50 +4,53 @@
     "type": "split",
     "children": [
       {
-        "id": "d130d32a5a9a9511",
+        "id": "19783080d41c1d79",
         "type": "tabs",
         "children": [
           {
-            "id": "dcb46dcb601e92cd",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "XYZ 로봇틱스 심화/강의자료/ROS2_기초강의_첫날(0929).pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "ROS2_기초강의_첫날(0929)"
-            }
-          },
-          {
-            "id": "fe8319db7fe49a2d",
+            "id": "1cee1b9d938cd746",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "XYZ 로봇틱스 심화/강의노트/Day1.md",
+                "file": "Today's task/Tasks 사용법.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Day1"
+              "title": "Tasks 사용법"
             }
           },
           {
-            "id": "225ff5f33ce1a462",
+            "id": "7a233d20780505c5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "XYZ 로봇틱스 심화/XYZ 로보틱스 심화.md",
+                "file": "명령어 모음집/ROS 명령어.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "XYZ 로보틱스 심화"
+              "title": "ROS 명령어"
+            }
+          },
+          {
+            "id": "4b9ab8b6ae2c70a4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "XYZ 로봇틱스 심화/강의노트/Day2.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Day2"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -104,8 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 269.5024719238281,
-    "collapsed": true
+    "width": 295.5024719238281
   },
   "right": {
     "id": "34f46f4b9983c0ed",
@@ -196,53 +198,54 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "dcb46dcb601e92cd",
+  "active": "4b9ab8b6ae2c70a4",
   "lastOpenFiles": [
+    "Today's task/Tasks 사용법.md",
+    "XYZ 로봇틱스 심화/강의자료/표박사 로봇 운영체제 ROS 2 특강.pdf",
+    "XYZ 로봇틱스 심화/강의자료/16차 케라스.pdf",
+    "XYZ 로봇틱스 심화/강의자료/15차 텐서플로어.pdf",
+    "XYZ 로봇틱스 심화/강의자료/7차 파이썬 함수^J클래스.pdf",
+    "XYZ 로봇틱스 심화/강의자료/ROS2_기초강의_250930_FINAL.pdf",
+    "XYZ 로봇틱스 심화/강의자료/12차 넘파이.pdf",
+    "XYZ 로봇틱스 심화/강의노트/Day2.md",
+    "XYZ 로봇틱스 심화/강의자료/ROS2_기초강의_250930.pdf",
+    "Today's task/To do list.md",
+    "명령어 모음집/ROS 명령어.md",
+    "XYZ 로봇틱스 심화/강의자료/두산 로봇교육 강의자료_0925.pdf",
+    "패스트캠퍼스/패스트 캠퍼스 강의자료.md",
+    "패스트캠퍼스/강의자료 리스트/부동산_금융(186).md",
+    "실습 사진.png",
     "XYZ 로봇틱스 심화/강의노트/Day1.md",
-    "XYZ 로봇틱스 심화/강의자료/ROS2_기초강의_첫날(0929).pdf",
+    "attachments/스크린샷 2025-09-30 오전 1.02.37.png",
+    "attachments/실습 이미지.png",
+    "XYZ 로봇틱스 심화/강의자료/ROS2_기초강의_250929(첫날).pdf",
+    "무제.base",
+    "명령어 모음집/Vim 사용법.md",
+    "명령어 모음집/nano 사용법.md",
+    "명령어 모음집/Git 사용법.md",
+    "명령어 모음집/cat 사용법.md",
+    "명령어 모음집/리눅스 명령어.md",
+    "주식 투자.md",
+    "패스트캠퍼스/강의자료 리스트/자격증(5).md",
+    "컴퓨터 꿀팁 모음.md",
+    "README.md",
+    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의노트 정리/Joint.md",
+    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의노트.md",
+    "XYZ 로봇틱스 심화/XYZ 로보틱스 심화.md",
     "attachments/스크린샷 2025-09-29 오후 7.11.41.png",
     "attachments/운영진.png",
-    "XYZ 로봇틱스 심화/XYZ 로보틱스 심화.md",
-    "XYZ 로봇틱스 심화/시간표.pdf",
-    "XYZ 로봇틱스 심화/강의자료/두산 로봇교육 강의자료_0925.pdf",
     "C언어/문법.md",
-    "XYZ 로봇틱스 심화/강의자료/협동-1_1차시_자료.pdf",
-    "XYZ 로봇틱스 심화/강의노트",
-    "XYZ 로봇틱스 심화/강의자료/산업용_로봇_협동작업_안전교육.pdf",
     "코드트리/Trail 0. Codetree 101/Chapter10 2차원 배열/Lesson2. 2차원 배열 응용.md",
-    "XYZ 로봇틱스 심화/강의자료",
-    "README.md",
-    "XYZ 로봇틱스 심화",
-    "Today's task/To do list.md",
     "Today's task/월별 목표 리스트.md",
     "코드트리/Trail 0. Codetree 101/Chapter10 2차원 배열/Lesson1. 2차원 배열 입문.md",
     "코드트리/Trail 0. Codetree 101/Chapter10 2차원 배열/Lesson3. 2차원 배열에서의 변수 사용.md",
     "코드트리/Trail 0. Codetree 101/Chapter10 2차원 배열/Lesson4. 2차원 배열 패턴 출력.md",
     "코드트리/Trail 0. Codetree 101/Chapter9 다중 반복문/Lesson6. 2중 반복문의 continue와 break.md",
-    "코드트리/Trail 0. Codetree 101/Chapter9 다중 반복문/Lesson5. 2중 반복문에서 변수 사용.md",
     "attachments/스크린샷 2025-09-26 오전 12.21.23.png",
-    "코드트리/Trail 0. Codetree 101/Chapter9 다중 반복문/Lesson4. 반복문을 반복하기.md",
-    "코드트리/Trail 0. Codetree 101/Chapter9 다중 반복문/Lesson3. 2중 반복문 응용.md",
-    "Today's task/Tasks 사용법.md",
-    "Today's task/Tasks.md",
-    "코드트리/Trail 0. Codetree 101/Chapter9 다중 반복문/Lesson2. 반복 횟수의 제어.md",
     "attachments/스크린샷 2025-09-22 오후 5.29.30.png",
-    "코드트리/Trail 3. Novice High/Chapter1. 시간, 공간복잡도/Lesson1. 수도코드.md",
-    "코드트리/Trail 0. Codetree 101/Chapter9 다중 반복문/Lesson1. 2중 반복문 입문.md",
-    "코드트리/Trail 0. Codetree 101/Chapter8 단순 반복문2/Lesson4. 무한 루프.md",
-    "컴퓨터 구조/Chapter2/2.3 피연산자.md",
-    "컴퓨터 구조/Chapter2/2.2 하드웨어 연산.md",
-    "컴퓨터 구조/Chapter2/2.1 서론.md",
     "attachments/스크린샷 2025-09-22 오후 5.44.16.png",
     "attachments/스크린샷 2025-09-22 오후 4.59.48.png",
     "attachments/스크린샷 2025-09-22 오후 4.58.50.png",
-    "컴퓨터 구조/컴퓨터 구조.md",
-    "컴퓨터 구조/Chapter1/1.10 오류 및 함정.md",
-    "컴퓨터 구조/Chapter2",
-    "코드트리/Trail 6. Intermediate High/무제",
-    "attachments/Pasted image 20250611153253.png",
-    "attachments/Raspberry Pi 40-pin Info..png",
-    "attachments/스크린샷 2025-02-13 오후 8.15.01.png",
     "Obsidian 사용법/캔버스 예시.canvas"
   ]
 }

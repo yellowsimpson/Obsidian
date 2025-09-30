@@ -34,6 +34,8 @@ framework
 2. 링크(link)
 
 <ros1과 ros2 차이점>
+![[스크린샷 2025-09-30 오전 1.02.37.png]]
+
 - ros1
 단일 로봇
 실시간 제어 지원하지 않음
@@ -296,10 +298,9 @@ Using turtlesim and rqt is a great way to learn the core concepts of ROS 2.
 
 
 
-[[ROS2_기초강의_첫날(0929).pdf]]
+[[ROS2_기초강의_250929(첫날).pdf]]
 
 ros2 안에 DDS가 있다!!
-
 
 
 vmware 설치 방법
@@ -354,8 +355,6 @@ if __name__ == '__main__':
     main()
 ```
 
-
-
 - subscriber_member_function.py
 ```python
 import rclpy
@@ -406,7 +405,6 @@ if __name__ == '__main__':
 비동기: 선생님 한테 질문하고 유튜브 보다가 선생님이 답변할때 듣는거
 
 
-
-[[ROS2_기초강의_첫날(0929).pdf]]
+[[ROS2_기초강의_250929(첫날).pdf]]
 여기에 있는 ros 명령어 실습 및 정리
 
