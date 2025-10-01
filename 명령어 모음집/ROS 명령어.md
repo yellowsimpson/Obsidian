@@ -4,6 +4,11 @@ __ROS 버전__
 - 22.04: humble
 - 24.04: Jazzy Jalisco
 
+__Ubuntu 버전__
+- 20.04: Focal Fossa -> focal
+- 22.04: Jammy Jellyfish -> jammy
+- 24.04: Noble Numbat -> noble
+ 
 __초기 업데이트 명령어__ 
 $sudo apt update
 $sudo apt upgrade

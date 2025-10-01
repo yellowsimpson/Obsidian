@@ -6,63 +6,42 @@
       {
         "id": "19783080d41c1d79",
         "type": "tabs",
+        "dimension": 28.8981288981289,
         "children": [
           {
-            "id": "721b25ac122813e3",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "XYZ 로봇틱스 심화/강의자료/1장 인공지능 이해.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "1장 인공지능 이해"
-            }
-          },
-          {
-            "id": "ce576fb3ac17cb99",
+            "id": "4010de2c1c7ed30c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "XYZ 로봇틱스 심화/강의노트/Day3.md",
+                "file": "XYZ 로봇틱스 심화/강의노트/Day1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Day3"
+              "title": "Day1"
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "71575788ac7756ae",
+        "type": "tabs",
+        "dimension": 71.10187110187111,
+        "children": [
           {
             "id": "c2b57e679a1b04e8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "명령어 모음집/ROS 명령어.md",
-                "mode": "source",
-                "source": false
+                "file": "XYZ 로봇틱스 심화/강의자료/06＿YOLO 모델.pdf"
               },
-              "icon": "lucide-file",
-              "title": "ROS 명령어"
-            }
-          },
-          {
-            "id": "54e98e4414922df4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "패스트캠퍼스/강의자료 리스트/생성형 AI(97).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "생성형 AI(97)"
+              "icon": "lucide-file-text",
+              "title": "06＿YOLO 모델"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -119,7 +98,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 320.50390243530273,
+    "width": 395.50390243530273,
     "collapsed": true
   },
   "right": {
@@ -211,18 +190,29 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "ce576fb3ac17cb99",
+  "active": "c2b57e679a1b04e8",
   "lastOpenFiles": [
-    "XYZ 로봇틱스 심화/강의자료/1장 인공지능 이해.pdf",
-    "XYZ 로봇틱스 심화/강의노트/Day3.md",
+    "XYZ 로봇틱스 심화/강의자료/ROS2_기초강의_250930.pdf",
+    "XYZ 로봇틱스 심화/강의자료/06＿YOLO 모델.pdf",
+    "XYZ 로봇틱스 심화/강의자료/협동-1_1차시_자료.pdf",
+    "XYZ 로봇틱스 심화/강의노트/Day1.md",
+    "XYZ 로봇틱스 심화/강의자료/06＿YOLO 모델.pptx",
+    "XYZ 로봇틱스 심화/강의자료/ㅗ을 가지고 협동-1_1차시_자료.pdf",
+    "XYZ 로봇틱스 심화/강의자료/두산 로봇교육 강의자료_0925.pdf",
+    "XYZ 로봇틱스 심화/강의자료/산업용_로봇_협동작업_안전교육.pdf",
+    "명령어 모음집/Git 사용법.md",
     "패스트캠퍼스/강의자료 리스트/생성형 AI(97).md",
     "명령어 모음집/ROS 명령어.md",
-    "XYZ 로봇틱스 심화/강의자료/패스트캠 - 프로젝트 교안(RVIZ2)_김루진_1001.pdf",
-    "XYZ 로봇틱스 심화/강의자료/ㅗ을 가지고 협동-1_1차시_자료.pdf",
-    "XYZ 로봇틱스 심화/강의자료/2장 개발환경 구축.pdf",
-    "XYZ 로봇틱스 심화/XYZ 로보틱스 심화.md",
-    "명령어 모음집/Vim 사용법.md",
+    "명령어 모음집/리눅스 명령어.md",
+    "XYZ 로봇틱스 심화/강의자료/1장 인공지능 이해.pdf",
+    "트렌드/트랜드_인사이트(142).md",
     "패스트캠퍼스/패스트 캠퍼스 강의자료.md",
+    "XYZ 로봇틱스 심화/XYZ 로보틱스 심화.md",
+    "XYZ 로봇틱스 심화/강의노트/Day3.md",
+    "XYZ 로봇틱스 심화/강의자료/ROS2_기초강의_250930_FINAL.pdf",
+    "XYZ 로봇틱스 심화/강의자료/패스트캠 - 프로젝트 교안(RVIZ2)_김루진_1001.pdf",
+    "XYZ 로봇틱스 심화/강의자료/2장 개발환경 구축.pdf",
+    "명령어 모음집/Vim 사용법.md",
     "패스트캠퍼스/강의자료 리스트/마케팅(72).md",
     "패스트캠퍼스/강의자료 리스트/산업별 직무(142).md",
     "패스트캠퍼스/강의자료 리스트/외국어(41).md",
@@ -234,25 +224,15 @@
     "코드트리/Trail 0. Codetree 101/Chapter2 입출력/Lesson4. 입출력 연습.md",
     "코드트리/Trail 0. Codetree 101/Chapter2 입출력/Lesson2. 입력 입문.md",
     "XYZ 로봇틱스 심화/강의노트/Day2.md",
-    "XYZ 로봇틱스 심화/강의노트/Day1.md",
     "인생조언/공부 방법.md",
-    "XYZ 로봇틱스 심화/강의자료/ROS2_기초강의_250930_FINAL.pdf",
     "주식 투자.md",
-    "XYZ 로봇틱스 심화/강의자료/ROS2_기초강의_250930.pdf",
-    "XYZ 로봇틱스 심화/강의자료/표박사 로봇 운영체제 ROS 2 특강.pdf",
-    "XYZ 로봇틱스 심화/강의자료/산업용_로봇_협동작업_안전교육.pdf",
-    "XYZ 로봇틱스 심화/강의자료/두산 로봇교육 강의자료_0925.pdf",
-    "XYZ 로봇틱스 심화/강의자료/16차 케라스.pdf",
     "attachments/실습 사진.png",
     "Today's task/Tasks 사용법.md",
     "Today's task/To do list.md",
     "attachments/스크린샷 2025-09-30 오전 1.02.37.png",
     "attachments/실습 이미지.png",
     "명령어 모음집/nano 사용법.md",
-    "명령어 모음집/Git 사용법.md",
     "명령어 모음집/cat 사용법.md",
-    "명령어 모음집/리눅스 명령어.md",
-    "패스트캠퍼스/강의자료 리스트/자격증(5).md",
     "attachments/스크린샷 2025-09-29 오후 7.11.41.png",
     "attachments/운영진.png",
     "attachments/스크린샷 2025-09-26 오전 12.21.23.png",

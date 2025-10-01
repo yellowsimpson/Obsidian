@@ -60,10 +60,6 @@ tutulsim  가지고 놀아
 
 
 
-
-
-
-
 [[패스트캠 - 프로젝트 교안(RVIZ2)_김루진_1001.pdf]]
 
 rqt_
@@ -248,6 +244,27 @@ https://github.com/ros-industrial/universal_robot
 
 
 두 종류의 활성화 영역
+
+- parameters
+
+sam 알트만
+젠슨 황이 5년 후에는 인간의 능력을 뛰어 넘는 인공지능이 발현 될 것이다.
+
+- Learning rate = 0.001정도로 맞춰 놓고 천천히 학습 시킴
+- batch size = 한번에 학습 시키는 데이터 갯수
+- epoch = 반복해서 학습 시키는 수
+- 손실함수(loss function): 예측 값과 정답 값의 차이
+- 경사하강법(gradient descent):손실함 수를 미분하고 그 반대방향으로 학습
+
+val_loss가 줄얼 들지 않을 때 학습을 멈춰야 함
+학습을 많이 한다고 학습이 잘 되는 것이 아님
+
+손실함수: 많이 묵읐다 그만하자
+
+descent(내려감) <-> ascent(올라감)
+optimizer(옵티마이져): 학습을 점점 좋은 방향으로 가게하는 것
+__경사하강법 => 0에 가까운 쪽으로 학습을 시킴__
+
 
 
 
