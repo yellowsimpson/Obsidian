@@ -1,4 +1,9 @@
 
+__ROS 버전__
+- 20.04: foxy
+- 22.04: humble
+- 24.04: Jazzy Jalisco
+
 __초기 업데이트 명령어__ 
 $sudo apt update
 $sudo apt upgrade
@@ -78,7 +83,6 @@ $ros2 topic find
 $ros2 topic hz
 :지정 토픽의 주기 측정
 
-
 __Serivce__
 $ros2 service list
 :실행중인 서비스 이름 표시
@@ -99,6 +103,24 @@ $ros2 action goal
 
 __Parameter__
 $rps2 param list
-:
+:파라미터 목록 확인
+$rps2 param describe
+	*ros2 param describe <노드 이름> <파라미터 이름>*
+:파라미터 내용 확인
+$rps2 param lget
+	*ros2 param get <노드 이름> <파라이머터 이름>*
+:파라미터 읽기
+$rps2 param set
+	*ros2 param set <노드 이름> <파라이머터 이름> <값>*
+:파라미터 쓰기
+$rps2 param dump
+	*ros2 param dump <노드 이름>*
+:파라미터 저장
+$rps2 param delete
+	*ros2 param delete <노드 이름> <파라이머터 이름>*
+:파라미터 삭제
 
 
+
+__dd
+$ros2 llaunch <패키지 이름> <노드 이름>

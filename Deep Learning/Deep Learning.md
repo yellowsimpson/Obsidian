@@ -98,7 +98,7 @@
 - 강의 녹음
 	[[Deep Learning/강의녹음/Day1|Day1]]
 	[[Deep Learning/강의녹음/Day2]]
-	[[Day3]]
+	[[Deep Learning/강의녹음/Day3]]
 	[[Day4]]
 	[[Day5]]
 	[[Day6]]
