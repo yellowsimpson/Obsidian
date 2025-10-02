@@ -4,6 +4,24 @@
     "type": "split",
     "children": [
       {
+        "id": "e8c1fed2e8960875",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3cc2eda15542efd8",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "XYZ 로봇틱스 심화/강의자료/프로젝트 교안(GAZEBO)_1010.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "프로젝트 교안(GAZEBO)_1010"
+            }
+          }
+        ]
+      },
+      {
         "id": "26fdce59251e9c5e",
         "type": "tabs",
         "children": [
@@ -20,31 +38,15 @@
             }
           },
           {
-            "id": "9a4a1045d13e462a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "XYZ 로봇틱스 심화/강의노트/Day4.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Day4"
-            }
-          },
-          {
             "id": "43bf159f1200f845",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "인생조언/공부 방법.md",
-                "mode": "source",
-                "source": false
+                "file": "XYZ 로봇틱스 심화/강의자료/프로젝트 교안(GAZEBO)_1010.pdf"
               },
-              "icon": "lucide-file",
-              "title": "공부 방법"
+              "icon": "lucide-file-text",
+              "title": "프로젝트 교안(GAZEBO)_1010"
             }
           }
         ],
@@ -105,7 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 491.5024719238281,
+    "width": 300.5024719238281,
     "collapsed": true
   },
   "right": {
@@ -197,19 +199,31 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "9a4a1045d13e462a",
+  "active": "3cc2eda15542efd8",
   "lastOpenFiles": [
-    "XYZ 로봇틱스 심화/강의자료/프로젝트 교안(GAZEBO)_1010.pdf",
     "XYZ 로봇틱스 심화/강의노트/Day4.md",
+    "XYZ 로봇틱스 심화/강의자료/프로젝트 교안(GAZEBO)_1010.pdf",
     "XYZ 로봇틱스 심화/강의자료/06＿YOLO 모델.pdf",
-    "object detection실습 사진 1.png",
-    "object detection실습 사진.png",
+    "XYZ 로봇틱스 심화/강의자료/ROS2_기초강의_250929(첫날).pdf",
+    "XYZ 로봇틱스 심화/강의자료/ROS2_기초강의_250930_FINAL.pdf",
+    "Today's task/월별 목표 리스트.md",
+    "Today's task/Tasks.md",
+    "Today's task/Tasks 사용법.md",
+    "Today's task/To do list.md",
     "XYZ 로봇틱스 심화/강의노트/Day3.md",
-    "패스트캠퍼스/패스트 캠퍼스 강의자료.md",
-    "인생조언/공부 방법.md",
+    "XYZ 로봇틱스 심화/강의자료/두산 로보틱스 초보 교육.pdf",
     "XYZ 로봇틱스 심화/강의노트/Day2.md",
     "XYZ 로봇틱스 심화/강의노트/Day1.md",
-    "스크린샷 2025-10-02 오전 9.17.08.png",
+    "XYZ 로봇틱스 심화/강의자료/산업용_로봇_협동작업_안전교육.pdf",
+    "인생조언/공부 방법.md",
+    "XYZ 로봇틱스 심화/XYZ 로보틱스 심화.md",
+    "XYZ 로봇틱스 심화/강의자료/협동-1_1차시_자료.pdf",
+    "XYZ 로봇틱스 심화/시간표.pdf",
+    "attachments/스크린샷 2025-10-02 오전 9.17.08.png",
+    "attachments/object detection실습 사진.png",
+    "attachments/object detection실습 사진 1.png",
+    "주식 투자.md",
+    "패스트캠퍼스/패스트 캠퍼스 강의자료.md",
     "attachments/로봇모델.png",
     "패스트캠퍼스/강의자료 리스트/마케팅(72).md",
     "패스트캠퍼스/강의자료 리스트/외국어(41).md",
@@ -225,19 +239,7 @@
     "패스트캠퍼스/강의자료 리스트/데이터사이언스(175).md",
     "패스트캠퍼스/강의자료 리스트/생성형 AI(98).md",
     "명령어 모음집/nano 사용법.md",
-    "XYZ 로봇틱스 심화/시간표.pdf",
     "XYZ 로봇틱스 심화/강의자료/ROS2_기초강의_250930.pdf",
-    "XYZ 로봇틱스 심화/강의자료/협동-1_1차시_자료.pdf",
-    "XYZ 로봇틱스 심화/강의자료/06＿YOLO 모델.pptx",
-    "XYZ 로봇틱스 심화/강의자료/ㅗ을 가지고 협동-1_1차시_자료.pdf",
-    "XYZ 로봇틱스 심화/강의자료/두산 로봇교육 강의자료_0925.pdf",
-    "XYZ 로봇틱스 심화/강의자료/산업용_로봇_협동작업_안전교육.pdf",
-    "명령어 모음집/Git 사용법.md",
-    "명령어 모음집/ROS 명령어.md",
-    "명령어 모음집/리눅스 명령어.md",
-    "XYZ 로봇틱스 심화/XYZ 로보틱스 심화.md",
-    "명령어 모음집/Vim 사용법.md",
-    "패스트캠퍼스/강의자료 리스트/디자인(147).md",
     "attachments/스크린샷 2025-10-01 오후 4.26.24.png",
     "attachments/스크린샷 2025-10-01 오후 2.18.21.png",
     "attachments/실습 사진.png",

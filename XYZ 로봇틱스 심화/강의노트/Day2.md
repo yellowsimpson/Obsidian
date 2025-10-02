@@ -1,4 +1,14 @@
 2025.09.30(화)
+강의 자료
+- [[ROS2_기초강의_250930_FINAL.pdf]]
+- [[12차 넘파이.pdf]]
+- [[15차 텐서플로어.pdf]]
+- [[16차 케라스.pdf]]
+- [[7차 파이썬 함수^J클래스.pdf]]
+- [[표박사 로봇 운영체제 ROS 2 특강.pdf]]
+사이트 링크
+- 두산로보틱스 로봇랩 홈페이지: [https://robotlab.doosanrobotics.com/ko/](https://robotlab.doosanrobotics.com/ko/) 
+과제
 
 thread를 사용하는 이유?
 
@@ -91,10 +101,7 @@ if __name__ == '__main__':
 
 ![[실습 사진.png]]
 
-
-
 두산 로보틱스 사이트
-
 https://robotlab.doosanrobotics.com/ko/MyRobot/DashBoard
 
 여기서 메뉴얼 같은거 한번 읽어보면 도움됨!!

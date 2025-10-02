@@ -1,7 +1,15 @@
 2025.09.29(월)
-진도 나간 강의 자료
-- [[]]
-
+강의 자료
+- [[산업용_로봇_협동작업_안전교육.pdf]]
+- [[협동-1_1차시_자료.pdf]]
+- [[두산 로봇교육 강의자료_0925.pdf]]
+- [[ROS2_기초강의_250929(첫날).pdf]]
+사이트 링크
+- ROS 공식 사이트: https://docs.ros.org/en/humble/Installation.html
+- turtlesi, rqt  설명: https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html 
+과제
+1. 자기가 공부할 리스트를 만들고 하나씩 지워가면서 공부 할 것!
+2. 리눅스 노트북 및 환경 구축하기
 
 - 공부해야 될것들
 1. 수학에 대해 알아야함
@@ -410,3 +418,47 @@ if __name__ == '__main__':
 [[ROS2_기초강의_250929(첫날).pdf]]
 여기에 있는 ros 명령어 실습 및 정리
 
+
+
+
+
+# C는 C99, C++는 C++17을 기본으로 설정  
+if(NOT CMAKE_C_STANDARD)  
+  set(CMAKE_C_STANDARD 99)  
+endif()  
+if(NOT CMAKE_CXX_STANDARD)  
+  set(CMAKE_CXX_STANDARD 17)  
+endif()# GCC/Clang 컴파일러에 대해 엄격한 경고 활성화  
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")  
+  add_compile_options(-Wall -Wextra -Wpedantic)  
+endif()# 의존성 찾기  
+find_package(ament_cmake REQUIRED)  
+find_package(rclcpp REQUIRED)  
+find_package(std_msgs REQUIRED)  
+# 필요에 따라 다른 ROS 2 의존성을 추가, 예:  
+# find_package(geometry_msgs REQUIRED)  
+# find_package(sensor_msgs REQUIRED)# C++ 실행 파일 추가  
+add_executable(my_node src/my_node.cpp)  
+ament_target_dependencies(my_node rclcpp std_msgs)# 실행 파일 설치  
+install(TARGETS  
+  my_node  
+  DESTINATION lib/${PROJECT_NAME}  
+)# Python 스크립트 설치 (있는 경우)  
+install(PROGRAMS  
+  scripts/my_python_node.py  
+  DESTINATION lib/${PROJECT_NAME}  
+)# 런치 파일, 설정 파일 등 설치 (있는 경우)  
+install(DIRECTORY  
+  launch  
+  config  
+  DESTINATION share/${PROJECT_NAME}/  
+)# 패키지 빌드 및 테스트 설정  
+if(BUILD_TESTING)  
+  find_package(ament_lint_auto REQUIRED)  
+  ament_lint_auto_find_test_dependencies()  
+endif()# ament 패키지 설정  
+ament_package()  
+[오후 8:38] CMakeLists.txt는 일반적인 작성 순서입니다. 이 예를 따르면 됩니다.  
+[오후 8:38] 수정할 부분은 거의 없고 자동 만들어 줍니다.  
+[오후 8:39] add_executable(my_node src/my_node.cpp)  
+[오후 8:39] 이 부분만 더하거나 수정하면 됩니다.
