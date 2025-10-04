@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/ROS2로 시작하는 로보틱스 Motion Planning.md",
+                "file": "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의노트 정리/Part3.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ROS2로 시작하는 로보틱스 Motion Planning"
+              "title": "Part3"
+            }
+          },
+          {
+            "id": "696a9383c904abcb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "패스트캠퍼스/올인원 패키지 가장 빨리 도달하는 객체 감지 알고리즘 YOLO!/올인원 패키지 가장 빨리 도달하는 객체 감지 알고리즘 YOLO!.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "올인원 패키지 가장 빨리 도달하는 객체 감지 알고리즘 YOLO!"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -169,35 +184,42 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "542b7b102eda1115",
+  "active": "696a9383c904abcb",
   "lastOpenFiles": [
-    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의자료/Part 3/Chapter 1. 로봇의 정의와 구성요소.pdf",
     "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/ROS2로 시작하는 로보틱스 Motion Planning.md",
+    "패스트캠퍼스/올인원 패키지 가장 빨리 도달하는 객체 감지 알고리즘 YOLO!/올인원 패키지 가장 빨리 도달하는 객체 감지 알고리즘 YOLO!.md",
+    "패스트캠퍼스/올인원 패키지 가장 빨리 도달하는 객체 감지 알고리즘 YOLO!/강의노트/Chapter 6. YOLOv5 in practice.md",
+    "패스트캠퍼스/올인원 패키지 가장 빨리 도달하는 객체 감지 알고리즘 YOLO!/강의노트/Chapter 7. AI Vision Limitation and Next.md",
+    "패스트캠퍼스/올인원 패키지 가장 빨리 도달하는 객체 감지 알고리즘 YOLO!/강의노트/Chapter 5. YOLOv3.md",
+    "패스트캠퍼스/올인원 패키지 가장 빨리 도달하는 객체 감지 알고리즘 YOLO!/강의노트/Chapter 4. Object Detection.md",
+    "패스트캠퍼스/올인원 패키지 가장 빨리 도달하는 객체 감지 알고리즘 YOLO!/강의노트/Chapter 3. Object Recognition.md",
+    "패스트캠퍼스/올인원 패키지 가장 빨리 도달하는 객체 감지 알고리즘 YOLO!/강의노트/Chapter 2. Vision.md",
+    "패스트캠퍼스/올인원 패키지 가장 빨리 도달하는 객체 감지 알고리즘 YOLO!/강의노트/Chapter 1. AI.md",
+    "패스트캠퍼스/올인원 패키지 가장 빨리 도달하는 객체 감지 알고리즘 YOLO!/강의노트",
+    "패스트캠퍼스/올인원 패키지 가장 빨리 도달하는 객체 감지 알고리즘 YOLO!/강의자료/Vision and YOLO (fast campus 수강생 제공용 강의안_202210.ver).pdf",
+    "패스트캠퍼스/올인원 패키지 가장 빨리 도달하는 객체 감지 알고리즘 YOLO!/강의자료/Vision and YOLO (fast campus 수강생 제공용 강의안_202209.ver).pdf",
+    "패스트캠퍼스/올인원 패키지 가장 빨리 도달하는 객체 감지 알고리즘 YOLO!/강의자료",
+    "패스트캠퍼스/올인원 패키지 가장 빨리 도달하는 객체 감지 알고리즘 YOLO!/올인원 패키지 가장 빨리 도달하는 객체 감지 알고리즘 YOLO.md",
+    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의자료/Part 3/Chapter 2. 로봇 좌표계의 개념.pdf",
+    "패스트캠퍼스/올인원 패키지 가장 빨리 도달하는 객체 감지 알고리즘 YOLO!",
+    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의노트 정리/Part3.md",
+    "주식 투자.md",
+    "패스트캠퍼스/패스트 캠퍼스 강의자료.md",
+    "패스트캠퍼스/강의자료 리스트/트랜드_인사이트(142).md",
+    "패스트캠퍼스/강의자료 리스트/경영 리더쉽(175).md",
+    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의자료/Part 3/Chapter 1. 로봇의 정의와 구성요소.pdf",
     "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의노트 정리/Part5.md",
     "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의노트 정리/Part4.md",
     "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의노트 정리/Part2.md",
-    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의노트 정리/Part3.md",
     "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의노트 정리/Part6.md",
     "XYZ 로봇틱스 심화/강의노트/Day2.md",
     "XYZ 로봇틱스 심화/강의노트/Day1.md",
-    "주식 투자.md",
     "2025-10-04.md",
     "무제.canvas",
     "통신공학/통신공학.md",
     "통신공학/Day1.md",
     "데이터 통신/강의자료/Chapter1.md",
     "로봇 개발자 테크트리/로봇 개발자 레벨 진단 가이드.md",
-    "명령어 모음집/Vim 사용법.md",
-    "명령어 모음집/ROS 명령어.md",
-    "명령어 모음집/nano 사용법.md",
-    "명령어 모음집/cat 사용법.md",
-    "명령어 모음집/리눅스 명령어.md",
-    "로봇 개발자 테크트리/로봇 개발자 테크 트리.md",
-    "Deep Learning/3장/3.5 텐서플로 시작하기.md",
-    "Today's task/월별 목표 리스트.md",
-    "Deep Learning/강의녹음/Day1.md",
-    "Deep Learning/3장/3.6 신경망의 구조_ 핵심 Keras API 이해하기.md",
-    "Deep Learning/3장/3.2 케라스란.md",
     "attachments/스크린샷 2025-10-04 오후 9.29.58.png",
     "ros 명령어 모음.png",
     "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의자료/Part 6/6-2 ROS2 기본 개념.pdf",
@@ -206,15 +228,9 @@
     "attachments/스크린샷 2025-10-04 오후 9.17.26.png",
     "attachments/스크린샷 2025-10-04 오후 9.17.37.png",
     "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의자료/Part 6/6-4 ROS2 패키지 분석.pdf",
-    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의자료/Part 6/6-1 ROS2 개요.pdf",
     "attachments/스크린샷 2025-10-04 오후 2.54.51.png",
     "attachments/스크린샷 2025-10-04 오후 5.46.32.png",
     "attachments/스크린샷 2025-10-04 오후 7.55.01.png",
-    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의자료/Part 2/Chapter 2. 모션플래닝 개요.pdf",
-    "패스트캠퍼스/40개 허깅페이스 실습 코드로 마스터하는 Transformer 활용/허깅 페이스 트랜스포머 2차 오픈 자료/논문/Electra.pdf",
-    "XYZ 로봇틱스 심화/강의자료/ROS2_기초강의_250929(첫날).pdf",
-    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의자료",
-    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의자료/Part 3/Chapter 6. 환경 - 격자지도와 로드맵.pdf",
     "attachments/스크린샷 2025-10-02 오전 9.17.08.png",
     "attachments/object detection실습 사진.png",
     "Obsidian 사용법/캔버스 예시.canvas"
