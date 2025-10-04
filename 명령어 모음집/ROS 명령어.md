@@ -38,6 +38,7 @@ ros2 run demo_nodes_py listener
 __rqt__
 $rqt_graph
 :현재 통신 상태 보여주는 명령어
+![[ros 명령어 모음.png]]
 
 # Turtlesim
 $sudo apt update
