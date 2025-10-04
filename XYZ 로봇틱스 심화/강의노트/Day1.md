@@ -62,7 +62,7 @@ framework
 최신 기술 지원(zeroconf, Protocol,...)
 상업용 제품 제원
 
-QOS란?
+### QOS란?
 **QoS(Quality of Service, 서비스 품질)** 는 __네트워크에서 특정 트래픽(데이터 흐름)에 대해 우선순위를 주거나 성능을 보장하는 기술/개념__ 을 말합니다.
 
 즉, 네트워크가 모든 데이터를 똑같이 취급하는 것이 아니라, **중요한 데이터는 더 빠르고 안정적으로 전송되도록 관리**하는 거예요.
@@ -311,7 +311,6 @@ Using turtlesim and rqt is a great way to learn the core concepts of ROS 2.
 [[ROS2_기초강의_250929(첫날).pdf]]
 
 ros2 안에 DDS가 있다!!
-
 
 vmware 설치 방법
 https://louis-j.tistory.com/entry/VMWARE-설치-VMware-다운로드-및-설치-방법

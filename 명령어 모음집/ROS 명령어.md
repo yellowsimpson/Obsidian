@@ -39,36 +39,43 @@ __rqt__
 $rqt_graph
 :현재 통신 상태 보여주는 명령어
 
-__Turtlesim__
+# Turtlesim
 $sudo apt update
 sudo apt install ros-humble-turtlesim
 : Turtlesim 설치 명령어
 
+__각각의 터미널에서 아래 두개 틀어줘__
 $ros2 run turtlesim turtlesim_node
+:거북이 있는 화면 나옴
 $ros2 run turtlesim turtle_teleop_key
-:동작 확인
+:키로 거북이를 조절 할 수 있음
 
 $ros2 pkg executables turtlesim
 turtlesim draw_square
 turtlesim mimic
 
-__각각의 터미널에서 아래 두개 틀어줘__
-$turtlesim turtlesim_node
-: 거북이 있는 화면 나옴
-$turtlesim turtle_teleop_key
-: 키로 거북이를 조절 할 수 있음
+__turtlesim 배경 색상 변경__
+$ros2 param set /turlesim background_r 255
+: 배경 빨간색으로 변경
+$ros2 param set /turlesim background_g 0
+:배경 초록색으로 변경
+$ros2 param set /turlesim background_b 0
+:배경 파란색으로 변경
+
+$ros2 param get /turlesim background_r
+:변경 사항 확인
 
 __새로운 터미널에서 아래 명령어로 거북이 조절 가능!!__
 $ros2 topic pub /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0}, angular: {z: 0.0}}" -1
 : x(거리)와 z(각도)값을 조절하여 거북이 조절
 
-__node__
+## __node__
 $ros2 node list
 :실행 중인 노드 이름 표시
 $ros2 node info
 :실행중인 노드 정보 표시
 
-__Topic__
+## __Topic__
 $ros2 topic list
 :실행중인 토픽 이름 표시
 $ros2 topic info
@@ -88,7 +95,7 @@ $ros2 topic find
 $ros2 topic hz
 :지정 토픽의 주기 측정
 
-__Serivce__
+## __Serivce__
 $ros2 service list
 :실행중인 서비스 이름 표시
 $ros2 service type
@@ -98,7 +105,7 @@ $ros2 service call
 $ros2 service find
 :지정 서비스 타입의 서비스 출력
 
-__Action__
+## __Action__
 $ros2 action list
 :실행중인 액션의 이름 표시
 $ros2 action info
