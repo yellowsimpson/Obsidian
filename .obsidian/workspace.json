@@ -105,8 +105,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 397.5024719238281,
-    "collapsed": true
+    "width": 397.5024719238281
   },
   "right": {
     "id": "34f46f4b9983c0ed",
@@ -201,12 +200,12 @@
   "lastOpenFiles": [
     "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의노트 정리/Part3.md",
     "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의노트 정리/Part6.md",
+    "무제.canvas",
     "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/ROS2로 시작하는 로보틱스 Motion Planning.md",
     "XYZ 로봇틱스 심화/강의노트/Day2.md",
     "XYZ 로봇틱스 심화/강의노트/Day1.md",
     "XYZ 로봇틱스 심화/강의노트/Day3.md",
     "XYZ 로봇틱스 심화/강의노트/Day4.md",
-    "무제.canvas",
     "코드트리/Trail 6. Intermediate High/Chapter1 Tree/Lesson1 트리 .md",
     "코드트리/Trail 0. Codetree 101/Chapter10 2차원 배열/Lesson3. 2차원 배열에서의 변수 사용.md",
     "코드트리/Trail 6. Intermediate High/Chapter5 Advanced DP/Lesson4 Bitmask DP.md",
@@ -225,7 +224,6 @@
     "코드트리/Trail 6. Intermediate High/Chapter4 String/Lesson1.  복사본.md",
     "코드트리/Trail 6. Intermediate High/Chapter3 위상정렬/Lesson2 Graph DP.md",
     "코드트리/Trail 6. Intermediate High/Chapter3 위상정렬/Lesson1 Topological Sort .md",
-    "코드트리/Trail 6. Intermediate High/Chapter3 위상정렬/Lesson1.  복사본.md",
     "코드트리/Trail 6. Intermediate High/Chapter5 Advanced DP",
     "코드트리/Trail 6. Intermediate High/Chapter4 String",
     "코드트리/Trail 6. Intermediate High/Chapter3 위상정렬",
