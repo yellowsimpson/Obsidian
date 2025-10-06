@@ -32,9 +32,23 @@
               "icon": "lucide-file",
               "title": "Part3"
             }
+          },
+          {
+            "id": "462eae81a4ff3368",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의노트 정리/Part6.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Part6"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -57,7 +71,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "파일 탐색기"
+              "title": "Files"
             }
           },
           {
@@ -91,7 +105,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 397.5024719238281
+    "width": 397.5024719238281,
+    "collapsed": true
   },
   "right": {
     "id": "34f46f4b9983c0ed",
@@ -173,17 +188,25 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:새 베이스 생성하기": false,
-      "switcher:빠른 전환기 열기": false,
-      "graph:그래프 뷰 열기": false,
-      "canvas:새 캔버스 만들기": false,
-      "daily-notes:오늘의 일일 노트 열기": false,
-      "templates:템플릿 삽입": false,
-      "command-palette:명령어 팔레트 열기": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
     }
   },
-  "active": "f2980b66b2f1eaed",
+  "active": "462eae81a4ff3368",
   "lastOpenFiles": [
+    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의노트 정리/Part3.md",
+    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의노트 정리/Part6.md",
+    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/ROS2로 시작하는 로보틱스 Motion Planning.md",
+    "XYZ 로봇틱스 심화/강의노트/Day2.md",
+    "XYZ 로봇틱스 심화/강의노트/Day1.md",
+    "XYZ 로봇틱스 심화/강의노트/Day3.md",
+    "XYZ 로봇틱스 심화/강의노트/Day4.md",
+    "무제.canvas",
     "코드트리/Trail 6. Intermediate High/Chapter1 Tree/Lesson1 트리 .md",
     "코드트리/Trail 0. Codetree 101/Chapter10 2차원 배열/Lesson3. 2차원 배열에서의 변수 사용.md",
     "코드트리/Trail 6. Intermediate High/Chapter5 Advanced DP/Lesson4 Bitmask DP.md",
@@ -203,13 +226,6 @@
     "코드트리/Trail 6. Intermediate High/Chapter3 위상정렬/Lesson2 Graph DP.md",
     "코드트리/Trail 6. Intermediate High/Chapter3 위상정렬/Lesson1 Topological Sort .md",
     "코드트리/Trail 6. Intermediate High/Chapter3 위상정렬/Lesson1.  복사본.md",
-    "코드트리/Trail 6. Intermediate High/Chapter2 MST/Lesson3 Prim.md",
-    "코드트리/Trail 6. Intermediate High/Chapter2 MST/Lesson2 Kruskal.md",
-    "코드트리/Trail 6. Intermediate High/Chapter2 MST/Lesson1 Disjoint Set(Union Find) .md",
-    "코드트리/Trail 6. Intermediate High/Chapter2 MST/Lesson1.  복사본 2.md",
-    "코드트리/Trail 6. Intermediate High/Chapter2 MST/Lesson1.  복사본.md",
-    "코드트리/Trail 6. Intermediate High/Chapter1 Tree/Lesson4 LCA.md",
-    "코드트리/Trail 6. Intermediate High/Chapter1 Tree/Lesson3 Tree DP.md",
     "코드트리/Trail 6. Intermediate High/Chapter5 Advanced DP",
     "코드트리/Trail 6. Intermediate High/Chapter4 String",
     "코드트리/Trail 6. Intermediate High/Chapter3 위상정렬",
@@ -220,7 +236,6 @@
     "코드트리/Trail 6. Intermediate High/Chapter1 중급 자료구조 복사본 6",
     "코드트리/Trail 6. Intermediate High/Chapter1 중급 자료구조 복사본 5",
     "코드트리/Trail 6. Intermediate High/Chapter1 중급 자료구조 복사본 4",
-    "무제.canvas",
     "attachments/스크린샷 2025-10-04 오후 9.29.58.png",
     "ros 명령어 모음.png",
     "attachments/스크린샷 2025-10-04 오후 9.17.18.png",
