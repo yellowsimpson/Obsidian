@@ -270,16 +270,190 @@ return None
 ## 3. pq 설명
 ### 다익스트라 알고리즘(Dijkstra Algorithm)
 Priority Queue: First in First OUT(FIFO)
-
-
 ## 4. Dijkstra
+특징:
+- priority Queue 사용
+- 가중치가 양수인 경우 항상 최단경로를 찾을 수 있음
+- 시간 복잡도: O((V + E)log V)
+- 공간 복잡도: O(V + E)
+
+Dijkstra 알고리즘을 실행하는 예제 code
+
+```python
+import networkx as nx
+from networkx.algorithms.shortest_paths.weighted import dijkstra
+
+# 그래프 생성
+G = nx.Graph()
+
+# 노드 추가 (V1 ~ V10)
+nodes = [f"V{i}" for i in range(1, 11)]
+G.add_nodes_from(nodes)
+
+# 엣지 추가
+edges = [
+    ("V1", "V2"), ("V1", "V3"), ("V2", "V4"), ("V2", "V5"),
+    ("V3", "V6"), ("V3", "7"), ("V4", "V8"), ("V5", "V8"),
+    ("V6", "V9"), ("V7", "V9"), ("V8", "V10"), ("V9", "V10"),
+    ("V5", "V6"), ("V2", "V3")
+]
+G.add_edges_from(edges)
+
+# 각 엣지에 가중치(weight) 기본값 1 부여
+for u, v in G.edges():
+    G[u][v]['weight'] = 1
+
+# Dijkstra 알고리즘 실행
+distances, predecessors = dijkstra(G, source="V1")
+
+print("최단 거리:", distances)
+print("이전 노드:", predecessors)
+```
+```python
+import heapq
+
+def dijkstra(graph, source):
+    # 거리와 이전 노드 초기화
+    dist = {node: float('inf') for node in graph}
+    prev = {node: None for node in graph}
+    dist[source] = 0
+
+    # 우선순위 큐 (priority queue)
+    pq = [(0, source)]
+
+    while pq:
+        # 현재 노드와 거리 추출
+        current_dist, u = heapq.heappop(pq)
+
+        # 더 긴 경로는 무시
+        if current_dist > dist[u]:
+            continue
+
+        # 인접 노드 탐색
+        for v, weight in graph[u].items():
+            new_dist = current_dist + weight
+            if new_dist < dist[v]:
+                dist[v] = new_dist
+                prev[v] = u
+                heapq.heappush(pq, (new_dist, v))
+
+    return dist, prev
+```
 
 ## 5. 휴리스틱
+휴리스틱 
+- 목표 지점까지의 거리를 근사
+- Admissible: 실제 최단 경로 비용보다 과대평가(overestimate) 하지 않아야 함.
+```python
+h(n) <= 실제 최단거리(n -> goal)
+```
+-  Consistency:  휴리스틱에 의해 선택된 노드는 실제 목표 지점에 가까워지고 있어야 함.
+```python
+h(n) <= w(n, m) + h(m)
+```
 ## 6. Astar
+## 🧭 1️⃣ A* 알고리즘이란?
 
-## 7. Astar 수도코드
+**A*** 알고리즘은 **최단 경로 탐색 알고리즘**이에요.  
+즉, 시작점에서 목표점까지 가는 **가장 짧은 경로**를 찾는 방법입니다.
 
+> 🚀 핵심 아이디어:  
+> 단순히 “지금까지 온 거리”뿐 아니라,  
+> “앞으로 남은 거리의 예측값”도 함께 고려한다는 점입니다.
+
+이게 다익스트라와의 큰 차이예요.  
+그래서 A*는 다익스트라보다 **더 빠르고 효율적**하게 목표까지 도달할 수 있습니다.
+
+A* star알고리즘 특징:
+- Priority Queue 사용
+- 가중치가 양수인 경우 항상 최단경로를 찾을 수 있음
+- 시간 복잡도와 공간 복잡도가 휴리스틱의 성능에 따라서 크게 달라짐
+
+## 7. A* star 수도코드
+```python
+import networkx as nx
+import math
+
+# 그래프 생성
+G = nx.Graph()
+nodes = [f"V{i}" for i in range(1, 11)]
+G.add_nodes_from(nodes)
+
+edges = [
+    ("V1", "V2"), ("V1", "V3"), ("V2", "V4"), ("V2", "V5"),
+    ("V3", "V6"), ("V3", "V7"), ("V4", "V8"), ("V5", "V8"),
+    ("V6", "V9"), ("V7", "V9"), ("V8", "V10"), ("V9", "V10"),
+    ("V5", "V6"), ("V2", "V3")
+]
+G.add_edges_from(edges)
+
+# 각 엣지에 weight 부여 (순서대로 1, 2, 3, ...)
+for i, (u, v) in enumerate(edges, start=1):
+    G[u][v]['weight'] = i
+
+# 노드 위치 (시각화용, 좌표 기반 휴리스틱 계산)
+pos = nx.spring_layout(G, seed=42)
+
+# 휴리스틱 함수 정의 (목표 V10까지의 유클리드 거리)
+def heuristic(n):
+    return math.dist(pos[n], pos["V10"])
+
+# A* 알고리즘 실행
+path = nx.astar_path(G, source="V1", target="V10", heuristic=heuristic, weight="weight")
+
+print("Found path:", path)
+```
+```python
+def astar(G, start, goal, h):
+    open_set = {start}
+    closed_set = set()
+    g_score = {v: float('inf') for v in G.nodes()}
+    f_score = {v: float('inf') for v in G.nodes()}
+    parent = {}
+
+    g_score[start] = 0
+    f_score[start] = h(start)
+
+    while open_set:
+        current = min(open_set, key=lambda v: f_score[v])
+
+        if current == goal:
+            return reconstruct_path(parent, current)
+
+        open_set.remove(current)
+        closed_set.add(current)
+
+        for neighbor in G.neighbors(current):
+            if neighbor in closed_set:
+                continue
+
+            cost = G[current][neighbor].get('weight', 1)
+            tentative_g = g_score[current] + cost
+
+            if tentative_g < g_score[neighbor]:
+                parent[neighbor] = current
+                g_score[neighbor] = tentative_g
+                f_score[neighbor] = tentative_g + h(neighbor)
+
+                if neighbor not in open_set:
+                    open_set.add(neighbor)
+
+    return None
+
+
+def reconstruct_path(parent, node):
+    path = [node]
+    while node in parent:
+        node = parent[node]
+        path.append(node)
+    return path[::-1]
+
+```
 ## 8. Dijkstra&Astar
+
+| Dijkstra Algorithm                                                                                            | Astar Algorithm                                                                                     |
+| ------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| - Priority Queue (FIFO)<br>- 시간 복잡도: O((V + E) log V)<br>- 공간 복잡도: O(V + E)<br>- 가중치가 양수인 경우 항상 최단경로를 찾을 수 있음 | - Priority Queue (FIFO)<br>- 가중치가 양수인 경우 항상 최단경로를 찾을 수 있음<br>- 시간 복잡도와 공간 복잡도가 휴리스틱의 성능에 따라서 크게 달라짐 |
 
 
 
