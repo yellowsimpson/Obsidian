@@ -1225,13 +1225,104 @@ force_abs_paths="$(arg force_abs_paths)"
 # Chapter 6. Manipulator (MoveIt2)
 
 ## 1. MoveIt2 개요
+- 서치 알고리즘
+- 모션 플래닝 알고리즘
+을 결합한 motion planning에 특화된  Moveit2 패키지를 사용 
+
+- motion planning에 특화된  ROS2 패키지의 일종
+	-  Sampling-based
+	- Optimization-based
+- 알고리즘 제공
+- 로봇 제조사와 협업 및 연동
+	- cobot arms: universal robots, panda
+	- industrial arms: kuka, abb
+- 사용자는 용도에 맞게 파라미터 조절
+- Rviz2, Gazebo와 연동
+	- Rviz2: 데이터 시각화 및  UI  제공
+	- Gazebo: 물리 엔진 시뮬레이션
 
 ## 2. 패키지 구조
+- moveit2 는 특정한 패키지 구조가 있고 그 구조에 따라 패키지가 실행, 빌드가 되기 때문에 가각의 폴더 어떤 역할을 하는지 아는것이 중요
 ## 3. 패키지 구조2
+https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver 
 
+이름 뒤에 moveit_config라고 적혀있는거 찾으면됨!!
+
+패키지 필수 파일
+- config
+- launch
+- srdf
+	->이 3개는 필수로 있어야됨 (doc 파일은 필수 X)
+
+ur_moveit_config/config/joint_limits.yaml : joint가 몇도까지 돌아가는지 설정해 놓은 파일
+ur_moveit_config/config/kinematics.yaml : 어떤 kinematics활용할건지
+ur_moveit_config/config/ompl_planning.yaml : 어떠한 파라미터 활용할건지
+ur_moveit_config/config/chomp_planning.yaml : chomp을 활용할때 사용하는 파라미터
 ## 4. 패키지구조 마무리
-
+ 패키지구조를 아는것이 중요!
 ## 5. MoveIt 2  설치
+moveit 설치 사이트: https://moveit.ai/install-moveit2/binary/ 
 
+moveit 설치 명령어
+```
+sudo apt install ros-humble-moveit
+```
 ## 6. 강의 요약
+
+Moveit2
+- Motion Planning에 특화된 ROS2  패키지의 일종
+- 알고리즘 제공
+- 로봇 제조사와 협업 및 연동
+
+패키지 구조
+- config
+- launch
+- srdf
+
+
+
+# Chatper 7. Manipulator (MoveIt2) 실습
+
+## 1. 강의 개요
+
+## 2. MoveIt 패키지 설치
+
+## 3. 커맨드 실행
+
+## 4. MoveIt 실행
+
+## 5. gripper Test
+
+## 6. ur+gripper
+
+## 7. world
+
+## 8. moveitConfig
+
+## 9. launch 0
+
+## 10. launch 1
+
+## 11. laucnh 2
+## 12. build And Run
+
+## 13. pickNplace
+
+## 14. 원리 설명
+
+## 15. 마무리
+
+
+
+# Chapter 8. Mobile Robot(Nav2)
+
+## 1. Nav2 개요
+
+## 2. Nav2 미니 실습 개요
+
+## 3. Nav2 설명
+
+## 4. 2D Pose
+
+## 5. 마무리
 
