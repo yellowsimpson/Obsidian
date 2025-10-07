@@ -224,14 +224,130 @@ __-> ROS가 여러 패키지를 한번에 모아서 사용할 수 있게 해준�
 - turtle Sim을 활용해서 실습시작!
 ## 2. ROS2 설치
 - [[ROS 명령어]]
+ros2 설치 사이트 : https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html
+
+터미널 1 : talker
+$ ros2 run demo_nodes_py talker
+
+터미널 2 : lisener
+$ ros2 run demo_nodes_py listener
+
+$ gedit ~/.bashrc : bashrc 여는 명령어
+
+여기에 source /opt/humble/setup.bash 넣어주면 터미널 틀때마다 칠 필요X
+
 ## 3. turtlesim 설치
 - [[ROS 명령어]]
+$sudo apt install ros-humble-turtlesim
+: turtlesim 설치 명령어
 ## 4. node
+[[ROS 명령어]]
 
+$ ros2 pkg executables turtlesim
+: 현재 사용할 수 있는 turtlesim 패키지  안에 executables  보기
+ex)
+turtlesim draw_square
+turtlesim mimic
+turtlesim turtle_teleop_key
+turtlesim turtlesim_node
+	->총 4개의 executables가 있음
+
+$ ros2 node list
+: 지금 현재 어떤 node가 실행되어 있는 지 확인하는 명령어
+/turtlesim
+
+$ ros2 run turtlesim turtlesim_node 
+: turtlesim 실행 명령어
+$ ros2 run turtlesim turtle_teleop_key 
+: 거북이 제어 명령어(방향키 누르면 제어 가능)
+
+$ ros2 node info /turtlesim
+:  turtlesim 안에 있는 노드 정보 확인
+
+```
+/turtlesim
+  Subscribers:
+    /parameter_events: rcl_interfaces/msg/ParameterEvent
+    /turtle1/cmd_vel: geometry_msgs/msg/Twist
+  Publishers:
+    /parameter_events: rcl_interfaces/msg/ParameterEvent
+    /rosout: rcl_interfaces/msg/Log
+    /turtle1/color_sensor: turtlesim/msg/Color
+    /turtle1/pose: turtlesim/msg/Pose
+  Service Servers:
+    /clear: std_srvs/srv/Empty
+    /kill: turtlesim/srv/Kill
+    /reset: std_srvs/srv/Empty
+    /spawn: turtlesim/srv/Spawn
+    /turtle1/set_pen: turtlesim/srv/SetPen
+    /turtle1/teleport_absolute: turtlesim/srv/TeleportAbsolute
+    /turtle1/teleport_relative: turtlesim/srv/TeleportRelative
+    /turtlesim/describe_parameters: rcl_interfaces/srv/DescribeParameters
+    /turtlesim/get_parameter_types: rcl_interfaces/srv/GetParameterTypes
+    /turtlesim/get_parameters: rcl_interfaces/srv/GetParameters
+    /turtlesim/list_parameters: rcl_interfaces/srv/ListParameters
+    /turtlesim/set_parameters: rcl_interfaces/srv/SetParameters
+    /turtlesim/set_parameters_atomically: rcl_interfaces/srv/SetParametersAtomically
+  Service Clients:
+
+  Action Servers:
+    /turtle1/rotate_absolute: turtlesim/action/RotateAbsolute
+  Action Clients:
+```
 ## 5. rqt
-
+$rqt_graph
+: 현재 노드들이 어떻게 연결되어 있는지 확인하는 명령어
 ## 6. topic
+$ ros2 topic list
+: 현재 실행 중인 모든 토픽(topic)의 이름을 목록으로 보여주는 명령어
+	/parameter_events
+	/rosout
+	/turtle1/cmd_vel
+	/turtle1/color_sensor
+	/turtle1/pose
 
+$ ros2 topic  echo
+: ROS 2에서 특정 토픽(topic)에 퍼블리시되는 메시지를 실시간으로 화면에 출력
+```
+usage: ros2 topic echo [-h] [--spin-time SPIN_TIME] [-s]
+                       [--no-daemon]
+                       [--qos-profile {unknown,system_default,sensor_data,services_default,parameters,parameter_events,action_status_default}]
+                       [--qos-depth N]
+                       [--qos-history {system_default,keep_last,keep_all,unknown}]
+                       [--qos-reliability {system_default,reliable,best_effort,unknown}]
+                       [--qos-durability {system_default,transient_local,volatile,unknown}]
+                       [--csv] [--field FIELD] [--full-length]
+                       [--truncate-length TRUNCATE_LENGTH]
+                       [--no-arr] [--no-str] [--flow-style]
+                       [--lost-messages] [--no-lost-messages]
+                       [--raw] [--filter FILTER_EXPR] [--once]
+                       topic_name [message_type]
+ros2 topic echo: error: the following arguments are required: topic_name
+```
+
+$ ros2 topic info
+: topic 정보 알려주는 명령어
+usage: ros2 topic info [-h] [--spin-time SPIN_TIME] [-s]
+                       [--no-daemon] [--verbose]
+                       topic_name
+ros2 topic info: error: the following arguments are required: topic_name
+
+$ros2 topic pub 1.토픽이름    2.메시지타입    3.어떤 데이터를 담을 껀지 
+예시
+$ ros2 interface show geometry_msgs/msg/Twist
+```
+# This expresses velocity in free space broken into its linear and angular parts.
+
+Vector3  linear
+	float64 x
+	float64 y
+	float64 z
+Vector3  angular
+	float64 x
+	float64 y
+	float64 z
+
+```
 ## 7. publish
 
 ## 8. 중간점검

@@ -19,6 +19,8 @@ $sudo apt install ros-humble-ros-base
 $sudo apt install ros-dev-tools
 
 __setup.bash 여는 명령어__
+$ gedit ~/.bashrc : bashrc 여는 명령어
+
 $source /opt/ros/humble/setup.bash
 :터미널 처음 열때 치는 명령어
 *-> 귀찮으면 .bashrc에 내용 포함해!*
