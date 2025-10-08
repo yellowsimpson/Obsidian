@@ -450,791 +450,422 @@ Xacro
 ### <ur_macro.xacro>
 ```xml
 <?xml version="1.0"?>
-
 <robot xmlns:xacro="http://wiki.ros.org/xacro">
 
-<!--
-
-Base UR robot series xacro macro.
-
-  
-
-NOTE this is NOT a URDF. It cannot directly be loaded by consumers
-
-expecting a flattened '.urdf' file. See the top-level '.xacro' for that
-
-(but note that .xacro must still be processed by the xacro command).
-
-  
-
-This file models the base kinematic chain of a UR robot, which then gets
-
-parameterised by various configuration files to convert it into a UR3(e),
-
-UR5(e), UR10(e) or UR16e.
-
-  
-
-NOTE the default kinematic parameters (i.e., link lengths, frame locations,
-
-offsets, etc) do not correspond to any particular robot. They are defaults
-
-only. There WILL be non-zero offsets between the Forward Kinematics results
-
-in TF (i.e., robot_state_publisher) and the values reported by the Teach
-
-Pendant.
-
-  
-
-For accurate (and robot-specific) transforms, the 'kinematics_parameters_file'
-
-parameter MUST point to a .yaml file containing the appropriate values for
-
-the targeted robot.
-
-  
-
-If using the UniversalRobots/Universal_Robots_ROS_Driver, follow the steps
-
-described in the readme of that repository to extract the kinematic
-
-calibration from the controller and generate the required .yaml file.
-
-  
-
-Main author of the migration to yaml configs Ludovic Delval.
-
-  
-
-Contributors to previous versions (in no particular order)
-
-  
-
-- Denis Stogl
-
-- Lovro Ivanov
-
-- Felix Messmer
-
-- Kelsey Hawkins
-
-- Wim Meeussen
-
-- Shaun Edwards
-
-- Nadia Hammoudeh Garcia
-
-- Dave Hershberger
-
-- G. vd. Hoorn
-
-- Philip Long
-
-- Dave Coleman
-
-- Miguel Prada
-
-- Mathias Luedtke
-
-- Marcel Schnirring
-
-- Felix von Drigalski
-
-- Felix Exner
-
-- Jimmy Da Silva
-
-- Ajit Krisshna N L
-
-- Muhammad Asif Rana
-
--->
-
-  
-
-<xacro:include filename="$(find ur_description)/urdf/inc/ur_common.xacro" />
-
-  
-<!-- xacro: macro => 앞에서 로봇의 base 구성하는 부분을 ur_robot으로 불러옴 -->
-<xacro:macro name="ur_robot" params="
-
-name
-tf_prefix
-parent
-*origin
-joint_limits_parameters_file
-kinematics_parameters_file
-physical_parameters_file
-visual_parameters_file
-safety_limits:=false
-safety_pos_margin:=0.15
-safety_k_position:=20
-force_abs_paths:=false
-">
-
-  
-
-<!-- Load configuration data from the provided .yaml files -->
-
-<xacro:read_model_data
-
-joint_limits_parameters_file="${joint_limits_parameters_file}"
-
-kinematics_parameters_file="${kinematics_parameters_file}"
-
-physical_parameters_file="${physical_parameters_file}"
-
-visual_parameters_file="${visual_parameters_file}"
-
-force_abs_paths="${force_abs_paths}"/>
-
-  
-
-<!-- links - main serial chain -->
-
-<link name="${tf_prefix}base_link"/>
-
-<link name="${tf_prefix}base_link_inertia">
-
-<visual>
-
-<origin xyz="0 0 0" rpy="0 0 ${pi}"/>
-
-<geometry>
-
-<xacro:get_mesh name="base" type="visual"/>
-
-</geometry>
-
-</visual>
-
-<collision>
-
-<origin xyz="0 0 0" rpy="0 0 ${pi}"/>
-
-<geometry>
-
-<xacro:get_mesh name="base" type="collision"/>
-
-</geometry>
-
-</collision>
-
-<xacro:cylinder_inertial radius="${base_inertia_radius}" length="${base_inertia_length}" mass="${base_mass}">
-
-<origin xyz="0 0 0" rpy="0 0 0" />
-
-</xacro:cylinder_inertial>
-
-</link>
-
-<link name="${tf_prefix}shoulder_link">
-
-<visual>
-
-<origin xyz="0 0 0" rpy="0 0 ${pi}"/>
-
-<geometry>
-
-<xacro:get_mesh name="shoulder" type="visual"/>
-
-</geometry>
-
-</visual>
-
-<collision>
-
-<origin xyz="0 0 0" rpy="0 0 ${pi}"/>
-
-<geometry>
-
-<xacro:get_mesh name="shoulder" type="collision"/>
-
-</geometry>
-
-</collision>
-
-<inertial>
-
-<mass value="${shoulder_mass}"/>
-
-<origin rpy="${shoulder_inertia_rotation}" xyz="${shoulder_cog}"/>
-
-<inertia
-
-ixx="${shoulder_inertia_ixx}"
-
-ixy="${shoulder_inertia_ixy}"
-
-ixz="${shoulder_inertia_ixz}"
-
-iyy="${shoulder_inertia_iyy}"
-
-iyz="${shoulder_inertia_iyz}"
-
-izz="${shoulder_inertia_izz}"
-
-/>
-
-</inertial> </link>
-
-<link name="${tf_prefix}upper_arm_link">
-
-<visual>
-
-<origin xyz="0 0 ${shoulder_offset}" rpy="${pi/2} 0 ${-pi/2}"/>
-
-<geometry>
-
-<xacro:get_mesh name="upper_arm" type="visual"/>
-
-</geometry>
-
-</visual>
-
-<collision>
-
-<origin xyz="0 0 ${shoulder_offset}" rpy="${pi/2} 0 ${-pi/2}"/>
-
-<geometry>
-
-<xacro:get_mesh name="upper_arm" type="collision"/>
-
-</geometry>
-
-</collision>
-
-<inertial>
-
-<mass value="${upper_arm_mass}"/>
-
-<origin rpy="${upper_arm_inertia_rotation}" xyz="${upper_arm_cog}"/>
-
-<inertia
-
-ixx="${upper_arm_inertia_ixx}"
-
-ixy="${upper_arm_inertia_ixy}"
-
-ixz="${upper_arm_inertia_ixz}"
-
-iyy="${upper_arm_inertia_iyy}"
-
-iyz="${upper_arm_inertia_iyz}"
-
-izz="${upper_arm_inertia_izz}"
-
-/>
-
-</inertial>
-
-</link>
-
-<link name="${tf_prefix}forearm_link">
-
-<visual>
-
-<origin xyz="0 0 ${elbow_offset}" rpy="${pi/2} 0 ${-pi/2}"/>
-
-<geometry>
-
-<xacro:get_mesh name="forearm" type="visual"/>
-
-</geometry>
-
-</visual>
-
-<collision>
-
-<origin xyz="0 0 ${elbow_offset}" rpy="${pi/2} 0 ${-pi/2}"/>
-
-<geometry>
-
-<xacro:get_mesh name="forearm" type="collision"/>
-
-</geometry>
-
-</collision>
-
-<inertial>
-
-<mass value="${forearm_mass}"/>
-
-<origin rpy="${forearm_inertia_rotation}" xyz="${forearm_cog}"/>
-
-<inertia
-
-ixx="${forearm_inertia_ixx}"
-
-ixy="${forearm_inertia_ixy}"
-
-ixz="${forearm_inertia_ixz}"
-
-iyy="${forearm_inertia_iyy}"
-
-iyz="${forearm_inertia_iyz}"
-
-izz="${forearm_inertia_izz}"
-
-/>
-
-</inertial>
-
-</link>
-
-<link name="${tf_prefix}wrist_1_link">
-
-<xacro:get_visual_params name="wrist_1" type="visual_offset"/>
-
-<visual>
-
-<origin xyz="0 0 ${visual_params}" rpy="${pi/2} 0 0"/>
-
-<geometry>
-
-<xacro:get_mesh name="wrist_1" type="visual"/>
-
-</geometry>
-
-</visual>
-
-<collision>
-
-<origin xyz="0 0 ${visual_params}" rpy="${pi/2} 0 0"/>
-
-<geometry>
-
-<xacro:get_mesh name="wrist_1" type="collision"/>
-
-</geometry>
-
-</collision>
-
-<inertial>
-
-<mass value="${wrist_1_mass}"/>
-
-<origin rpy="${wrist_1_inertia_rotation}" xyz="${wrist_1_cog}"/>
-
-<inertia
-
-ixx="${wrist_1_inertia_ixx}"
-
-ixy="${wrist_1_inertia_ixy}"
-
-ixz="${wrist_1_inertia_ixz}"
-
-iyy="${wrist_1_inertia_iyy}"
-
-iyz="${wrist_1_inertia_iyz}"
-
-izz="${wrist_1_inertia_izz}"
-
-/>
-
-</inertial>
-
-</link>
-
-<link name="${tf_prefix}wrist_2_link">
-
-<xacro:get_visual_params name="wrist_2" type="visual_offset"/>
-
-<visual>
-
-<origin xyz="0 0 ${visual_params}" rpy="0 0 0"/>
-
-<geometry>
-
-<xacro:get_mesh name="wrist_2" type="visual"/>
-
-</geometry>
-
-</visual>
-
-<collision>
-
-<origin xyz="0 0 ${visual_params}" rpy="0 0 0"/>
-
-<geometry>
-
-<xacro:get_mesh name="wrist_2" type="collision"/>
-
-</geometry>
-
-</collision>
-
-<inertial>
-
-<mass value="${wrist_2_mass}"/>
-
-<origin rpy="${wrist_2_inertia_rotation}" xyz="${wrist_2_cog}"/>
-
-<inertia
-
-ixx="${wrist_2_inertia_ixx}"
-
-ixy="${wrist_2_inertia_ixy}"
-
-ixz="${wrist_2_inertia_ixz}"
-
-iyy="${wrist_2_inertia_iyy}"
-
-iyz="${wrist_2_inertia_iyz}"
-
-izz="${wrist_2_inertia_izz}"
-
-/>
-
-</inertial>
-
-</link>
-
-<link name="${tf_prefix}wrist_3_link">
-
-<!-- TODO: remove this once all wrist_3 meshes have the visual_offset_xyz tag -->
-
-<xacro:get_visual_params name="wrist_3" type="visual_offset_xyz"/>
-
-<xacro:property name="mesh_offset" value="${visual_params}" scope="parent"/>
-
-  
-
-<xacro:if value="${visual_params == ''}">
-
-<xacro:get_visual_params name="wrist_3" type="visual_offset"/>
-
-<xacro:property name="mesh_offset" value="0 0 ${visual_params}" scope="parent"/>
-
-</xacro:if>
-
-<visual>
-
-<origin xyz="${mesh_offset}" rpy="${pi/2} 0 0"/>
-
-<geometry>
-
-<xacro:get_mesh name="wrist_3" type="visual"/>
-
-</geometry>
-
-</visual>
-
-<collision>
-
-<origin xyz="${mesh_offset}" rpy="${pi/2} 0 0"/>
-
-<geometry>
-
-<xacro:get_mesh name="wrist_3" type="collision"/>
-
-</geometry>
-
-</collision>
-
-<inertial>
-
-<mass value="${wrist_3_mass}"/>
-
-<origin rpy="${wrist_3_inertia_rotation}" xyz="${wrist_3_cog}"/>
-
-<inertia
-
-ixx="${wrist_3_inertia_ixx}"
-
-ixy="${wrist_3_inertia_ixy}"
-
-ixz="${wrist_3_inertia_ixz}"
-
-iyy="${wrist_3_inertia_iyy}"
-
-iyz="${wrist_3_inertia_iyz}"
-
-izz="${wrist_3_inertia_izz}"
-
-/>
-
-</inertial>
-
-</link>
-
-  
-
-<!-- base_joint fixes base_link to the environment -->
-
-<joint name="${tf_prefix}base_joint" type="fixed">
-
-<xacro:insert_block name="origin" />
-
-<parent link="${parent}" />
-
-<child link="${tf_prefix}base_link" />
-
-</joint>
-
-  
-
-<!-- joints - main serial chain -->
-
-<joint name="${tf_prefix}base_link-base_link_inertia" type="fixed">
-
-<parent link="${tf_prefix}base_link" />
-
-<child link="${tf_prefix}base_link_inertia" />
-
-<!-- 'base_link' is REP-103 aligned (so X+ forward), while the internal
-
-frames of the robot/controller have X+ pointing backwards.
-
-Use the joint between 'base_link' and 'base_link_inertia' (a dummy
-
-link/frame) to introduce the necessary rotation over Z (of pi rad).
-
--->
-
-<origin xyz="0 0 0" rpy="0 0 ${pi}" />
-
-</joint>
-
-<joint name="${tf_prefix}shoulder_pan_joint" type="revolute">
-
-<parent link="${tf_prefix}base_link_inertia" />
-
-<child link="${tf_prefix}shoulder_link" />
-
-<origin xyz="${shoulder_x} ${shoulder_y} ${shoulder_z}" rpy="${shoulder_roll} ${shoulder_pitch} ${shoulder_yaw}" />
-
-<axis xyz="0 0 1" />
-
-<limit lower="${shoulder_pan_lower_limit}" upper="${shoulder_pan_upper_limit}"
-
-effort="${shoulder_pan_effort_limit}" velocity="${shoulder_pan_velocity_limit}"/>
-
-<xacro:if value="${safety_limits}">
-
-<safety_controller soft_lower_limit="${shoulder_pan_lower_limit + safety_pos_margin}" soft_upper_limit="${shoulder_pan_upper_limit - safety_pos_margin}" k_position="${safety_k_position}" k_velocity="0.0"/>
-
-</xacro:if>
-
-<dynamics damping="0" friction="0"/>
-
-</joint>
-
-<joint name="${tf_prefix}shoulder_lift_joint" type="revolute">
-
-<parent link="${tf_prefix}shoulder_link" />
-
-<child link="${tf_prefix}upper_arm_link" />
-
-<origin xyz="${upper_arm_x} ${upper_arm_y} ${upper_arm_z}" rpy="${upper_arm_roll} ${upper_arm_pitch} ${upper_arm_yaw}" />
-
-<axis xyz="0 0 1" />
-
-<limit lower="${shoulder_lift_lower_limit}" upper="${shoulder_lift_upper_limit}"
-
-effort="${shoulder_lift_effort_limit}" velocity="${shoulder_lift_velocity_limit}"/>
-
-<xacro:if value="${safety_limits}">
-
-<safety_controller soft_lower_limit="${shoulder_lift_lower_limit + safety_pos_margin}" soft_upper_limit="${shoulder_lift_upper_limit - safety_pos_margin}" k_position="${safety_k_position}" k_velocity="0.0"/>
-
-</xacro:if>
-
-<dynamics damping="0" friction="0"/>
-
-</joint>
-
-<joint name="${tf_prefix}elbow_joint" type="revolute">
-
-<parent link="${tf_prefix}upper_arm_link" />
-
-<child link="${tf_prefix}forearm_link" />
-
-<origin xyz="${forearm_x} ${forearm_y} ${forearm_z}" rpy="${forearm_roll} ${forearm_pitch} ${forearm_yaw}" />
-
-<axis xyz="0 0 1" />
-
-<limit lower="${elbow_joint_lower_limit}" upper="${elbow_joint_upper_limit}"
-
-effort="${elbow_joint_effort_limit}" velocity="${elbow_joint_velocity_limit}"/>
-
-<xacro:if value="${safety_limits}">
-
-<safety_controller soft_lower_limit="${elbow_joint_lower_limit + safety_pos_margin}" soft_upper_limit="${elbow_joint_upper_limit - safety_pos_margin}" k_position="${safety_k_position}" k_velocity="0.0"/>
-
-</xacro:if>
-
-<dynamics damping="0" friction="0"/>
-
-</joint>
-
-<joint name="${tf_prefix}wrist_1_joint" type="revolute">
-
-<parent link="${tf_prefix}forearm_link" />
-
-<child link="${tf_prefix}wrist_1_link" />
-
-<origin xyz="${wrist_1_x} ${wrist_1_y} ${wrist_1_z}" rpy="${wrist_1_roll} ${wrist_1_pitch} ${wrist_1_yaw}" />
-
-<axis xyz="0 0 1" />
-
-<limit lower="${wrist_1_lower_limit}" upper="${wrist_1_upper_limit}"
-
-effort="${wrist_1_effort_limit}" velocity="${wrist_1_velocity_limit}"/>
-
-<xacro:if value="${safety_limits}">
-
-<safety_controller soft_lower_limit="${wrist_1_lower_limit + safety_pos_margin}" soft_upper_limit="${wrist_1_upper_limit - safety_pos_margin}" k_position="${safety_k_position}" k_velocity="0.0"/>
-
-</xacro:if>
-
-<dynamics damping="0" friction="0"/>
-
-</joint>
-
-<joint name="${tf_prefix}wrist_2_joint" type="revolute">
-
-<parent link="${tf_prefix}wrist_1_link" />
-
-<child link="${tf_prefix}wrist_2_link" />
-
-<origin xyz="${wrist_2_x} ${wrist_2_y} ${wrist_2_z}" rpy="${wrist_2_roll} ${wrist_2_pitch} ${wrist_2_yaw}" />
-
-<axis xyz="0 0 1" />
-
-<limit lower="${wrist_2_lower_limit}" upper="${wrist_2_upper_limit}"
-
-effort="${wrist_2_effort_limit}" velocity="${wrist_2_velocity_limit}"/>
-
-<xacro:if value="${safety_limits}">
-
-<safety_controller soft_lower_limit="${wrist_2_lower_limit + safety_pos_margin}" soft_upper_limit="${wrist_2_upper_limit - safety_pos_margin}" k_position="${safety_k_position}" k_velocity="0.0"/>
-
-</xacro:if>
-
-<dynamics damping="0" friction="0"/>
-
-</joint>
-
-<joint name="${tf_prefix}wrist_3_joint" type="${wrist_3_joint_type}">
-
-<parent link="${tf_prefix}wrist_2_link" />
-
-<child link="${tf_prefix}wrist_3_link" />
-
-<origin xyz="${wrist_3_x} ${wrist_3_y} ${wrist_3_z}" rpy="${wrist_3_roll} ${wrist_3_pitch} ${wrist_3_yaw}" />
-
-<axis xyz="0 0 1" />
-
-<xacro:if value="${wrist_3_joint_type != 'continuous'}">
-
-<limit lower="${wrist_3_lower_limit}" upper="${wrist_3_upper_limit}"
-
-effort="${wrist_3_effort_limit}" velocity="${wrist_3_velocity_limit}"/>
-
-<xacro:if value="${safety_limits}">
-
-<safety_controller soft_lower_limit="${wrist_3_lower_limit + safety_pos_margin}" soft_upper_limit="${wrist_3_upper_limit - safety_pos_margin}" k_position="${safety_k_position}" k_velocity="0.0"/>
-
-</xacro:if>
-
-</xacro:if>
-
-<xacro:unless value="${wrist_3_joint_type != 'continuous'}">
-
-<limit effort="${wrist_3_effort_limit}" velocity="${wrist_3_velocity_limit}"/>
-
-<xacro:if value="${safety_limits}">
-
-<safety_controller k_position="${safety_k_position}" k_velocity="0.0"/>
-
-</xacro:if>
-
-</xacro:unless>
-
-<dynamics damping="0" friction="0"/>
-
-</joint>
-
-  
-
-<link name="${tf_prefix}ft_frame"/>
-
-<joint name="${tf_prefix}wrist_3_link-ft_frame" type="fixed">
-
-<parent link="${tf_prefix}wrist_3_link"/>
-
-<child link="${tf_prefix}ft_frame"/>
-
-<origin xyz="0 0 0" rpy="${pi} 0 0"/>
-
-</joint>
-
-  
-
-<!-- ROS-Industrial 'base' frame - base_link to UR 'Base' Coordinates transform -->
-
-<link name="${tf_prefix}base"/>
-
-<joint name="${tf_prefix}base_link-base_fixed_joint" type="fixed">
-
-<!-- Note the rotation over Z of pi radians - as base_link is REP-103
-
-aligned (i.e., has X+ forward, Y+ left and Z+ up), this is needed
-
-to correctly align 'base' with the 'Base' coordinate system of
-
-the UR controller.
-
--->
-
-<origin xyz="0 0 0" rpy="0 0 ${pi}"/>
-
-<parent link="${tf_prefix}base_link"/>
-
-<child link="${tf_prefix}base"/>
-
-</joint>
-
-  
-
-<!-- ROS-Industrial 'flange' frame - attachment point for EEF models -->
-
-<link name="${tf_prefix}flange" />
-
-<joint name="${tf_prefix}wrist_3-flange" type="fixed">
-
-<parent link="${tf_prefix}wrist_3_link" />
-
-<child link="${tf_prefix}flange" />
-
-<origin xyz="0 0 0" rpy="0 ${-pi/2.0} ${-pi/2.0}" />
-
-</joint>
-
-  
-
-<!-- ROS-Industrial 'tool0' frame - all-zeros tool frame -->
-
-<link name="${tf_prefix}tool0"/>
-
-<joint name="${tf_prefix}flange-tool0" type="fixed">
-
-<!-- default toolframe - X+ left, Y+ up, Z+ front -->
-
-<origin xyz="0 0 0" rpy="${pi/2.0} 0 ${pi/2.0}"/>
-
-<parent link="${tf_prefix}flange"/>
-
-<child link="${tf_prefix}tool0"/>
-
-</joint>
-
-  
-
-</xacro:macro>
-
+  <!--
+    Base UR robot series xacro macro.
+
+    NOTE this is NOT a URDF. It cannot directly be loaded by consumers
+    expecting a flattened '.urdf' file. See the top-level '.xacro' for that
+    (but note that .xacro must still be processed by the xacro command).
+
+    This file models the base kinematic chain of a UR robot, which then gets
+    parameterised by various configuration files to convert it into a UR3(e),
+    UR5(e), UR10(e) or UR16e.
+
+    NOTE the default kinematic parameters (i.e., link lengths, frame locations,
+    offsets, etc) do not correspond to any particular robot. They are defaults
+    only. There WILL be non-zero offsets between the Forward Kinematics results
+    in TF (i.e., robot_state_publisher) and the values reported by the Teach
+    Pendant.
+
+    For accurate (and robot-specific) transforms, the 'kinematics_parameters_file'
+    parameter MUST point to a .yaml file containing the appropriate values for
+    the targeted robot.
+
+    If using the UniversalRobots/Universal_Robots_ROS_Driver, follow the steps
+    described in the readme of that repository to extract the kinematic
+    calibration from the controller and generate the required .yaml file.
+
+    Main author of the migration to yaml configs: Ludovic Delval.
+
+    Contributors to previous versions (in no particular order)
+      - Denis Stogl
+      - Lovro Ivanov
+      - Felix Messmer
+      - Kelsey Hawkins
+      - Wim Meeussen
+      - Shaun Edwards
+      - Nadia Hammoudeh Garcia
+      - Dave Hershberger
+      - G. vd. Hoorn
+      - Philip Long
+      - Dave Coleman
+      - Miguel Prada
+      - Mathias Luedtke
+      - Marcel Schnirring
+      - Felix von Drigalski
+      - Felix Exner
+      - Jimmy Da Silva
+      - Ajit Krisshna N L
+      - Muhammad Asif Rana
+  -->
+
+  <xacro:include filename="$(find ur_description)/urdf/inc/ur_common.xacro" />
+
+  <!-- xacro: macro => 로봇의 base를 구성하는 부분을 ur_robot으로 정의 -->
+  <xacro:macro name="ur_robot" params="
+      name
+      tf_prefix
+      parent
+      *origin
+      joint_limits_parameters_file
+      kinematics_parameters_file
+      physical_parameters_file
+      visual_parameters_file
+      safety_limits:=false
+      safety_pos_margin:=0.15
+      safety_k_position:=20
+      force_abs_paths:=false">
+
+    <!-- Load configuration data from the provided .yaml files -->
+    <xacro:read_model_data
+      joint_limits_parameters_file="${joint_limits_parameters_file}"
+      kinematics_parameters_file="${kinematics_parameters_file}"
+      physical_parameters_file="${physical_parameters_file}"
+      visual_parameters_file="${visual_parameters_file}"
+      force_abs_paths="${force_abs_paths}"/>
+
+    <!-- links - main serial chain -->
+    <link name="${tf_prefix}base_link"/>
+
+    <link name="${tf_prefix}base_link_inertia">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 ${pi}"/>
+        <geometry>
+          <xacro:get_mesh name="base" type="visual"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 ${pi}"/>
+        <geometry>
+          <xacro:get_mesh name="base" type="collision"/>
+        </geometry>
+      </collision>
+      <xacro:cylinder_inertial radius="${base_inertia_radius}" length="${base_inertia_length}" mass="${base_mass}">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+      </xacro:cylinder_inertial>
+    </link>
+
+    <link name="${tf_prefix}shoulder_link">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 ${pi}"/>
+        <geometry>
+          <xacro:get_mesh name="shoulder" type="visual"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 ${pi}"/>
+        <geometry>
+          <xacro:get_mesh name="shoulder" type="collision"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="${shoulder_mass}"/>
+        <origin rpy="${shoulder_inertia_rotation}" xyz="${shoulder_cog}"/>
+        <inertia
+          ixx="${shoulder_inertia_ixx}"
+          ixy="${shoulder_inertia_ixy}"
+          ixz="${shoulder_inertia_ixz}"
+          iyy="${shoulder_inertia_iyy}"
+          iyz="${shoulder_inertia_iyz}"
+          izz="${shoulder_inertia_izz}"/>
+      </inertial>
+    </link>
+
+    <link name="${tf_prefix}upper_arm_link">
+      <visual>
+        <origin xyz="0 0 ${shoulder_offset}" rpy="${pi/2} 0 ${-pi/2}"/>
+        <geometry>
+          <xacro:get_mesh name="upper_arm" type="visual"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 ${shoulder_offset}" rpy="${pi/2} 0 ${-pi/2}"/>
+        <geometry>
+          <xacro:get_mesh name="upper_arm" type="collision"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="${upper_arm_mass}"/>
+        <origin rpy="${upper_arm_inertia_rotation}" xyz="${upper_arm_cog}"/>
+        <inertia
+          ixx="${upper_arm_inertia_ixx}"
+          ixy="${upper_arm_inertia_ixy}"
+          ixz="${upper_arm_inertia_ixz}"
+          iyy="${upper_arm_inertia_iyy}"
+          iyz="${upper_arm_inertia_iyz}"
+          izz="${upper_arm_inertia_izz}"/>
+      </inertial>
+    </link>
+
+    <link name="${tf_prefix}forearm_link">
+      <visual>
+        <origin xyz="0 0 ${elbow_offset}" rpy="${pi/2} 0 ${-pi/2}"/>
+        <geometry>
+          <xacro:get_mesh name="forearm" type="visual"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 ${elbow_offset}" rpy="${pi/2} 0 ${-pi/2}"/>
+        <geometry>
+          <xacro:get_mesh name="forearm" type="collision"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="${forearm_mass}"/>
+        <origin rpy="${forearm_inertia_rotation}" xyz="${forearm_cog}"/>
+        <inertia
+          ixx="${forearm_inertia_ixx}"
+          ixy="${forearm_inertia_ixy}"
+          ixz="${forearm_inertia_ixz}"
+          iyy="${forearm_inertia_iyy}"
+          iyz="${forearm_inertia_iyz}"
+          izz="${forearm_inertia_izz}"/>
+      </inertial>
+    </link>
+
+    <link name="${tf_prefix}wrist_1_link">
+      <xacro:get_visual_params name="wrist_1" type="visual_offset"/>
+      <visual>
+        <origin xyz="0 0 ${visual_params}" rpy="${pi/2} 0 0"/>
+        <geometry>
+          <xacro:get_mesh name="wrist_1" type="visual"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 ${visual_params}" rpy="${pi/2} 0 0"/>
+        <geometry>
+          <xacro:get_mesh name="wrist_1" type="collision"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="${wrist_1_mass}"/>
+        <origin rpy="${wrist_1_inertia_rotation}" xyz="${wrist_1_cog}"/>
+        <inertia
+          ixx="${wrist_1_inertia_ixx}"
+          ixy="${wrist_1_inertia_ixy}"
+          ixz="${wrist_1_inertia_ixz}"
+          iyy="${wrist_1_inertia_iyy}"
+          iyz="${wrist_1_inertia_iyz}"
+          izz="${wrist_1_inertia_izz}"/>
+      </inertial>
+    </link>
+
+    <link name="${tf_prefix}wrist_2_link">
+      <xacro:get_visual_params name="wrist_2" type="visual_offset"/>
+      <visual>
+        <origin xyz="0 0 ${visual_params}" rpy="0 0 0"/>
+        <geometry>
+          <xacro:get_mesh name="wrist_2" type="visual"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 ${visual_params}" rpy="0 0 0"/>
+        <geometry>
+          <xacro:get_mesh name="wrist_2" type="collision"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="${wrist_2_mass}"/>
+        <origin rpy="${wrist_2_inertia_rotation}" xyz="${wrist_2_cog}"/>
+        <inertia
+          ixx="${wrist_2_inertia_ixx}"
+          ixy="${wrist_2_inertia_ixy}"
+          ixz="${wrist_2_inertia_ixz}"
+          iyy="${wrist_2_inertia_iyy}"
+          iyz="${wrist_2_inertia_iyz}"
+          izz="${wrist_2_inertia_izz}"/>
+      </inertial>
+    </link>
+
+    <link name="${tf_prefix}wrist_3_link">
+      <!-- TODO: remove this once all wrist_3 meshes have the visual_offset_xyz tag -->
+      <xacro:get_visual_params name="wrist_3" type="visual_offset_xyz"/>
+      <xacro:property name="mesh_offset" value="${visual_params}" scope="parent"/>
+      <xacro:if value="${visual_params == ''}">
+        <xacro:get_visual_params name="wrist_3" type="visual_offset"/>
+        <xacro:property name="mesh_offset" value="0 0 ${visual_params}" scope="parent"/>
+      </xacro:if>
+
+      <visual>
+        <origin xyz="${mesh_offset}" rpy="${pi/2} 0 0"/>
+        <geometry>
+          <xacro:get_mesh name="wrist_3" type="visual"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="${mesh_offset}" rpy="${pi/2} 0 0"/>
+        <geometry>
+          <xacro:get_mesh name="wrist_3" type="collision"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="${wrist_3_mass}"/>
+        <origin rpy="${wrist_3_inertia_rotation}" xyz="${wrist_3_cog}"/>
+        <inertia
+          ixx="${wrist_3_inertia_ixx}"
+          ixy="${wrist_3_inertia_ixy}"
+          ixz="${wrist_3_inertia_ixz}"
+          iyy="${wrist_3_inertia_iyy}"
+          iyz="${wrist_3_inertia_iyz}"
+          izz="${wrist_3_inertia_izz}"/>
+      </inertial>
+    </link>
+
+    <!-- base_joint fixes base_link to the environment -->
+    <joint name="${tf_prefix}base_joint" type="fixed">
+      <xacro:insert_block name="origin"/>
+      <parent link="${parent}"/>
+      <child link="${tf_prefix}base_link"/>
+    </joint>
+
+    <!-- joints - main serial chain -->
+    <joint name="${tf_prefix}base_link-base_link_inertia" type="fixed">
+      <parent link="${tf_prefix}base_link"/>
+      <child link="${tf_prefix}base_link_inertia"/>
+      <!-- 'base_link' is REP-103 aligned (X+ forward), while the internal
+           frames of the robot/controller have X+ pointing backwards.
+           Use this joint to introduce the necessary rotation over Z (pi rad). -->
+      <origin xyz="0 0 0" rpy="0 0 ${pi}"/>
+    </joint>
+
+    <joint name="${tf_prefix}shoulder_pan_joint" type="revolute">
+      <parent link="${tf_prefix}base_link_inertia"/>
+      <child link="${tf_prefix}shoulder_link"/>
+      <origin xyz="${shoulder_x} ${shoulder_y} ${shoulder_z}" rpy="${shoulder_roll} ${shoulder_pitch} ${shoulder_yaw}"/>
+      <axis xyz="0 0 1"/>
+      <limit lower="${shoulder_pan_lower_limit}" upper="${shoulder_pan_upper_limit}"
+             effort="${shoulder_pan_effort_limit}" velocity="${shoulder_pan_velocity_limit}"/>
+      <xacro:if value="${safety_limits}">
+        <safety_controller soft_lower_limit="${shoulder_pan_lower_limit + safety_pos_margin}"
+                           soft_upper_limit="${shoulder_pan_upper_limit - safety_pos_margin}"
+                           k_position="${safety_k_position}" k_velocity="0.0"/>
+      </xacro:if>
+      <dynamics damping="0" friction="0"/>
+    </joint>
+
+    <joint name="${tf_prefix}shoulder_lift_joint" type="revolute">
+      <parent link="${tf_prefix}shoulder_link"/>
+      <child link="${tf_prefix}upper_arm_link"/>
+      <origin xyz="${upper_arm_x} ${upper_arm_y} ${upper_arm_z}" rpy="${upper_arm_roll} ${upper_arm_pitch} ${upper_arm_yaw}"/>
+      <axis xyz="0 0 1"/>
+      <limit lower="${shoulder_lift_lower_limit}" upper="${shoulder_lift_upper_limit}"
+             effort="${shoulder_lift_effort_limit}" velocity="${shoulder_lift_velocity_limit}"/>
+      <xacro:if value="${safety_limits}">
+        <safety_controller soft_lower_limit="${shoulder_lift_lower_limit + safety_pos_margin}"
+                           soft_upper_limit="${shoulder_lift_upper_limit - safety_pos_margin}"
+                           k_position="${safety_k_position}" k_velocity="0.0"/>
+      </xacro:if>
+      <dynamics damping="0" friction="0"/>
+    </joint>
+
+    <joint name="${tf_prefix}elbow_joint" type="revolute">
+      <parent link="${tf_prefix}upper_arm_link"/>
+      <child link="${tf_prefix}forearm_link"/>
+      <origin xyz="${forearm_x} ${forearm_y} ${forearm_z}" rpy="${forearm_roll} ${forearm_pitch} ${forearm_yaw}"/>
+      <axis xyz="0 0 1"/>
+      <limit lower="${elbow_joint_lower_limit}" upper="${elbow_joint_upper_limit}"
+             effort="${elbow_joint_effort_limit}" velocity="${elbow_joint_velocity_limit}"/>
+      <xacro:if value="${safety_limits}">
+        <safety_controller soft_lower_limit="${elbow_joint_lower_limit + safety_pos_margin}"
+                           soft_upper_limit="${elbow_joint_upper_limit - safety_pos_margin}"
+                           k_position="${safety_k_position}" k_velocity="0.0"/>
+      </xacro:if>
+      <dynamics damping="0" friction="0"/>
+    </joint>
+
+    <joint name="${tf_prefix}wrist_1_joint" type="revolute">
+      <parent link="${tf_prefix}forearm_link"/>
+      <child link="${tf_prefix}wrist_1_link"/>
+      <origin xyz="${wrist_1_x} ${wrist_1_y} ${wrist_1_z}" rpy="${wrist_1_roll} ${wrist_1_pitch} ${wrist_1_yaw}"/>
+      <axis xyz="0 0 1"/>
+      <limit lower="${wrist_1_lower_limit}" upper="${wrist_1_upper_limit}"
+             effort="${wrist_1_effort_limit}" velocity="${wrist_1_velocity_limit}"/>
+      <xacro:if value="${safety_limits}">
+        <safety_controller soft_lower_limit="${wrist_1_lower_limit + safety_pos_margin}"
+                           soft_upper_limit="${wrist_1_upper_limit - safety_pos_margin}"
+                           k_position="${safety_k_position}" k_velocity="0.0"/>
+      </xacro:if>
+      <dynamics damping="0" friction="0"/>
+    </joint>
+
+    <joint name="${tf_prefix}wrist_2_joint" type="revolute">
+      <parent link="${tf_prefix}wrist_1_link"/>
+      <child link="${tf_prefix}wrist_2_link"/>
+      <origin xyz="${wrist_2_x} ${wrist_2_y} ${wrist_2_z}" rpy="${wrist_2_roll} ${wrist_2_pitch} ${wrist_2_yaw}"/>
+      <axis xyz="0 0 1"/>
+      <limit lower="${wrist_2_lower_limit}" upper="${wrist_2_upper_limit}"
+             effort="${wrist_2_effort_limit}" velocity="${wrist_2_velocity_limit}"/>
+      <xacro:if value="${safety_limits}">
+        <safety_controller soft_lower_limit="${wrist_2_lower_limit + safety_pos_margin}"
+                           soft_upper_limit="${wrist_2_upper_limit - safety_pos_margin}"
+                           k_position="${safety_k_position}" k_velocity="0.0"/>
+      </xacro:if>
+      <dynamics damping="0" friction="0"/>
+    </joint>
+
+    <joint name="${tf_prefix}wrist_3_joint" type="${wrist_3_joint_type}">
+      <parent link="${tf_prefix}wrist_2_link"/>
+      <child link="${tf_prefix}wrist_3_link"/>
+      <origin xyz="${wrist_3_x} ${wrist_3_y} ${wrist_3_z}" rpy="${wrist_3_roll} ${wrist_3_pitch} ${wrist_3_yaw}"/>
+      <axis xyz="0 0 1"/>
+
+      <xacro:if value="${wrist_3_joint_type != 'continuous'}">
+        <limit lower="${wrist_3_lower_limit}" upper="${wrist_3_upper_limit}"
+               effort="${wrist_3_effort_limit}" velocity="${wrist_3_velocity_limit}"/>
+        <xacro:if value="${safety_limits}">
+          <safety_controller soft_lower_limit="${wrist_3_lower_limit + safety_pos_margin}"
+                             soft_upper_limit="${wrist_3_upper_limit - safety_pos_margin}"
+                             k_position="${safety_k_position}" k_velocity="0.0"/>
+        </xacro:if>
+      </xacro:if>
+
+      <xacro:unless value="${wrist_3_joint_type != 'continuous'}">
+        <limit effort="${wrist_3_effort_limit}" velocity="${wrist_3_velocity_limit}"/>
+        <xacro:if value="${safety_limits}">
+          <safety_controller k_position="${safety_k_position}" k_velocity="0.0"/>
+        </xacro:if>
+      </xacro:unless>
+
+      <dynamics damping="0" friction="0"/>
+    </joint>
+
+    <link name="${tf_prefix}ft_frame"/>
+    <joint name="${tf_prefix}wrist_3_link-ft_frame" type="fixed">
+      <parent link="${tf_prefix}wrist_3_link"/>
+      <child link="${tf_prefix}ft_frame"/>
+      <origin xyz="0 0 0" rpy="${pi} 0 0"/>
+    </joint>
+
+    <!-- ROS-Industrial 'base' frame - base_link to UR 'Base' Coordinates transform -->
+    <link name="${tf_prefix}base"/>
+    <joint name="${tf_prefix}base_link-base_fixed_joint" type="fixed">
+      <!-- Note the rotation over Z of pi radians: base_link is REP-103 aligned (X+ forward, Y+ left, Z+ up),
+           rotate to align with the UR controller 'Base' coordinates. -->
+      <origin xyz="0 0 0" rpy="0 0 ${pi}"/>
+      <parent link="${tf_prefix}base_link"/>
+      <child link="${tf_prefix}base"/>
+    </joint>
+
+    <!-- ROS-Industrial 'flange' frame - attachment point for EEF models -->
+    <link name="${tf_prefix}flange"/>
+    <joint name="${tf_prefix}wrist_3-flange" type="fixed">
+      <parent link="${tf_prefix}wrist_3_link"/>
+      <child link="${tf_prefix}flange"/>
+      <origin xyz="0 0 0" rpy="0 ${-pi/2.0} ${-pi/2.0}"/>
+    </joint>
+
+    <!-- ROS-Industrial 'tool0' frame - all-zeros tool frame -->
+    <link name="${tf_prefix}tool0"/>
+    <joint name="${tf_prefix}flange-tool0" type="fixed">
+      <!-- default toolframe - X+ left, Y+ up, Z+ front -->
+      <origin xyz="0 0 0" rpy="${pi/2.0} 0 ${pi/2.0}"/>
+      <parent link="${tf_prefix}flange"/>
+      <child link="${tf_prefix}tool0"/>
+    </joint>
+
+  </xacro:macro>
 </robot>
 ```
 
@@ -1244,89 +875,53 @@ the UR controller.
 
 <robot xmlns:xacro="http://wiki.ros.org/xacro" name="$(arg name)">
 
-<!-- robot name parameter -->
+  <!-- robot name parameter -->
+  <xacro:arg name="name" default="ur"/>
 
-<xacro:arg name="name" default="ur"/>
+  <!-- import main macro -->
+  <xacro:include filename="$(find ur_description)/urdf/ur_macro.xacro"/>
 
-<!-- import main macro -->
+  <!-- 
+    possible 'ur_type' values: ur3, ur3e, ur5, ur5e, ur10, ur10e, ur16e, ur20, ur30
+    the default value should raise an error in case this was called without defining the type 
+  -->
+  <xacro:arg name="ur_type" default="ur5x"/>
 
-<xacro:include filename="$(find ur_description)/urdf/ur_macro.xacro"/>
+  <!-- parameters -->
+  <xacro:arg name="tf_prefix" default="" />
+  <xacro:arg name="joint_limit_params"  default="$(find ur_description)/config/$(arg ur_type)/joint_limits.yaml"/>
+  <xacro:arg name="kinematics_params"   default="$(find ur_description)/config/$(arg ur_type)/default_kinematics.yaml"/>
+  <xacro:arg name="physical_params"     default="$(find ur_description)/config/$(arg ur_type)/physical_parameters.yaml"/>
+  <xacro:arg name="visual_params"       default="$(find ur_description)/config/$(arg ur_type)/visual_parameters.yaml"/>
+  <xacro:arg name="transmission_hw_interface" default=""/>
+  <xacro:arg name="safety_limits"      default="false"/>
+  <xacro:arg name="safety_pos_margin"  default="0.15"/>
+  <xacro:arg name="safety_k_position"  default="20"/>
 
-  
+  <!-- When using gazebo simulations absolute paths are necessary. -->
+  <xacro:arg name="force_abs_paths" default="false" />
 
-<!-- possible 'ur_type' values: ur3, ur3e, ur5, ur5e, ur10, ur10e, ur16e, ur20, ur30 -->
+  <!-- create link fixed to the "world" -->
+  <link name="world" />
 
-<!-- the default value should raise an error in case this was called without defining the type -->
-
-<xacro:arg name="ur_type" default="ur5x"/>
-
-  
-
-<!-- parameters -->
-
-<xacro:arg name="tf_prefix" default="" />
-
-<xacro:arg name="joint_limit_params" default="$(find ur_description)/config/$(arg ur_type)/joint_limits.yaml"/>
-
-<xacro:arg name="kinematics_params" default="$(find ur_description)/config/$(arg ur_type)/default_kinematics.yaml"/>
-
-<xacro:arg name="physical_params" default="$(find ur_description)/config/$(arg ur_type)/physical_parameters.yaml"/>
-
-<xacro:arg name="visual_params" default="$(find ur_description)/config/$(arg ur_type)/visual_parameters.yaml"/>
-
-<xacro:arg name="transmission_hw_interface" default=""/>
-
-<xacro:arg name="safety_limits" default="false"/>
-
-<xacro:arg name="safety_pos_margin" default="0.15"/>
-
-<xacro:arg name="safety_k_position" default="20"/>
-
-  
-
-<!--When using gazebo simulations absolute paths are necessary.-->
-
-<xacro:arg name="force_abs_paths" default="false" />
-
-  
-
-<!-- create link fixed to the "world" -->
-
-<link name="world" />
-
-  
-
-<!-- arm -->
-<!-- ur_macro.xacro파일에서 설정한 ur_robot을 include를 통해 불러옴 -->
-<xacro:ur_robot
-
-name="$(arg name)"
-
-tf_prefix="$(arg tf_prefix)"
-
-parent="world"
-
-joint_limits_parameters_file="$(arg joint_limit_params)"
-
-kinematics_parameters_file="$(arg kinematics_params)"
-
-physical_parameters_file="$(arg physical_params)"
-
-visual_parameters_file="$(arg visual_params)"
-
-safety_limits="$(arg safety_limits)"
-
-safety_pos_margin="$(arg safety_pos_margin)"
-
-safety_k_position="$(arg safety_k_position)"
-
-force_abs_paths="$(arg force_abs_paths)"
-
->
-
-<origin xyz="0 0 0" rpy="0 0 0" /> <!-- position robot in the world -->
-<!-- 그래서 여기서 ur_robot을 활용할 수 있음 -->
-</xacro:ur_robot>
+  <!-- arm -->
+  <!-- ur_macro.xacro파일에서 설정한 ur_robot을 include를 통해 불러옴 -->
+  <xacro:ur_robot
+      name="$(arg name)"
+      tf_prefix="$(arg tf_prefix)"
+      parent="world"
+      joint_limits_parameters_file="$(arg joint_limit_params)"
+      kinematics_parameters_file="$(arg kinematics_params)"
+      physical_parameters_file="$(arg physical_params)"
+      visual_parameters_file="$(arg visual_params)"
+      safety_limits="$(arg safety_limits)"
+      safety_pos_margin="$(arg safety_pos_margin)"
+      safety_k_position="$(arg safety_k_position)"
+      force_abs_paths="$(arg force_abs_paths)">
+      
+    <origin xyz="0 0 0" rpy="0 0 0" /> <!-- position robot in the world -->
+    <!-- 그래서 여기서 ur_robot을 활용할 수 있음 -->
+  </xacro:ur_robot>
 
 </robot>
 ```
@@ -1456,7 +1051,7 @@ https://github.com/tylerjw/serial.git  이 저장소로 같이 git clone 해줘�
 https://github.com/RoverRobotics-forks/serial-ros2 난 이걸로  git clone 한 후 
 
 
-motion_planning_ws/src/serial/CMakeLists.txt
+### <motion_planning_ws/src/serial/CMakeLists.txt>
 
 ```txt
 cmake_minimum_required(VERSION 3.5)
@@ -1536,17 +1131,1599 @@ motion_planning_ws/src/ros2_robotiq_gripper/robotiq_description/urdf/2f_85.ros2_
 -> 2개의 파일 중 85가 조금 더 작은 모델
 
 ## 6. ur+gripper
+<motion_planning_ws/src/ur_robotiq_moveit_config/urdf>
+### <ur_robotiq_macro.urdf.xacro>
+```xml
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
 
+  <xacro:macro name="ur_robotiq" params="
+    ur_name:=ur
+    ur_type:=ur5x
+    tf_prefix
+    parent
+    *origin
+    use_fake_hardware:=false
+    fake_sensor_commands:=false
+    sim_gazebo:=false
+    sim_ignition:=false
+    headless_mode:=false
+    initial_positions
+    simulation_controllers"
+    >
+
+    <!-- import main macro -->
+    <xacro:include filename="$(find ur_description)/urdf/ur_macro.xacro"/>
+    <xacro:include filename="$(find robotiq_description)/urdf/robotiq_2f_85_macro.urdf.xacro" />
+    <xacro:include filename="$(find robotiq_description)/urdf/ur_to_robotiq_adapter.urdf.xacro" />
+    <!-- <xacro:include filename="$(find ur_robotiq_moveit_config)/urdf/realsense_d435.urdf.xacro"/> -->
+    
+    <!-- property -->
+    <xacro:property name="joint_limits_parameters_file" value="$(find ur_description)/config/${ur_type}/joint_limits.yaml"/>
+    <xacro:property name="kinematics_parameters_file" value="$(find ur_description)/config/${ur_type}/default_kinematics.yaml"/>
+    <xacro:property name="physical_parameters_file" value="$(find ur_description)/config/${ur_type}/physical_parameters.yaml"/>
+    <xacro:property name="visual_parameters_file" value="$(find ur_description)/config/${ur_type}/visual_parameters.yaml"/>
+    <xacro:property name="transmission_hw_interface" value=""/>
+    <xacro:property name="safety_limits" value="false"/>
+    <xacro:property name="safety_pos_margin" value="0.15"/>
+    <xacro:property name="safety_k_position" value="20"/>
+
+    <!-- ros2_control related parameters -->
+    <xacro:property name="headless_mode" value="false" />
+    <xacro:property name="robot_ip" value="0.0.0.0" />
+    <xacro:property name="script_filename" value=""/>
+    <xacro:property name="output_recipe_filename" value=""/>
+    <xacro:property name="input_recipe_filename" value=""/>
+    <xacro:property name="reverse_ip" value="0.0.0.0"/>
+    <xacro:property name="script_command_port" value="50004"/>
+    <xacro:property name="reverse_port" value="50001"/>
+    <xacro:property name="script_sender_port" value="50002"/>
+    <xacro:property name="trajectory_port" value="50003"/>
+
+    <!-- tool communication related parameters -->
+    <xacro:property name="use_tool_communication" value="false" />
+    <xacro:property name="tool_voltage" value="0" />
+    <xacro:property name="tool_parity" value="0" />
+    <xacro:property name="tool_baud_rate" value="115200" />
+    <xacro:property name="tool_stop_bits" value="1" />
+    <xacro:property name="tool_rx_idle_chars" value="1.5" />
+    <xacro:property name="tool_tx_idle_chars" value="3.5" />
+    <xacro:property name="tool_device_name" value="/tmp/ttyUR" />
+    <xacro:property name="tool_tcp_port" value="54321" />
+
+    <!-- arm -->
+    <xacro:ur_robot
+      name="${ur_name}"
+      tf_prefix="${tf_prefix}"
+      parent="${parent}" 
+      joint_limits_parameters_file="${joint_limits_parameters_file}"
+      kinematics_parameters_file="${kinematics_parameters_file}"
+      physical_parameters_file="${physical_parameters_file}"
+      visual_parameters_file="${visual_parameters_file}"
+      safety_limits="${safety_limits}"
+      safety_pos_margin="${safety_pos_margin}"
+      safety_k_position="${safety_k_position}"
+      >
+      <xacro:insert_block name="origin" /> <!-- position robot in the parent link -->
+    </xacro:ur_robot>
+
+    <!-- adapter -->
+    <xacro:ur_to_robotiq
+      prefix="${tf_prefix}"
+      parent="${tf_prefix}tool0"
+      child="${tf_prefix}gripper_mount_link"
+      rotation="0."
+      />
+
+    <!-- gripper -->
+    <xacro:robotiq_gripper 
+        name="${ur_name}gripper" 
+        prefix="${tf_prefix}"
+        parent="${tf_prefix}gripper_mount_link" 
+        use_fake_hardware="${use_fake_hardware}"
+        sim_gazebo="$(arg sim_gazebo)">
+        <origin xyz="0 0 0" rpy="0 0 0" />
+    </xacro:robotiq_gripper>
+
+    <!-- grasp point for planning -->
+    <link name="${tf_prefix}grasp_point"/>
+    <joint name="${tf_prefix}grasp_point_joint" type="fixed">
+      <parent link="${tf_prefix}tool0"/>
+      <child link="${tf_prefix}grasp_point"/>
+      <origin xyz="0 0 0.15" rpy="0 0 0"/>
+    </joint>
+
+    <!-- realsense camera -->
+    <!-- Use the nominal extrinsics between camera frames if the calibrated extrinsics aren't being published. e.g. running the device in simulation -->
+    <!--
+    <xacro:sensor_d435 parent="${tf_prefix}tool0"
+      name="${tf_prefix}camera"
+      use_nominal_extrinsics="true" 
+      add_plug="false" 
+      use_mesh="true">
+      <origin xyz="0 -0.1 0" rpy="0 -1.5707 1.5707"/>
+    </xacro:sensor_d435>
+    -->
+
+  </xacro:macro>
+</robot>
+
+```
+
+### <ur_robotiq.urdf.xacro>
+```xml
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ur_robotiq">
+
+    <!-- ========================= -->
+    <!--   Argument definitions    -->
+    <!-- ========================= -->
+    <xacro:arg name="tf_prefix" default=""/>
+    <xacro:arg name="ur_type" default="ur5e"/>
+    <xacro:arg name="sim_gazebo" default="true" />
+    <xacro:arg name="parent" default="world" />
+    <xacro:arg name="simulation_controllers" default="$(find ur_robotiq_moveit_config)/config/controllers.yaml" />
+    <xacro:arg name="initial_positions_file" default="$(find ur_robotiq_moveit_config)/config/initial_positions.yaml"/>
+    <xacro:arg name="base_frame_file" default="$(find ur_robotiq_moveit_config)/config/base_frame.yaml" />
+    <xacro:arg name="transmission_hw_interface" default=""/>
+
+    <!-- ========================= -->
+    <!--   Property setup          -->
+    <!-- ========================= -->
+    <xacro:property name="base_frame_file" value="$(arg base_frame_file)"/>
+    <xacro:property name="base_frame" value="${xacro.load_yaml(base_frame_file)['base_frame']}"/>
+
+    <!-- ========================= -->
+    <!--   Include main macros     -->
+    <!-- ========================= -->
+    <xacro:include filename="$(find ur_robotiq_moveit_config)/urdf/ur_robotiq_macro.urdf.xacro"/>
+    <xacro:include filename="$(find ur_robotiq_moveit_config)/urdf/ur_gz.ros2_control.xacro"/>
+
+    <!-- ========================= -->
+    <!--   World Link              -->
+    <!-- ========================= -->
+    <link name="world"/>
+
+    <!-- ========================= -->
+    <!--   Robot: UR + Robotiq     -->
+    <!-- ========================= -->
+    <xacro:ur_robotiq 
+        ur_name="ur"
+        ur_type="$(arg ur_type)" 
+        tf_prefix="$(arg tf_prefix)" 
+        parent="$(arg parent)"
+        sim_gazebo="$(arg sim_gazebo)"
+        initial_positions="$(arg initial_positions_file)"
+        simulation_controllers="$(arg simulation_controllers)">
+        <origin xyz="${base_frame['x']} ${base_frame['y']} ${base_frame['z']}"
+                rpy="${base_frame['roll']} ${base_frame['pitch']} ${base_frame['yaw']}" />
+    </xacro:ur_robotiq>
+
+    <!-- ========================= -->
+    <!--   Gazebo / ROS2 Control   -->
+    <!-- ========================= -->
+    <xacro:if value="$(arg sim_gazebo)">
+        <!-- World reference for Gazebo -->
+        <gazebo reference="world">
+        </gazebo>
+
+        <!-- Gazebo ROS2 Control Plugin -->
+        <gazebo>
+            <plugin filename="libgz_ros2_control-system.so" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+                <parameters>$(arg simulation_controllers)</parameters>
+            </plugin>
+        </gazebo>
+
+        <!-- ROS2 Control Interface Instance -->
+        <xacro:ur_ros2_control
+            name="ur"
+            tf_prefix="$(arg tf_prefix)"
+            transmission_hw_interface="$(arg transmission_hw_interface)"
+        />
+    </xacro:if>
+
+</robot>
+
+```
 ## 7. world
+### <workstation.sdf>
+```xml
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="workstation">
 
+    <!-- ========== Scene Settings ========== -->
+    <scene>
+      <shadows>0</shadows>
+    </scene>
+
+    <!-- ========== GUI Camera View ========== -->
+    <gui>
+      <camera name="user_camera">
+        <!-- pose: x y z roll pitch yaw -->
+        <pose>0.75 -0.75 1.4 0 0.29 2.21</pose>
+      </camera>
+    </gui>
+    <!-- GUI 카메라 시점 설정 -->
+
+    <!-- ========== Lighting ========== -->
+    <include>
+    <!-- include 는 동일 폴더 안에 있는 내용을 불러옴 -->
+      <uri>model://sun</uri>
+    </include>
+    <!-- 태양광 조명 추가 -->
+
+    <!-- ========== Tables ========== -->
+    <!-- table은 는 동일 폴더 안에 있는 내용을 불러옴 -->
+    <model name="table1">
+      <static>true</static>
+      <include>
+        <uri>model://table</uri>
+      </include>
+      <pose>-0.8 0.5 0 0 0 1.5708</pose>
+    </model>
+
+    <model name="table2">
+      <static>true</static>
+      <include>
+        <uri>model://table</uri>
+      </include>
+      <pose>0 0.5 0 0 0 1.5708</pose>
+    </model>
+
+    <model name="table3">
+      <static>true</static>
+      <include>
+        <uri>model://table</uri>
+      </include>
+      <pose>0.8 0.5 0 0 0 1.5708</pose>
+    </model>
+
+    <!-- ========== Cube Object ========== -->
+    <model name="cube">
+      <!-- Positioned on table2 -->
+      <pose>0 0.5 1.0 0 0 0</pose>
+
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.0005</ixx>
+            <iyy>0.0005</iyy>
+            <izz>0.0005</izz>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyz>0.0</iyz>
+          </inertia>
+        </inertial>
+
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.03 0.03 0.03</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.03 0.03 0.03</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.8 0.2 0.2 1</ambient>
+            <!--    (x, y, z, row, pith, low) -->
+            <diffuse>0.8 0.2 0.2 1</diffuse>
+            <specular>0.8 0.2 0.2 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ========== Ground Plane ========== -->
+    <model name="ground_plane">
+	<!-- 동일 선상 ground 모델 불러옴-->
+      <static>true</static>
+      <include>
+        <uri>model://ground_plane</uri>
+      </include>
+    </model>
+
+  </world>
+</sdf>
+
+```
+
+### <model.sdf>
+-> 이 파일 같은 경우 웹상에서 구할 수 있는 파일이다
+```xml
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="workstation">
+
+    <!-- ========== Scene Settings ========== -->
+    <scene>
+      <shadows>0</shadows>
+    </scene>
+
+    <!-- ========== GUI Camera View ========== -->
+    <gui>
+      <camera name="user_camera">
+        <!-- pose: x y z roll pitch yaw -->
+        <pose>0.75 -0.75 1.4 0 0.29 2.21</pose>
+      </camera>
+    </gui>
+
+    <!-- ========== Lighting ========== -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- ========== Table Models ========== -->
+    <model name="table1">
+      <static>true</static>
+      <include>
+        <uri>model://table</uri>
+      </include>
+      <pose>-0.8 0.5 0 0 0 1.5708</pose>
+    </model>
+
+    <model name="table2">
+      <static>true</static>
+      <include>
+        <uri>model://table</uri>
+      </include>
+      <pose>0 0.5 0 0 0 1.5708</pose>
+    </model>
+
+    <model name="table3">
+      <static>true</static>
+      <include>
+        <uri>model://table</uri>
+      </include>
+      <pose>0.8 0.5 0 0 0 1.5708</pose>
+    </model>
+
+    <!-- ========== Cube Object ========== -->
+    <model name="cube">
+      <!-- Positioned on table2 -->
+      <pose>0 0.5 1.0 0 0 0</pose>
+
+      <link name="link">
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.0005</ixx>
+            <iyy>0.0005</iyy>
+            <izz>0.0005</izz>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyz>0.0</iyz>
+          </inertia>
+        </inertial>
+
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.03 0.03 0.03</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.03 0.03 0.03</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.8 0.2 0.2 1</ambient>
+            <diffuse>0.8 0.2 0.2 1</diffuse>
+            <specular>0.8 0.2 0.2 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ========== Ground Plane ========== -->
+    <model name="ground_plane">
+      <static>true</static>
+      <include>
+        <uri>model://ground_plane</uri>
+      </include>
+    </model>
+
+  </world>
+</sdf>
+```
 ## 8. moveitConfig
+- launch 파일: 어떤걸 launch 한다는 의미 (ur과 관련된 정보 포함)
+- script: 어떤한 task를 수행하도록 하는 파일
+- srdf:  moveit2에서 collision의 관계 나타내는 파일
 
-## 9. launch 0
+### <ur_macro.srdf.xacro>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
 
-## 10. launch 1
+  <!--
+    =============================================
+      Semantic Robot Description Format (SRDF)
+    =============================================
 
-## 11. laucnh 2
+    ⚙️ 개요:
+    - URDF를 대체하거나 확장하는 것이 아니라,
+      로봇의 "의미적 구성 요소" (그룹, 상태, 충돌 무시 등)를 기술하는 파일.
+    - MoveIt! 등에서 로봇의 동작 그룹, 상태, 충돌 제외 링크 등을 정의할 때 사용됨.
+    - 반드시 대응하는 URDF가 존재해야 함 (여기서 정의된 링크/조인트는 URDF에 이미 있어야 함)
+  -->
+
+  <xacro:macro name="ur_srdf" params="name prefix">
+
+    <!-- ============================= -->
+    <!--     GROUP 정의 (Manipulator) -->
+    <!-- ============================= -->
+    <!--
+      - group: 로봇의 관절/링크 집합 (예: arm, gripper)
+      - chain: base_link → tool0 까지의 모든 링크 및 조인트 포함
+    -->
+    <group name="${prefix}${name}_manipulator">
+      <chain base_link="${prefix}base_link" tip_link="${prefix}tool0" />
+    </group>
+
+    <!-- ============================= -->
+    <!--     GROUP STATES 정의         -->
+    <!-- ============================= -->
+    <!--
+      - 특정 그룹의 조인트 구성을 이름으로 저장
+      - MoveIt에서 “home”, “up” 등으로 호출 가능
+    -->
+
+    <!-- 기본 Home 자세 -->
+    <group_state name="${prefix}home" group="${prefix}${name}_manipulator">
+      <joint name="${prefix}elbow_joint" value="0" />
+      <joint name="${prefix}shoulder_lift_joint" value="-1.5707" />
+      <joint name="${prefix}shoulder_pan_joint" value="0" />
+      <joint name="${prefix}wrist_1_joint" value="0" />
+      <joint name="${prefix}wrist_2_joint" value="0" />
+      <joint name="${prefix}wrist_3_joint" value="0" />
+    </group_state>
+
+    <!-- Up 자세 -->
+    <group_state name="${prefix}up" group="${prefix}${name}_manipulator">
+      <joint name="${prefix}elbow_joint" value="0" />
+      <joint name="${prefix}shoulder_lift_joint" value="-1.5707" />
+      <joint name="${prefix}shoulder_pan_joint" value="0" />
+      <joint name="${prefix}wrist_1_joint" value="-1.5707" />
+      <joint name="${prefix}wrist_2_joint" value="0" />
+      <joint name="${prefix}wrist_3_joint" value="0" />
+    </group_state>
+
+    <!-- 테스트 자세 -->
+    <group_state name="${prefix}test_configuration" group="${prefix}${name}_manipulator">
+      <joint name="${prefix}elbow_joint" value="1.4" />
+      <joint name="${prefix}shoulder_lift_joint" value="-1.62" />
+      <joint name="${prefix}shoulder_pan_joint" value="1.54" />
+      <joint name="${prefix}wrist_1_joint" value="-1.2" />
+      <joint name="${prefix}wrist_2_joint" value="-1.6" />
+      <joint name="${prefix}wrist_3_joint" value="-0.11" />
+    </group_state>
+
+    <!-- ============================= -->
+    <!--     COLLISION 제외 설정       -->
+    <!-- ============================= -->
+    <!--
+      - 인접하거나 실제로 충돌 불가능한 링크 간 충돌 체크를 비활성화
+      - MoveIt의 Planning 속도를 높임
+    -->
+    <disable_collisions link1="${prefix}base_link" link2="${prefix}base_link_inertia" reason="Adjacent" />
+    <disable_collisions link1="${prefix}base_link_inertia" link2="${prefix}shoulder_link" reason="Adjacent" />
+    <disable_collisions link1="${prefix}tool0" link2="${prefix}wrist_1_link" reason="Never" />
+    <disable_collisions link1="${prefix}tool0" link2="${prefix}wrist_2_link" reason="Never" />
+    <disable_collisions link1="${prefix}tool0" link2="${prefix}wrist_3_link" reason="Adjacent" />
+    <disable_collisions link1="${prefix}forearm_link" link2="${prefix}upper_arm_link" reason="Adjacent" />
+    <disable_collisions link1="${prefix}forearm_link" link2="${prefix}wrist_1_link" reason="Adjacent" />
+    <disable_collisions link1="${prefix}shoulder_link" link2="${prefix}upper_arm_link" reason="Adjacent" />
+    <disable_collisions link1="${prefix}wrist_1_link" link2="${prefix}wrist_2_link" reason="Adjacent" />
+    <disable_collisions link1="${prefix}wrist_1_link" link2="${prefix}wrist_3_link" reason="Never" />
+    <disable_collisions link1="${prefix}wrist_2_link" link2="${prefix}wrist_3_link" reason="Adjacent" />
+
+  </xacro:macro>
+</robot>
+```
+
+### <ur_robotiq_macro.srdf.xacro>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+
+  <!-- ===================================================== -->
+  <!--   UR + Robotiq 2F-85 통합 SRDF (MoveIt용) 매크로      -->
+  <!--   파일명: ur_robotiq_srdf.xacro                      -->
+  <!-- ===================================================== -->
+
+  <xacro:macro name="ur_robotiq_srdf" params="prefix">
+
+    <!-- ============================= -->
+    <!--  Include 서브 매크로 정의들   -->
+    <!-- ============================= -->
+    <xacro:include filename="$(find ur_robotiq_moveit_config)/srdf/ur_macro.srdf.xacro" />
+    <xacro:include filename="$(find robotiq_description)/srdf/robotiq_2f_85_macro.srdf.xacro"/>
+
+    <!-- ============================= -->
+    <!--  UR 로봇 (팔) 구성            -->
+    <!-- ============================= -->
+    <xacro:ur_srdf name="ur" prefix="${prefix}" />
+
+    <!-- ============================= -->
+    <!--  Robotiq 2F-85 그리퍼 구성     -->
+    <!-- ============================= -->
+    <xacro:robotiq_2f_85_srdf prefix="${prefix}"/>
+
+    <!-- ============================= -->
+    <!--  전체 조합 그룹 정의           -->
+    <!-- ============================= -->
+    <!-- UR 매니퓰레이터 + Robotiq 그리퍼 통합 -->
+    <group name="${prefix}ur_robotiq">
+      <group name="${prefix}ur_manipulator"/>
+      <group name="${prefix}robotiq_2f_85_gripper"/>
+    </group>
+
+    <!-- ============================= -->
+    <!--  준비 자세 (Ready Pose) 정의   -->
+    <!-- ============================= -->
+    <group_state name="${prefix}ready" group="${prefix}ur_manipulator">
+      <joint name="${prefix}elbow_joint" value="1.5707" />
+      <joint name="${prefix}shoulder_lift_joint" value="-1.5707" />
+      <joint name="${prefix}shoulder_pan_joint" value="0" />
+      <joint name="${prefix}wrist_1_joint" value="-1.5707" />
+      <joint name="${prefix}wrist_2_joint" value="-1.5707" />
+      <joint name="${prefix}wrist_3_joint" value="0" />
+    </group_state>
+
+    <!-- ============================= -->
+    <!--  End Effector 설정             -->
+    <!-- ============================= -->
+    <end_effector
+      name="${prefix}robotiq_2f_85_gripper_ee"
+      parent_link="${prefix}tool0"
+      group="${prefix}robotiq_2f_85_gripper"
+      parent_group="${prefix}ur_manipulator"/>
+
+    <!-- ============================= -->
+    <!--  Collision Disable 설정        -->
+    <!-- ============================= -->
+    <!-- 인접하거나 연결된 링크들 간의 불필요한 충돌 검사 비활성화 -->
+    <!-- 무시해도 되는 링크들 적어놓은거 -->
+    <disable_collisions link1="${prefix}robotiq_85_base_link" link2="${prefix}ur_to_robotiq_link" reason="Adjacent"/>
+    <disable_collisions link1="${prefix}robotiq_85_left_finger_link" link2="${prefix}ur_to_robotiq_link" reason="Never"/>
+    <disable_collisions link1="${prefix}robotiq_85_left_finger_tip_link" link2="${prefix}ur_to_robotiq_link" reason="Never"/>
+    <disable_collisions link1="${prefix}robotiq_85_left_inner_knuckle_link" link2="${prefix}ur_to_robotiq_link" reason="Never"/>
+    <disable_collisions link1="${prefix}robotiq_85_left_knuckle_link" link2="${prefix}ur_to_robotiq_link" reason="Never"/>
+    <disable_collisions link1="${prefix}robotiq_85_right_finger_link" link2="${prefix}ur_to_robotiq_link" reason="Never"/>
+    <disable_collisions link1="${prefix}robotiq_85_right_finger_tip_link" link2="${prefix}ur_to_robotiq_link" reason="Never"/>
+    <disable_collisions link1="${prefix}robotiq_85_right_inner_knuckle_link" link2="${prefix}ur_to_robotiq_link" reason="Never"/>
+    <disable_collisions link1="${prefix}robotiq_85_right_knuckle_link" link2="${prefix}ur_to_robotiq_link" reason="Never"/>
+    <disable_collisions link1="${prefix}ur_to_robotiq_link" link2="${prefix}wrist_1_link" reason="Never"/>
+    <disable_collisions link1="${prefix}ur_to_robotiq_link" link2="${prefix}wrist_2_link" reason="Never"/>
+    <disable_collisions link1="${prefix}ur_to_robotiq_link" link2="${prefix}wrist_3_link" reason="Adjacent"/>
+
+  </xacro:macro>
+</robot>
+```
+
+<ur_robotiq.srdf.xacro>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="ur_robotiq">
+
+	<xacro:arg name="prefix" default="" />
+	
+	<xacro:include filename="$(find ur_robotiq_moveit_config)/srdf/ur_robotiq_macro.srdf.xacro"/>
+<xacro:ur_robotiq_srdf prefix="$(arg prefix)"/>
+
+</robot>
+```
+
+config 폴더 안에 파일
+- base_frame.yaml : 어디에 고정 시켜 놓을지에 대한 정보
+- controllers.yaml : 
+- initial_positions.yaml :  joint 의 초기값이 적혀있음
+- joint_limits.yaml : 로봇의 최대값 최솟값에 대한 정보
+- kinematics.yaml : 내가 뭘 이용할 것이가?에 대한 정보
+- moveit_controllers.yaml : moveit과 관련된 파일, moveit에서 실제 사용하는 컨트롤러
+- moveit_cpp.yaml : 어떤한 알고리즘을 사용할지에 대한 정보
+- ompl_planning.yaml : ompl(open motion palnning library) planning 과 관련된 파일
+- pilz_cartesian_limits.yaml : 어떤 회사 알고리즘
+- planning_pipelines_config.yaml
+- servo.yaml : moveit과 gazebo사용할때 필요한 파라미터
+- visual_parameters.yaml : gazebo나 rviz2에 올릴 때 어떤 걸쓸지에 대한 정보
+
+
+### <controllers.yaml >
+```yaml
+# ros2_control uses this configuration for controller management
+# This file is only for simulation
+
+controller_manager:
+  ros__parameters:
+    update_rate: 100  # Hz
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    ur_arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    forward_velocity_controller:
+      type: velocity_controllers/JointGroupVelocityController
+
+    forward_position_controller:
+      type: position_controllers/JointGroupPositionController
+
+    gripper_controller:
+      type: position_controllers/GripperActionController
+
+
+# -----------------------------------------------------------------
+# Arm controller configuration
+ur_arm_controller:
+  ros__parameters:
+    joints:
+    #아래 6개의 joint대로 움직이겠다
+      - shoulder_pan_joint
+      - shoulder_lift_joint
+      - elbow_joint
+      - wrist_1_joint
+      - wrist_2_joint
+      - wrist_3_joint
+    command_interfaces:
+    #내가 이 joint 가 어디로 갔으면 좋겠는지 정보를 적어 넣은 것
+      - position
+    state_interfaces:
+    #로봇이 움직이는 동안 어떤한 정보를 붙이고 있을지에 대한 내용
+      - position
+      - velocity
+    state_publish_rate: 100.0
+    action_monitor_rate: 20.0
+    allow_partial_joints_goal: false
+    constraints:
+      stopped_velocity_tolerance: 0.2
+      goal_time: 0.0
+      shoulder_pan_joint:   { trajectory: 0.2, goal: 0.1 }
+      shoulder_lift_joint:  { trajectory: 0.2, goal: 0.1 }
+      elbow_joint:          { trajectory: 0.2, goal: 0.1 }
+      wrist_1_joint:        { trajectory: 0.2, goal: 0.1 }
+      wrist_2_joint:        { trajectory: 0.2, goal: 0.1 }
+      wrist_3_joint:        { trajectory: 0.2, goal: 0.1 }
+
+
+# -----------------------------------------------------------------
+# Velocity controller for teleoperation / testing
+forward_velocity_controller:
+  ros__parameters:
+    joints:
+      - shoulder_pan_joint
+      - shoulder_lift_joint
+      - elbow_joint
+      - wrist_1_joint
+      - wrist_2_joint
+      - wrist_3_joint
+    interface_name: velocity
+
+
+# -----------------------------------------------------------------
+# Position controller for direct joint position commands
+forward_position_controller:
+  ros__parameters:
+    joints:
+      - shoulder_pan_joint
+      - shoulder_lift_joint
+      - elbow_joint
+      - wrist_1_joint
+      - wrist_2_joint
+      - wrist_3_joint
+
+
+# -----------------------------------------------------------------
+# Robotiq 2F-85 gripper controller
+gripper_controller:
+  ros__parameters:
+    joint: robotiq_85_left_knuckle_joint
+```
+
+
+## 9, 10, 11. launch 0, 1, 2
+launch 폴더 안에 파일 
+-  ur_robotiq_control.launch.py
+- ur_robotiq_moveit.launch.py
+- ur_robotiq.launch.py
+
+### <ur_robotiq.launch.py>
+```python
+from launch import LaunchDescription
+from launch.actions import (
+    DeclareLaunchArgument,
+    IncludeLaunchDescription,
+    OpaqueFunction,
+)
+from launch.conditions import IfCondition, UnlessCondition
+from launch.event_handlers import OnProcessExit, OnProcessStart
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import (
+    Command,
+    FindExecutable,
+    FindPackageShare,
+    LaunchConfiguration,
+    PathJoinSubstitution,
+    IfElseSubstitution,
+)
+from launch_ros.actions import Node
+from launch_ros.descriptions import ParameterValue
+from ament_index_python.packages import get_package_share_directory
+from moveit_configs_utils import MoveItConfigsBuilder
+import os
+
+
+def generate_launch_description():
+    """Launch file to bring up UR + Robotiq robot simulation with MoveIt and Gazebo."""
+    declared_arguments = []
+
+    # --------------------------------------------------------------------------
+    # Simulation and configuration arguments
+    # --------------------------------------------------------------------------
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "runtime_config_package",
+            default_value="ur_robotiq_moveit_config",
+            description=(
+                "Package with the controller's configuration in 'config' folder. "
+                "Usually the argument is not set; it enables the use of a custom setup."
+            ),
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "controllers_file",
+            default_value="controllers.yaml",
+            description="YAML file with the controllers configuration.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "description_package",
+            default_value="ur_robotiq_moveit_config",
+            description=(
+                "Description package with robot URDF/Xacro files. Usually the argument "
+                "is not set, it enables use of a custom description."
+            ),
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "description_file",
+            default_value="ur_robotiq.urdf.xacro",
+            description="URDF/Xacro description file with the robot.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "gazebo_world_file_path",
+            default_value=os.path.join(
+                get_package_share_directory("ur_robotiq_moveit_config"),
+                "gazebo",
+                "workstation.world",
+            ),
+            description="Gazebo world file with the robot.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "prefix",
+            default_value='""',
+            description=(
+                "Prefix of the joint names, useful for multi-robot setup. "
+                'Expected format "<prefix>/".'
+            ),
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "namespace",
+            default_value="",
+            description=(
+                "Namespace of launched nodes, useful for multi-robot setup. "
+                'Expected format "<ns>/".'
+            ),
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "sim_gazebo",
+            default_value="true",
+            description="Start robot in Gazebo simulation.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "use_fake_hardware",
+            default_value="false",
+            description="Start robot with fake hardware mirroring commands to its states.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "use_planning",
+            default_value="true",
+            description="Start robot with MoveIt2 `move_group` planning config (Pilz and OMPL).",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "arm_controller",
+            default_value="ur_arm_controller",
+            description="Arm controller to start.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "gripper_controller",
+            default_value="gripper_controller",
+            description="Gripper controller to start.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "start_rviz",
+            default_value="true",
+            description="Start RViz2 automatically with this launch file.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "rviz_config_file",
+            default_value="ur_robotiq.rviz",
+            description="Rviz2 configuration file.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "initial_positions_file",
+            default_value="initial_positions.yaml",
+            description="Configuration file for robot initial positions in simulation.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "base_frame_file",
+            default_value="base_frame.yaml",
+            description="Configuration file for robot base frame wrt world.",
+        )
+    )
+
+    # Duplicate (safe to include for completeness)
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "description_package",
+            default_value="ur_robotiq_moveit_config",
+            description=(
+                "Description package with robot URDF/Xacro files. Usually the argument "
+                "is not set, it enables use of a custom description."
+            ),
+        )
+    )
+
+    return LaunchDescription(declared_arguments + [OpaqueFunction(function=launch_setup)])
+
+
+def launch_setup(context, *args, **kwargs):
+    """Launch Gazebo control and MoveIt configuration for UR + Robotiq."""
+    
+    # --------------------------------------------------------------------------
+    # UR control (ros2_control + Gazebo)
+    # --------------------------------------------------------------------------
+    ur_control_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            PathJoinSubstitution([
+                FindPackageShare("ur_robotiq_moveit_config"),
+                "launch",
+                "ur_robotiq_control.launch.py"
+                #여기서 파일 1개
+            ])
+        ),
+        launch_arguments={
+            "use_sim_time": "true",
+            "launch_rviz": "false",
+        }.items(),
+    )
+
+    # --------------------------------------------------------------------------
+    # MoveIt configuration (planning + RViz)
+    # --------------------------------------------------------------------------
+    ur_moveit_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            PathJoinSubstitution([
+                FindPackageShare("ur_robotiq_moveit_config"),
+                "launch",
+                "ur_robotiq_moveit.launch.py"
+                #여기서 파일 또 다른 1개 실행
+            ])
+        ),
+        launch_arguments={
+            "use_sim_time": "true",
+            "launch_rviz": "true",
+        }.items(),
+    )
+
+    # --------------------------------------------------------------------------
+    # Final nodes to launch
+    # --------------------------------------------------------------------------
+    nodes_to_launch = [
+        ur_control_launch,
+        ur_moveit_launch,
+    ]
+
+    return nodes_to_launch
+```
+
+### <ur_robotiq_control.launch.py>
+```python
+from launch import LaunchDescription
+from launch.actions import (
+    DeclareLaunchArgument,
+    IncludeLaunchDescription,
+    RegisterEventHandler,
+    SetEnvironmentVariable,
+    TimerAction,
+    OpaqueFunction,
+)
+from launch.event_handlers import OnProcessExit, OnProcessStart
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import (
+    Command,
+    FindExecutable,
+    LaunchConfiguration,
+    PathJoinSubstitution,
+)
+from launch_ros.actions import Node
+from launch_ros.substitutions import FindPackageShare
+from ament_index_python.packages import get_package_share_directory
+
+from pathlib import Path
+import os
+import subprocess
+
+
+def generate_launch_description():
+    # Declare arguments
+    declared_arguments = []
+
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "runtime_config_package",
+            default_value="ur_robotiq_moveit_config",
+            description=(
+                "Package with the controller's configuration in 'config' folder. "
+                "Usually the argument is not set, it enables use of a custom setup."
+            ),
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "controllers_file",
+            default_value="controllers.yaml",
+            description="YAML file with the controllers configuration.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "description_package",
+            default_value="ur_robotiq_moveit_config",
+            description=(
+                "Description package with robot URDF/xacro files. Usually the argument "
+                "is not set, it enables use of a custom description."
+            ),
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "description_file",
+            default_value="ur_robotiq.urdf.xacro",
+            description="URDF/XACRO description file with the robot.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "gazebo_world_file",
+            default_value="workstation.sdf",
+            description="gazebo world file with the robot",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "prefix",
+            default_value='""',
+            description=(
+                "Prefix of the joint names, useful for multi-robot setup. "
+                'If changed then also joint names in the controllers configuration have to be updated. '
+                'Expected format "<prefix>/"'
+            ),
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "namespace",
+            default_value="",
+            description=(
+                "Namespace of launched nodes, useful for multi-robot setup. "
+                'If changed then also the namespace in the controllers configuration needs to be updated. '
+                'Expected format "<ns>/".'
+            ),
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "sim_gazebo",
+            default_value="true",
+            description="Start robot in Gazebo simulation.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "use_fake_hardware",
+            default_value="false",
+            description="Start robot with fake hardware mirroring command to its states.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "use_planning",
+            default_value="true",
+            description=(
+                "Start robot with Moveit2 `move_group` planning "
+                "config for Pilz and OMPL."
+            ),
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "arm_controller",
+            default_value="ur_arm_controller",
+            description="arm controller to start.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "gripper_controller",
+            default_value="gripper_controller",
+            description="gripper controller to start.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "start_rviz",
+            default_value="true",
+            description="Start RViz2 automatically with this launch file.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "rviz_config_file",
+            default_value="ur_robotiq.rviz",
+            description="Rviz file",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "initial_positions_file",
+            default_value="initial_positions.yaml",
+            description="Configuration file of robot initial positions for simulation.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "base_frame_file",
+            default_value="base_frame.yaml",
+            description="Configuration file of robot base frame wrt World.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "description_package",
+            default_value="ur_robotiq_moveit_config",
+            description=(
+                "Description package with robot URDF/xacro files. Usually the argument "
+                "is not set, it enables use of a custom description."
+            ),
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "use_sim_time",
+            default_value="true",
+            description=(
+                "Use simulated time from Gazebo/IGN for ROS nodes."
+            ),
+        )
+    )
+
+    # Initialize Arguments
+    runtime_config_package = LaunchConfiguration("runtime_config_package")
+    controllers_file = LaunchConfiguration("controllers_file")
+    description_package = LaunchConfiguration("description_package")
+    description_file = LaunchConfiguration("description_file")
+    gazebo_world_file = LaunchConfiguration("gazebo_world_file")
+    prefix = LaunchConfiguration("prefix")
+    namespace = LaunchConfiguration("namespace")
+    sim_gazebo = LaunchConfiguration("sim_gazebo")
+    use_planning = LaunchConfiguration("use_planning")
+    arm_controller = LaunchConfiguration("arm_controller")
+    gripper_controller = LaunchConfiguration("gripper_controller")
+    start_rviz = LaunchConfiguration("start_rviz")
+    rviz_config_file = LaunchConfiguration("rviz_config_file")
+    initial_positions_file = LaunchConfiguration("initial_positions_file")
+    base_frame_file = LaunchConfiguration("base_frame_file")
+    use_sim_time = LaunchConfiguration("use_sim_time")
+
+    # File paths
+    controllers_file_path = PathJoinSubstitution(
+        [FindPackageShare(description_package), "config", controllers_file]
+    )
+    initial_positions_file_path = PathJoinSubstitution(
+        [FindPackageShare(runtime_config_package), "config", initial_positions_file]
+    )
+    rviz_config_file_path = PathJoinSubstitution(
+        [FindPackageShare(runtime_config_package), "rviz", rviz_config_file]
+    )
+    base_frame_file_path = PathJoinSubstitution(
+        [FindPackageShare(runtime_config_package), "config", base_frame_file]
+    )
+
+    # Build robot_description by processing xacro
+    robot_description_content = Command(
+        [
+            PathJoinSubstitution([FindExecutable(name="xacro")]),
+            " ",
+            PathJoinSubstitution([FindPackageShare(description_package), "urdf", description_file]),
+            " ",
+            "ur_type:=",
+            "ur5e",
+            " ",
+            "sim_gazebo:=",
+            sim_gazebo,
+            " ",
+            "simulation_controllers:=",
+            controllers_file_path,
+            " ",
+            "initial_positions_file:=",
+            initial_positions_file_path,
+            " ",
+            "base_frame_file:=",
+            base_frame_file_path,
+        ]
+    )
+    robot_description = {"robot_description": robot_description_content}
+
+    # Nodes
+    robot_state_publisher_node = Node(
+        package="robot_state_publisher",
+        executable="robot_state_publisher",
+        output="both",
+        parameters=[{"use_sim_time": use_sim_time}, robot_description],
+    )
+
+    joint_state_broadcaster_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=[
+            "joint_state_broadcaster",
+            "--controller-manager",
+            [namespace, "controller_manager"],
+        ],
+    )
+
+    arm_controller_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=[arm_controller, "--controller-manager", [namespace, "controller_manager"]],
+    )
+
+    gripper_controller_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=[gripper_controller, "--controller-manager", [namespace, "controller_manager"]],
+    )
+
+    # Delay start of robot controllers after joint_state_broadcaster
+    # joint_state_broadcaster_spawner이 시작 되어야지(먼저!!) arm_controller_spawner, gripper_controller_spawner이 실행(나중!!)이 됨
+    delay_robot_controller_spawner_after_joint_state_broadcaster_spawner = RegisterEventHandler(
+        event_handler=OnProcessExit(
+            target_action=joint_state_broadcaster_spawner,
+            on_exit=[arm_controller_spawner, gripper_controller_spawner],
+        )
+    )
+
+    arm_robot_sim_path = os.path.join(get_package_share_directory("ur_robotiq_moveit_config"))
+
+    gazebo_resource_path = SetEnvironmentVariable(
+        name="GZ_SIM_RESOURCE_PATH",
+        value=[
+            os.path.join(arm_robot_sim_path, "worlds"),
+            ":" + str(Path(arm_robot_sim_path).parent.resolve()),
+        ],
+    )
+
+    spawn_entity = Node(
+        package="ros_gz_sim",
+        executable="create",
+        output="screen",
+        arguments=[
+            "-string",
+            robot_description_content,
+            # "-name", "ur",
+            # "-allow_renaming", "true",
+        ],
+    )
+
+    gazebo = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            [FindPackageShare("ros_gz_sim"), "/launch/gz_sim.launch.py"]
+        ),
+        launch_arguments=[
+            (
+                "gz_args",
+                [
+                    PathJoinSubstitution([FindPackageShare(description_package), "worlds", gazebo_world_file]),
+                    " -v 4",
+                    " -r",
+                    " --physics-engine gz-physics-bullet-featherstone-plugin",
+                ],
+            )
+        ],
+    )
+
+    # Make the /clock topic available in ROS
+    # time과 관련된내용이랑 반드시 넣어줘야함
+    gz_sim_bridge = Node(
+        package="ros_gz_bridge",
+        executable="parameter_bridge",
+        arguments=[
+            "/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock",
+        ],
+        output="screen",
+    )
+
+    nodes = [
+        gazebo_resource_path,
+        robot_state_publisher_node,
+        joint_state_broadcaster_spawner,
+        delay_robot_controller_spawner_after_joint_state_broadcaster_spawner,
+        spawn_entity,
+        gazebo,
+        gz_sim_bridge,
+    ]
+
+    return LaunchDescription(declared_arguments + nodes)
+
+```
+
+### <ur_robotiq_moveit.launch.py>
+```python
+from launch import LaunchDescription
+from launch.actions import (
+    DeclareLaunchArgument,
+    IncludeLaunchDescription,
+    RegisterEventHandler,
+    OpaqueFunction,
+)
+from launch.conditions import IfCondition
+from launch.event_handlers import OnProcessExit, OnProcessStart
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import (
+    Command,
+    FindExecutable,
+    LaunchConfiguration,
+    PathJoinSubstitution,
+)
+from launch_ros.actions import Node
+from launch_ros.substitutions import FindPackageShare
+from launch_ros.descriptions import ParameterValue
+from ament_index_python.packages import get_package_share_directory
+from moveit_configs_utils import MoveItConfigsBuilder
+from pathlib import Path
+import os
+import yaml
+
+
+# ---------------------------------------------------------------------------- #
+# Helper function: Load YAML configuration files
+# ---------------------------------------------------------------------------- #
+def load_yaml(package_name, file_path):
+    package_path = get_package_share_directory(package_name)
+    absolute_file_path = os.path.join(package_path, file_path)
+
+    try:
+        with open(absolute_file_path) as file:
+            return yaml.safe_load(file)
+    except OSError:
+        return None
+
+
+# ---------------------------------------------------------------------------- #
+# Main Launch Description
+# ---------------------------------------------------------------------------- #
+def generate_launch_description():
+    # ---------------------------
+    # Declare Launch Arguments
+    # ---------------------------
+    declared_arguments = []
+
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "runtime_config_package",
+            default_value="ur_robotiq_moveit_config",
+            description=(
+                "Package with the controller's configuration in 'config' folder. "
+                "Usually the argument is not set, it enables use of a custom setup."
+            ),
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "description_package",
+            default_value="ur_robotiq_moveit_config",
+            description=(
+                "Description package with robot URDF/xacro files. "
+                "Usually not set, allows for a custom robot description."
+            ),
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "description_file",
+            default_value="ur_robotiq.urdf.xacro",
+            description="URDF/Xacro description file for the robot.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "prefix",
+            default_value='""',
+            description=(
+                "Prefix of the joint names, useful for multi-robot setups. "
+                'Expected format "<prefix>/".'
+            ),
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "namespace",
+            default_value="",
+            description=(
+                "Namespace of launched nodes, useful for multi-robot setups. "
+                'Expected format "<ns>/".'
+            ),
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "start_rviz",
+            default_value="true",
+            description="Start RViz2 automatically with this launch file.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "rviz_config_file",
+            default_value="dual_ur_robotiq.rviz",
+            description="RViz configuration file.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "use_sim_time",
+            default_value="true",
+            description="Use simulated time (from Gazebo or Ignition).",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "base_frame_file",
+            default_value="base_frame.yaml",
+            description="Configuration file for the robot base frame wrt World.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "warehouse_sqlite_path",
+            default_value=os.path.expanduser("~/.ros/warehouse_ros.sqlite"),
+            description="Path to MoveIt warehouse SQLite database.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "launch_servo",
+            default_value="false",
+            description="Launch MoveIt Servo node?",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "test_mode",
+            default_value="true",
+            description="Run MoveIt Python API tutorial node?",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "test_name",
+            default_value="motion_test_arm",
+            description="Python API tutorial filename to execute.",
+        )
+    )
+
+    # ---------------------------
+    # Initialize Launch Configs
+    # ---------------------------
+    runtime_config_package = LaunchConfiguration("runtime_config_package")
+    description_package = LaunchConfiguration("description_package")
+    description_file = LaunchConfiguration("description_file")
+    prefix = LaunchConfiguration("prefix")
+    start_rviz = LaunchConfiguration("start_rviz")
+    rviz_config_file = LaunchConfiguration("rviz_config_file")
+    base_frame_file = LaunchConfiguration("base_frame_file")
+    namespace = LaunchConfiguration("namespace")
+    use_sim_time = LaunchConfiguration("use_sim_time")
+    warehouse_sqlite_path = LaunchConfiguration("warehouse_sqlite_path")
+    launch_servo = LaunchConfiguration("launch_servo")
+    test_name = LaunchConfiguration("test_name")
+    test_mode = LaunchConfiguration("test_mode")
+
+    # ---------------------------
+    # Build MoveIt Config
+    # ---------------------------
+    base_package_name = "ur_robotiq_moveit_config"
+#=====================================================================
+	#이 부분이 어디론가 들어가야하는데 moveit과 관련된 설정을 다 넣어둠
+    moveit_config = (
+    
+        MoveItConfigsBuilder(robot_name="ur_robotiq")
+        #MoveItConfigsBuilder는 ur_robotiq이라는 이름의 패키지를 찾아라!!
+        .robot_description(Path("urdf") / "ur_robotiq.urdf.xacro")
+        .robot_description_semantic(Path("srdf") / "ur_robotiq.srdf.xacro")
+        .moveit_cpp(
+            file_path=get_package_share_directory(base_package_name)
+            + "/config/moveit_cpp.yaml"
+        )
+        .to_moveit_configs()
+    )
+
+    # ---------------------------
+    # MoveIt Python Control Node
+    # ---------------------------
+    moveit_py_node = Node(
+        name="moveit_py",
+        package="ur_robotiq_moveit_config",
+        executable="ur_robotiq_controller.py",
+        output="both",
+        parameters=[
+            moveit_config.to_dict(),
+            {"use_sim_time": use_sim_time},
+        ],
+        condition=IfCondition(test_mode),
+    )
+
+    # ---------------------------
+    # MoveIt Warehouse Configuration
+    # ---------------------------
+    warehouse_ros_config = {
+        "warehouse_plugin": "warehouse_ros_sqlite::DatabaseConnection",
+        "warehouse_host": warehouse_sqlite_path,
+    }
+
+    # ---------------------------
+    # Wait for robot_description before move_group
+    # ---------------------------
+    wait_robot_description = Node(
+        package="ur_robot_driver",
+        executable="wait_for_robot_description",
+        #wait_for_robot_description이게 실행이 안되면 다른 것도 실행시키지 말아라!
+        output="screen",
+    )
+
+    # ---------------------------
+    # Move Group Node
+    # ---------------------------
+    move_group_node = Node(
+        package="moveit_ros_move_group",
+        executable="move_group",
+        output="screen",
+        parameters=[
+            moveit_config.to_dict(),
+            warehouse_ros_config,
+            {
+                "use_sim_time": use_sim_time,
+                "publish_robot_description": True,
+                "publish_robot_description_semantic": True,
+            },
+        ],
+    )
+
+    # ---------------------------
+    # MoveIt Servo Node
+    # ---------------------------
+    servo_yaml = load_yaml(base_package_name, "config/servo.yaml")
+    servo_params = {"moveit_servo": servo_yaml}
+
+    servo_node = Node(
+        package="moveit_servo",
+        executable="servo_node",
+        output="screen",
+        condition=IfCondition(launch_servo),
+        parameters=[
+            moveit_config.to_dict(),
+            servo_params,
+        ],
+    )
+
+    # ---------------------------
+    # RViz Node
+    # ---------------------------
+    rviz_config = PathJoinSubstitution(
+        [FindPackageShare(base_package_name), "rviz", "ur_robotiq.rviz"]
+    )
+
+    rviz_node = Node(
+        package="rviz2",
+        executable="rviz2",
+        name="rviz2_moveit",
+        output="log",
+        arguments=["-d", rviz_config],
+        parameters=[
+            moveit_config.robot_description,
+            moveit_config.robot_description_semantic,
+            moveit_config.robot_description_kinematics,
+            moveit_config.planning_pipelines,
+            moveit_config.joint_limits,
+            warehouse_ros_config,
+            {"use_sim_time": use_sim_time},
+        ],
+        condition=IfCondition(start_rviz),
+    )
+
+    # ---------------------------
+    # Launch Description
+    # ---------------------------
+    ld = LaunchDescription()
+    ld.add_entity(LaunchDescription(declared_arguments))
+
+    # Wait for robot_description before launching MoveIt nodes
+    ld.add_action(wait_robot_description)
+    ld.add_action(
+        RegisterEventHandler(
+            OnProcessExit(
+                target_action=wait_robot_description,
+                on_exit=[move_group_node, rviz_node, servo_node, moveit_py_node],
+            )
+        ),
+    )
+
+    return ld
+```
 ## 12. build And Run
+$ colcon build --symlink-install --allow-overriding ur_description
 
 ## 13. pickNplace
 
