@@ -1400,14 +1400,140 @@ Moveit2
 # Chatper 7. Manipulator (MoveIt2) 실습
 
 ## 1. 강의 개요
-
+Moveit2 를 활용한 pick and place 실습
+- UR Moveit Package Test
+- Gripper Package Test
+- 로봇 구성
+- 환경 구성
+- 실행 코드 구성
 ## 2. MoveIt 패키지 설치
+https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver
+위의 저장소 중 config 폴더
+
+1.  **Install the driver**
+    ```shell
+    sudo apt-get install ros-rolling-ur
+    ```
+    
+    See the [installation instructions](https://docs.universal-robots.com/Universal_Robots_ROS2_Documentation/doc/ur_robot_driver/ur_robot_driver/doc/installation/installation.html) for more details and source-build instructions.
+
 
 ## 3. 커맨드 실행
+2. 실행 명령어
+```shell
+ros2 launch ur_moveit_config  ur_moveit.launch.py ur_type:=ur5e
+```
+-> ros2 launch  <패키지 이름>  <실행할 launch 파일 이름>  <런치 인자(launch argument) 설정(불러올 urdf 파일 )>                                                                         
 
 ## 4. MoveIt 실행
+urdf -> robot_description(토픽)을 moveit2에 보냄
+
+1. 하드웨어를 구동(driver안에 launch 파일 안에 로봇 description을 실행하는  launch file이 )
+2. Rviz2->  robotdescription
+
+rivz2에 띄운 모델을 옆에 motion planning 설정 창에 옆에 
+![[moveit2.png]]
+
+![[rosgraph_1.png]]
 
 ## 5. gripper Test
+그리퍼 예제 깃허브 링크: https://github.com/PickNikRobotics/ros2_robotiq_gripper
+
+1. 새로운 ws와 그 안에 src 폴더를 만든다.
+2. 그 안에  위 깃허브 링크를 git clone  해준다.
+3. 새로운 ws 에서 $ colcon build --symlink-install 을 해주면 에러가 생긴다!! why??
+
+<ros2_robotiq_gripper-not-released.rolling.repos> 이 폴더 안에 
+``` repos
+repositories:
+  serial:
+    type: git
+    url: https://github.com/tylerjw/serial.git
+    version: ros2
+```
+https://github.com/tylerjw/serial.git  이 저장소로 같이 git clone 해줘야되
+
+https://github.com/RoverRobotics-forks/serial-ros2 난 이걸로  git clone 한 후 
+
+
+motion_planning_ws/src/serial/CMakeLists.txt
+
+```txt
+cmake_minimum_required(VERSION 3.5)
+project(serial)
+
+# PIC 전역 활성화 (보험용)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
+find_package(ament_cmake REQUIRED)
+
+# 라이브러리 본체: 우선 공통 소스만 넣고, OS별 소스는 target_sources로 추가
+add_library(${PROJECT_NAME}
+  src/serial.cc
+)
+
+# 헤더 공개
+target_include_directories(${PROJECT_NAME}
+  PUBLIC
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+    $<INSTALL_INTERFACE:include>
+)
+
+# 타깃에 PIC 확실히 적용 (add_library 다음 줄에서!)
+set_property(TARGET ${PROJECT_NAME} PROPERTY POSITION_INDEPENDENT_CODE ON)
+
+# OS별 소스/링크
+if(APPLE) # macOS
+  find_library(IOKIT_LIBRARY IOKit)
+  find_library(FOUNDATION_LIBRARY Foundation)
+  target_sources(${PROJECT_NAME} PRIVATE
+    src/impl/unix.cc
+    src/impl/list_ports/list_ports_osx.cc
+  )
+  target_link_libraries(${PROJECT_NAME} ${FOUNDATION_LIBRARY} ${IOKIT_LIBRARY})
+
+elseif(UNIX) # Linux 등
+  target_sources(${PROJECT_NAME} PRIVATE
+    src/impl/unix.cc
+    src/impl/list_ports/list_ports_linux.cc
+  )
+  target_link_libraries(${PROJECT_NAME} rt pthread)
+
+elseif(WIN32) # Windows
+  target_sources(${PROJECT_NAME} PRIVATE
+    src/impl/win.cc
+    src/impl/list_ports/list_ports_win.cc
+  )
+  target_link_libraries(${PROJECT_NAME} setupapi)
+  ament_export_libraries(setupapi)
+endif()
+
+# ament 내보내기 정보
+ament_export_include_directories(include)
+ament_export_libraries(${PROJECT_NAME})
+
+# 설치
+install(TARGETS ${PROJECT_NAME}
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin
+)
+install(DIRECTORY include/ DESTINATION include)
+
+ament_package()
+```
+이렇게 수정한 후 $ colcon build --symlink-install 해줌
+
+
+그 후 rivz2실행
+$ ros2 launch robotiq_description view_gripper.launch.py 
+
+![[gripper.png]]
+
+motion_planning_ws/src/ros2_robotiq_gripper/robotiq_description/urdf/2f_85.ros2_control.xacro
+2f_85.ros2_control.xacro
+2f_140.ros2_control.xacro
+-> 2개의 파일 중 85가 조금 더 작은 모델
 
 ## 6. ur+gripper
 

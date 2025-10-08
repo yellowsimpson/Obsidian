@@ -171,6 +171,9 @@
   },
   "active": "20461fe2487da258",
   "lastOpenFiles": [
+    "gripper.png",
+    "moveit2.png",
+    "rosgraph_1.png",
     "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의노트 정리/Part6.md",
     "명령어 모음집/ROS 명령어.md",
     "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의노트 정리/Part4.md",
@@ -210,14 +213,11 @@
     "코드트리/Trail 6. Intermediate High/Chapter5 Advanced DP/Lesson2 작은 구간에서 큰 구간으로 확장되는 DP.md",
     "코드트리/Trail 6. Intermediate High/Chapter5 Advanced DP/Lesson1 Ditonic Cycle .md",
     "코드트리/Trail 6. Intermediate High/Chapter5 Advanced DP/Lesson1.  복사본 3.md",
-    "코드트리/Trail 6. Intermediate High/Chapter5 Advanced DP/Lesson1.  복사본 2.md",
     "코드트리/Trail 6. Intermediate High/Chapter5 Advanced DP",
     "코드트리/Trail 6. Intermediate High/Chapter4 String",
     "코드트리/Trail 6. Intermediate High/Chapter3 위상정렬",
     "코드트리/Trail 6. Intermediate High/Chapter2 MST",
     "attachments/스크린샷 2025-10-04 오후 9.29.58.png",
-    "attachments/스크린샷 2025-10-04 오후 9.17.18.png",
-    "attachments/스크린샷 2025-10-04 오후 9.17.26.png",
     "Obsidian 사용법/캔버스 예시.canvas"
   ]
 }
