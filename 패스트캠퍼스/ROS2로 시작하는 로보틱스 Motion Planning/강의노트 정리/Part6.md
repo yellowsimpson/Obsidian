@@ -2725,32 +2725,181 @@ def generate_launch_description():
 ## 12. build And Run
 $ colcon build --symlink-install --allow-overriding ur_description
 
-## 13. pickNplace
+target place -> node ->  M.I
+### <pick_and_place.py>
+```python
+#! /usr/bin/python3
+# -*- coding: utf-8 -*-
 
+import sys
+import math
+import numpy as np
+
+# ROS2
+import rclpy
+from rclpy.node import Node
+from sensor_msgs.msg import Image
+from std_msgs.msg import Float64MultiArray
+from cv_bridge import CvBridge
+
+bridge = CvBridge()
+
+class Commander(Node):
+
+    def __init__(self):
+        super().__init__('pub_path')
+
+        # Create publisher
+        self.pub = self.create_publisher(Float64MultiArray, '/target_point', 10)
+
+        # Initialize target point
+        self.target_point = np.zeros(15, dtype=np.float64)
+
+    def publish_target(self):
+        self.target_point[0] = 0.5
+        self.target_point[1] = 0.0
+        self.target_point[2] = 0.05
+        self.target_point[3] = 1.0
+        self.target_point[4] = 0.
+        self.target_point[5] = 0.
+        self.target_point[6] = 0.
+
+        self.target_point[7] = 0.4
+        self.target_point[8] = 0.4
+        self.target_point[9] = 0.05
+        self.target_point[10] = 1.
+        self.target_point[11] = 0.
+        self.target_point[12] = 0.
+        self.target_point[13] = 0.
+
+        self.target_point[14] = 3.0  # Simple Top Grasp Mode
+
+        # Publish target point
+        target_point_pub = Float64MultiArray(data=self.target_point.tolist())  
+        self.pub.publish(target_point_pub) 
+        self.get_logger().info(f'Published target point: {self.target_point.tolist()}')
+
+
+def main(args=None):
+    rclpy.init(args=args)
+    commander = Commander()
+
+    try:
+        commander.publish_target()
+        rclpy.spin(commander)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        commander.destroy_node()
+        rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
+
+```
+## 13. pickNplace
+<pick_and_place.py>
+ 이 코드를 실행시키면 rivz2에서 로봇암이 물건 잡고 놓는건 시뮬레이션 돌리수 있음
 ## 14. 원리 설명
 
 ## 15. 마무리
-
+코드 하나 하나를 보면서 launch 파일에서 어떻게 가져오는지 알아보고
+각각 역할이 무엇인지 아는 것이 나중에 도움이 많이 됨!!
 
 
 # Chapter 8. Mobile Robot(Nav2)
 
 ## 1. Nav2 개요
+navigation이란?
+	->로봇이 주어진 목표 지점까지 이동하기 위한 시스템
+	
+navigation패키지
+- 센서
+	- 카메라 패키지
+	- 라이다 패키지
+	- IMU 패키지
+- 프래닝 알고리즘
+	- 서치 알고리즘
+	- 모션 플래닝 알고리즘
+	- 경로 계획 알고리즘
+	- 네비게이션 알고리즘
+- 필터링 알고리즘
+	- 몬테 카를로
+	- 칼만 필터
+	->위의 내용들이 패키지 안에 포함되어 있음
 
+Nav2
+- Navigation에 특화된 ROS2 패키지의 일종
+	-  Localization
+	- Mapping
+	- SLAM
+- Sensor Fusion, Sensor Filtering 알고리즘
+	- ACML
+	- Kaiman Filter
+- 로봇 제조사 패키지와 연동
+	- Clearpath
+- 사용자는 용도에 맞게 파라미터 조절
+- Rviz2, gazebo  와 연동
+	- Rviz2: 데이터 시각화 및 UI 제공
+	- Gazebo: 물리 엔진 시뮬레이션
 ## 2. Nav2 미니 실습 개요
+nav2 사이트 링크: https://docs.nav2.org/getting_started/index.html#installation
 
+1. Install the [ROS 2 binary packages](https://docs.ros.org/en/rolling/Installation/Ubuntu-Install-Debians.html) as described in the official docs
+    
+2. Install the Nav2 packages using your operating system’s package manager:
+ ```shell
+sudo apt install ros-<ros2-distro>-navigation2
+sudo apt install ros-<ros2-distro>-nav2-bringup
+ ```       
+3. Install the demo robot (Turtlebot) for gazebo:
+    
+For **Jazzy and newer**, install the Turtlebot 3 & 4 packages for Gazebo Modern. It should be automatically installed with `nav2_bringup`:
+```shell
+sudo apt install ros-<ros2-distro>-nav2-minimal-tb*
+ ```
+For **Iron and older, install Turtlebot 3 packages for gazebo classic:
+```shell
+sudo apt install ros-<ros2-distro>-turtlebot3-gazebo
+ ```
 ## 3. Nav2 설명
+## Running the Example
+
+1. Start a terminal in your GUI
+    
+2. Set key environment variables, some of which are only required for Iron and older:
+    ```shell
+    source /opt/ros/<ros2-distro>/setup.bash
+    export TURTLEBOT3_MODEL=waffle  # Iron and older only with Gazebo Classic
+    export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/opt/ros/<ros2-distro>/share/turtlebot3_gazebo/models # Iron and older only with Gazebo Classic
+    ```
+3 . In the same terminal, run:
+    ```
+    ros2 launch nav2_bringup tb3_simulation_launch.py headless:=False
+    ```
+
 
 ## 4. 2D Pose
 
+ nav2 를 통해 로봇이 목표물 까지 가는 경로를 설정할 수 있음
 ## 5. 마무리
-
+nav2 패키지는 시뮬레이션와 시각화를 잘 만들어놓았고 우리가 사용하는 환경을 nav2 에 잘 넣어주고 사용되면 된다
 
 # Chapter 9. Mobile Robot(Nav2) 실습
 
 ## 1. 실습 개요
+- 실습 패키지 구성
+- Spawp Robot
+- Mapping
+- Navigation
+- SLAM
 
 ## 2. 코드 구조
+2개의 폴더 사용
+- navigation_stack
+- navigation_tasks  
+
 
 ## 3. launch
 
@@ -2782,6 +2931,7 @@ $ colcon build --symlink-install --allow-overriding ur_description
 ## 7. 실행
 
 ## 8. 마무리
+
 
 
 
