@@ -100,7 +100,7 @@
 	[[Deep Learning/강의녹음/Day2]]
 	[[Deep Learning/강의녹음/Day3]]
 	[[Deep Learning/강의녹음/Day4]]
-	[[Day5]]
+	[[Deep Learning/강의녹음/Day5]]
 	[[Day6]]
 	[[Day7]]
 	[[Day8]]
