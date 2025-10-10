@@ -349,9 +349,26 @@ Vector3  angular
 
 ```
 ## 7. publish
+linear와 angular 안의 값들을 조절해 거북이를 조절할 수 있음
+```
+$ros2 topic pub /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.3, y: 0., z:0.}, angular: {x:0.0, y:0.0, z: 0.0}}"
 
+```
 ## 8. 중간점검
 
+노드 명령어 복습
+```
+$ros2 node list
+$ros2 node info /turtlesim
+$rqt_graph
+$
+```
+토픽 명령어 복습
+```
+$ros2 topic list
+$ros2 topic list -t
+ros2 topic echo /turtle1/pose
+```
 ## 9. service
 
 ## 10. parameter 도입부

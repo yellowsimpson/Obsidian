@@ -6,7 +6,6 @@
       {
         "id": "7f2556b526d1754c",
         "type": "tabs",
-        "dimension": 64.80881399870383,
         "children": [
           {
             "id": "3af10951567e2d35",
@@ -37,54 +36,47 @@
             }
           },
           {
-            "id": "73b0d065d6bd3492",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "XYZ 로봇틱스 심화/강의자료/리눅스 학습_1002.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "리눅스 학습_1002"
-            }
-          },
-          {
-            "id": "7f1c97d8c32204b6",
+            "id": "7e10bc07409a4ec3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "명령어 모음집/Git 사용법.md",
+                "file": "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의노트 정리/Part6.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Git 사용법"
+              "title": "Part6"
             }
-          }
-        ],
-        "currentTab": 3
-      },
-      {
-        "id": "b7ce6baa36748c84",
-        "type": "tabs",
-        "dimension": 35.191186001296174,
-        "children": [
+          },
           {
             "id": "380ef948eaa38fb9",
             "type": "leaf",
             "state": {
+              "type": "pdf",
+              "state": {
+                "file": "XYZ 로봇틱스 심화/강의자료/E시리즈 메뉴얼_V3.2.0_v3.0.1_KR(E-Series).pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "E시리즈 메뉴얼_V3.2.0_v3.0.1_KR(E-Series)"
+            }
+          },
+          {
+            "id": "9fa072df35e723f7",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "명령어 모음집/명령어 모음.md",
+                "file": "Jupyter/Jupyter 사용법.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "명령어 모음"
+              "title": "Jupyter 사용법"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -232,18 +224,37 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "7f1c97d8c32204b6",
+  "active": "9fa072df35e723f7",
   "lastOpenFiles": [
-    "명령어 모음집/ROS 명령어.md",
+    "Jupyter/아나콘다 사용법.md",
+    "Jupyter/Jupyter 사용법.md",
+    "Jupyter",
+    "XYZ 로봇틱스 심화/강의자료/E시리즈 메뉴얼_V3.2.0_v3.0.1_KR(E-Series).pdf",
+    "Today's task/To do list.md",
     "XYZ 로봇틱스 심화/강의노트/Day5.md",
-    "XYZ 로봇틱스 심화/강의자료/리눅스 학습_1002.pdf",
+    "투자/주식 투자.md",
+    "KAIROS/KAIROS.md",
+    "KAIROS/시험문제/훈련생 기초평가.pdf",
     "명령어 모음집/명령어 모음.md",
+    "명령어 모음집/ROS 명령어.md",
+    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의노트 정리/Part6.md",
+    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의노트 정리/Part4.md",
+    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의노트 정리/Part5.md",
+    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의노트 정리/Part3.md",
+    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의노트 정리/Part2.md",
+    "스크린샷 2025-10-10 오후 1.45.49.png",
+    "XYZ 로봇틱스 심화/강의자료/리눅스 학습_1002.pdf",
+    "컴퓨터 꿀팁 모음.md",
+    "attachments/rosgraph_1.png",
+    "attachments/moveit2.png",
+    "attachments/gripper.png",
+    "attachments/스크린샷 2025-10-09 오후 11.57.18.png",
+    "무제.canvas",
+    "2025-10-04.md",
     "명령어 모음집/cat 사용법.md",
     "명령어 모음집/Git 사용법.md",
     "명령어 모음집/nano 사용법.md",
     "명령어 모음집/Vi 사용법.md",
-    "Today's task/To do list.md",
-    "XYZ 로봇틱스 심화/강의자료/E시리즈 메뉴얼_V3.2.0_v3.0.1_KR(E-Series).pdf",
     "XYZ 로봇틱스 심화/강의노트/Day3.md",
     "XYZ 로봇틱스 심화/강의노트/Day4.md",
     "XYZ 로봇틱스 심화/강의자료/image.png",
@@ -251,36 +262,18 @@
     "패스트캠퍼스/올인원 패키지 가장 빨리 도달하는 객체 감지 알고리즘 YOLO!/강의노트/Chapter 6. YOLOv5 in practice.md",
     "XYZ 로봇틱스 심화/ㅇㅇ",
     "README.md",
-    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의노트 정리/Part6.md",
     "패스트캠퍼스/올인원 패키지 가장 빨리 도달하는 객체 감지 알고리즘 YOLO!/강의노트/Chapter 4. Object Detection.md",
-    "스크린샷 2025-10-10 오전 1.47.56.png",
-    "스크린샷 2025-10-10 오전 12.13.29.png",
-    "스크린샷 2025-10-10 오전 12.02.59.png",
-    "스크린샷 2025-10-09 오후 11.57.18.png",
-    "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의노트 정리/Part4.md",
+    "attachments/스크린샷 2025-10-10 오전 1.47.56.png",
+    "attachments/스크린샷 2025-10-10 오전 12.13.29.png",
+    "attachments/스크린샷 2025-10-10 오전 12.02.59.png",
     "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의자료/Part 6/6-4 ROS2 패키지 분석.pdf",
-    "rosgraph_1.png",
-    "moveit2.png",
-    "gripper.png",
     "attachments/ros 명령어 모음.png",
-    "주식 투자.md",
-    "무제.canvas",
-    "ros 명령어 모음.png",
-    "2025-10-04.md",
     "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/ROS2로 시작하는 로보틱스 Motion Planning.md",
     "패스트캠퍼스/ROS2로 시작하는 로보틱스 Motion Planning/강의자료/Part 6/6-3 ROS2 기본 개념 실습.pdf",
-    "컴퓨터 꿀팁 모음.md",
     "투자/무제.canvas",
-    "투자/주식 투자.md",
     "투자",
     "컴퓨터 구조/Chapter1/1.6 성능.md",
-    "진로설정과 취업/진로 취업 특강.md",
-    "Open CV/코드 저장소.md",
     "Obsidian 사용법/캔버스 예시.canvas",
-    "OpenSource/강의자료/3장.md",
-    "OpenSource/OpenSource.md",
-    "XYZ 로봇틱스 심화/강의자료/06＿YOLO 모델.pdf",
-    "OpenSource/강의자료/Midterm Exam Preparation Guide.pdf",
-    "XYZ 로봇틱스 심화/시간표.pdf"
+    "XYZ 로봇틱스 심화/강의자료/06＿YOLO 모델.pdf"
   ]
 }
