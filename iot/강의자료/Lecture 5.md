@@ -55,7 +55,7 @@ Interfacing with the Raspberry Pi
 3. It installs an application called psftp that enables you to transfer files to and from the PRi over the network from your desktop computer
 
 
-[[리눅스 명령어]]
+[[명령어 모음]]
 
 [[C compile]]
 

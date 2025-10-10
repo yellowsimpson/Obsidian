@@ -5,20 +5,13 @@ git 시뮬레이션 사이트
 https://learngitbranching.js.org/?locale=ko
 ```
 
-
-
 git bash 처음 로그인
-
 ## 초기 설정
-
 $git config —global [user.name](http://user.name) “이름”
-
 $git config —global [user.email](http://user.email) “메일 주소” $git config --global --list
-
 →설정 확인
 
 $git config ([user.name](http://user.name))
-
 →() 안에 확인해보고 싶은 설정 넣으면되
 
 <파일 처음 만들었을 때 같이 만들면 편한것>
@@ -44,7 +37,6 @@ git remote add origin [https://github.com/yellowsimpson/aa.git](https://github.c
 ## 프로젝트 생성
 
 처음 repoistory를 만들때 같이 만들어야하는 파일
-
 1. [README.md](http://README.md)
 2. .gitignore → 추적 무시
 3. requirements.txt. →종속성 파일 list 사용(다운로드 하는 파일 설정해두는 파일)

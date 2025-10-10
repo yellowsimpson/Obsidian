@@ -135,7 +135,5 @@ $rps2 param delete
 	*ros2 param delete <노드 이름> <파라이머터 이름>*
 :파라미터 삭제
 
-
-
 __dd
 $ros2 llaunch <패키지 이름> <노드 이름>

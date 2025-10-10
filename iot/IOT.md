@@ -10,7 +10,7 @@
 	[[Lecture 5]]
 	[[week5]]
 	[[week6]]
-	[[리눅스 명령어]]
+	[[명령어 모음]]
 	[[IoT Project Idea]]
 
 - 센서별 코드
