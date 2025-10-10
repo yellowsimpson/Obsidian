@@ -361,7 +361,6 @@ $ros2 topic pub /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.3, y: 0
 $ros2 node list
 $ros2 node info /turtlesim
 $rqt_graph
-$
 ```
 토픽 명령어 복습
 ```
@@ -370,22 +369,140 @@ $ros2 topic list -t
 ros2 topic echo /turtle1/pose
 ```
 ## 9. service
+service 명령어
+__$ros2 service (노드이름) (서비스 이름)__
+
+```
+$ros2 service list
+
+>>>
+/clear 
+/kill 
+/reset 
+/spawn 
+/teleop_turtle
+/describe_parameters 
+/teleop_turtle/get_parameter_types 
+/teleop_turtle/get_parameters 
+/teleop_turtle/list_parameters 
+/teleop_turtle/set_parameters 
+/teleop_turtle/set_parameters_atomically 
+/turtle1/set_pen 
+/turtle1/teleport_absolute 
+/turtle1/teleport_relative 
+/turtlesim/describe_parameters 
+/turtlesim/get_parameter_types 
+/turtlesim/get_parameters 
+/turtlesim/list_parameters 
+/turtlesim/set_parameters 
+/turtlesim/set_parameters_atomically
+```
+
+```
+$ ros2 service type /clear 
+>>> std_srvs/srv/Empty
+```
 
 ## 10. parameter 도입부
-
 ## 11. parameter
+파라미터 명령어
+__$ros2 param get (노드 이름) (파라미터 이름)__
 
+```
+$ ros2 param list  
+/teleop_turtle:  
+  qos_overrides./parameter_events.publisher.depth  
+  qos_overrides./parameter_events.publisher.durability  
+  qos_overrides./parameter_events.publisher.history  
+  qos_overrides./parameter_events.publisher.reliability  
+  scale_angular  
+  scale_linear  
+  use_sim_time  
+/turtlesim:  
+  background_b  
+  background_g  
+  background_r  
+  qos_overrides./parameter_events.publisher.depth  
+  qos_overrides./parameter_events.publisher.durability  
+  qos_overrides./parameter_events.publisher.history  
+  qos_overrides./parameter_events.publisher.reliability  
+  use_sim_time  
+(base) shim@shim-Lenovo-Y520-15IKBN:~/github/Obsidian$
+```
+배경 색 바꾸는 명령어
+```
+$ros2 param set /turtlesim background_b 255
+#b부분에 r,g,b 숫자부분에 1 ~ 255까지 원하는 결로 바꿀 수 있어
+```
 ## 12. action
+파라미터 명령어
+__$ros2 action send_goal (액션 이름) (액션 타입) (액션 타입  값)__
+```
+$ros2 action list
+>>> /turtle1/rotae_absolute
+>>> 특정한 각도로 움직이게 하는 값
+```
 
+```
+$ ros2 action send_goal /turtle1/rotate_absolute turtlesim/action/RotateAbsolute  "{theta: 0}" --feedback
+#feedback은 지속적인 신호를 받고 싶은때 써줘
+```
+teleop 터미널이 액션을  수행한다고 생각
+액션은 지속적으로 피드백이 가능한 경우
 ## 13. 중간점검2
+명령어 복습
+### service
+```
+ros2 service list
+ros2 service list -t
+ros2 service rtype /clear
+ros2 serivce info /clear
+ros2 service find std_srvs/srv/Empty
+ros2 interface show std_srvs/srv/Empty
+ros2 interface show turtlesim/srv/Spawn
+ros2 service call /clear std_srv/srv/Empty
+```
+### param
+```
+ros2 param list
+ros2 param get /turtlesim backbround_b
+```
+### action
+```
+ros2 action list
+ros2 action list -t
+ros2 action type /turtle1/rotate_absolute
+ros2 action info /turtle1/rotate_absolute
+ros2 interface show turtlesim/action/RotateAbsolute
+ros2 action send_goal /turtle1/rotate_absolute turtlesim/action/RoateAbsolute "{}" --feedback
+```
 
 ##  14. 마무리
-
-
-# Chapter 4. ROS2 패키지 분석2
+- Message
+- Node
+- Topic
+- Service
+- Parameter
+- Action
+	의 개념 및 명령어 숙지!
+# Chapter 4. ROS2 패키지 분석
 
 ## 1. 패키지 개요
+cmd -> __package__ -> build -> intall exe
+package가 가장 중요!
 
+제조사 제공 드라이버(복잡한 low-level 소프트웨어) -> ROS 플랫폼 -> 사용이 편리한 high-level 소프트웨어(활용)
+
+- Robot Description
+	- URDF, mesh 등 로봇의 구성요소
+	- Simulation (dynamics, forward and inverse kinematics)
+- Robot Driver
+	- 로봇의 구동과 관련된 설정
+	- Simulation & Hardware
+- 확장 패키지
+	- Gazebo & Rviz2 (시뮬레이션)
+	- MoveIt2 (모션 플래닝)
+	- Nav2 (네비게이션)
 ## 2. Robot Description
 #### **my_robot_description**
 
