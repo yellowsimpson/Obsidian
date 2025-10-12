@@ -504,7 +504,9 @@ package가 가장 중요!
 	- MoveIt2 (모션 플래닝)
 	- Nav2 (네비게이션)
 ## 2. Robot Description
-#### **my_robot_description**
+ros2 universial robot description 리크: 
+https://github.com/UniversalRobots/Universal_Robots_ROS2_Description 
+#### **Universal_Robots_ROS2_Description**
 
 로봇의 외형과 구조를 정의하는 패키지. 
 
@@ -513,8 +515,6 @@ package가 가장 중요!
 **Mesh** - 로봇의 3D 모델링 파일
 
 **Launch** - URDF를 ROS2 시스템에 로드하는 **robot_state_publisher** 노드를 실행함
-
-
 ## 3. driver
 #### **my_robot_driver**
 
@@ -527,8 +527,9 @@ ROS2 시스템과 실제 로봇 하드웨어를 연결하는 역할. 
 #### **my_robot_bringup**
 
 로봇을 구동하는 데 필요한 모든 노드를 한 번에 실행하는 역할. 대부분 launch 파일로만 이루어져 있음.
-
 ## 4. driver Repository
+ur_robot_driver링크: 
+https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver
 
 ## 5. 추가 패키지
 ## **확장 패키지**
@@ -541,21 +542,58 @@ ROS2 시스템과 실제 로봇 하드웨어를 연결하는 역할. 
 
 **rviz2** - 3D 시각화 / 현재 상태, 센서 데이터, 경로 계획 등을 3D 환경에서 직관적으로 보여줌
 
-
+ Robot Node                              ->                                          SImulation Node
+ Topic                                                                                                Topic
+ Message                                                                                        Message
+ Packages                                                                                       Packages
+ (Robot Description, Robot Driver)
+ 
 ## 6. Gitub Respository
-
+ 결구은 대부분 동이란 구조
+	 ->패키지 구성을 이해하고 필요한 부분을 잘 골라내는 것이 중요
+	 ->이를 참고하여 본인만의 패키지 구성
+	 ->패키지들이 모여서 워크 스페이스를 구성
+	 
 ## 7. Gitub Respository2
+ur_pick_and_place 깃허브 링크: 
+https://github.com/cobang0111/ur_pick_and_place_moveit
 
+ROS2_pick_and_place_UR5 깃허브 링크:
+https://github.com/JuoTungChen/ROS2_pick_and_place_UR5
+
+사람들이 만들어 놓은 패키지에서 내가 필요한 부분 가져와서 쓰면됨!!
 ## 8. Build 예시
-
 ## 9. Build 예시2
+$colcon build
+$colcon build --symlink-install 
+$ros2 launch (패키지 이름) (패키지 안 런치 파일)
+
+### ⚖️ colcon build VS colcon build --symlink-install  차이
+
+| 항목       | `colcon build` | `colcon build --symlink-install` |
+| -------- | -------------- | -------------------------------- |
+| 설치 방식    | 파일 복사          | 심볼릭 링크                           |
+| 코드 변경 반영 | 다시 빌드 필요       | 즉시 반영                            |
+| 빌드 속도    | 느림 (복사 필요)     | 빠름                               |
+| 사용 추천 시점 | 배포, 안정 빌드      | 개발, 디버깅                          |
+| 위험 요소    | 없음             | 원본 파일 이동 시 링크 깨짐                 |
 
 ## 10. 마무리
+로봇 패키지의 대표적 구성요소
+- Robot Description
+- Robot Driver
+- 추가 패키지
+	- Gazebo, Rviz2
+	- MoveIt2
+	- Nav2
 
+시각화 및 시뮬레이션 툴
+- Gazebo: 물리 엔진 O
+- Rviz2: 시각화에 특화
 
-
-
-
+패키지 빌드
+- colcon build
+- --symlink-install
 
 # Chapter 5. Xacro 개요
 ## 1. Xacro  개요
@@ -3031,15 +3069,328 @@ nav2 패키지는 시뮬레이션와 시각화를 잘 만들어놓았고 우리�
 
 ## 2. 코드 구조
 2개의 폴더 사용
+mobile_robot_tutorial/src
 - navigation_stack
 - navigation_tasks  
 
-
 ## 3. launch
+### <spawn_robot.launch>
+  ```python
+import os  
+from launch import LaunchDescription  
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription  
+from launch.conditions import IfCondition  
+from launch.launch_description_sources import PythonLaunchDescriptionSource  
+from launch.substitutions import LaunchConfiguration, PathJoinSubstitution, Command  
+from launch_ros.actions import Node  
+from ament_index_python.packages import get_package_share_directorydef generate_launch_description():    pkg_navigation_stack = get_package_share_directory('navigation_stack')    # gazebo_models_path, last_dir = os.path.split(pkg_navigation_stack)  
+    # os.environ["GZ_SIM_RESOURCE_PATH"] += os.pathsep + gazebo_models_path + "/" + last_dir + "/"  
+    os.environ["GZ_SIM_RESOURCE_PATH"] += os.pathsep + pkg_navigation_stack + "/gazebo_models/"    world_arg = DeclareLaunchArgument(  
+        'world', default_value='warehouse.sdf',  
+        description='Name of the Gazebo world file to load'  
+    )    model_arg = DeclareLaunchArgument(  
+        'model', default_value='mir.urdf.xacro',  
+        description='Name of the URDF description to load'  
+    )    x_arg = DeclareLaunchArgument(  
+        'x', default_value='0.',  
+        description='x coordinate of spawned robot'  
+    )    y_arg = DeclareLaunchArgument(  
+        'y', default_value='0.',  
+        description='y coordinate of spawned robot'  
+    )    yaw_arg = DeclareLaunchArgument(  
+        'yaw', default_value='-1.5707',  
+        description='yaw angle of spawned robot'  
+    )    sim_time_arg = DeclareLaunchArgument(  
+        'use_sim_time', default_value='True',  
+        description='Flag to enable use_sim_time'  
+    )    # Define the path to your URDF or Xacro file  
+    urdf_file_path = PathJoinSubstitution([  
+        pkg_navigation_stack,  # Replace with your package name  
+        "urdf",  
+        LaunchConfiguration('model')  # Replace with your URDF or Xacro file  
+    ])    gz_bridge_params_path = os.path.join(  
+        get_package_share_directory('navigation_stack'),  
+        'config',  
+        'gz_bridge.yaml'  
+    )    # Generate path to config file  
+    world_launch = IncludeLaunchDescription(  
+        PythonLaunchDescriptionSource(  
+            os.path.join(pkg_navigation_stack, 'launch', 'world.launch.py'),  
+        ),  
+        launch_arguments={  
+        'world': LaunchConfiguration('world'),  
+        }.items()  
+    )    # Spawn the URDF model using the `/world/<world_name>/create` service  
+    spawn_urdf_node = Node(  
+        package="ros_gz_sim",  
+        executable="create",  
+        arguments=[  
+            "-name", "mobile_robot",  
+            "-topic", "robot_description",  
+            "-x", LaunchConfiguration('x'), "-y", LaunchConfiguration('y'), "-z", "0.5", "-Y", LaunchConfiguration('yaw')  # Initial spawn position  
+        ],  
+        output="screen",  
+        parameters=[  
+            {'use_sim_time': LaunchConfiguration('use_sim_time')},  
+        ]  
+    )    # Node to bridge /cmd_vel and /odom  
+    gz_bridge_node = Node(  
+        package="ros_gz_bridge",  
+        executable="parameter_bridge",  
+        arguments=[  
+            '--ros-args', '-p',  
+            f'config_file:={gz_bridge_params_path}'  
+        ],  
+        output="screen",  
+        parameters=[  
+            {'use_sim_time': LaunchConfiguration('use_sim_time')},  
+        ]  
+    )    robot_state_publisher_node = Node(  
+        #로봇의 상태를 publisher 하는 노드  
+        package='robot_state_publisher',  
+        executable='robot_state_publisher',  
+        name='robot_state_publisher',  
+        output='screen',  
+        parameters=[  
+            {'robot_description': Command(['xacro', ' ', urdf_file_path]),  
+             'use_sim_time': LaunchConfiguration('use_sim_time')},  
+        ],  
+        remappings=[  
+            ('/tf', 'tf'),  
+            #gazebo에서 나오는 tf 정보는 /tf로 나오는데 그걸 tf로 바꿔주는 역할을 함  
+            ('/tf_static', 'tf_static')  
+        ]  
+    )    ekf_node = Node(  
+        package='robot_localization',  
+        executable='ekf_node',  
+        name='ekf_filter_node',  
+        output='screen',  
+        parameters=[  
+            os.path.join(pkg_navigation_stack, 'config', 'ekf.yaml'),  
+            {'use_sim_time': LaunchConfiguration('use_sim_time')},  
+             ]  
+    )    launchDescriptionObject = LaunchDescription()    #launchDescriptionObject.add_action(rviz_launch_arg)  
+    #launchDescriptionObject.add_action(rviz_config_arg)  
+    launchDescriptionObject.add_action(world_arg)  
+    launchDescriptionObject.add_action(model_arg)  
+    launchDescriptionObject.add_action(x_arg)  
+    launchDescriptionObject.add_action(y_arg)  
+    launchDescriptionObject.add_action(yaw_arg)  
+    launchDescriptionObject.add_action(sim_time_arg)  
+    launchDescriptionObject.add_action(world_launch)  
+    launchDescriptionObject.add_action(spawn_urdf_node)  
+    launchDescriptionObject.add_action(gz_bridge_node)  
+    launchDescriptionObject.add_action(robot_state_publisher_node)  
+    launchDescriptionObject.add_action(ekf_node)    return launchDescriptionObject
 
+```
+  
 ## 4. launch2
 
+#### <navigation.launch.py>
+```python
+import os
+from launch import LaunchDescription
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
+from launch.conditions import IfCondition
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import LaunchConfiguration, PathJoinSubstitution, Command
+from launch_ros.actions import Node
+from ament_index_python.packages import get_package_share_directory
+
+def generate_launch_description():
+
+    pkg_navigation_stack = get_package_share_directory('navigation_stack')
+
+    # gazebo_models_path, ignore_last_dir = os.path.split(pkg_navigation_stack)
+    # os.environ["GZ_SIM_RESOURCE_PATH"] += os.pathsep + gazebo_models_path
+    os.environ["GZ_SIM_RESOURCE_PATH"] += os.pathsep + pkg_navigation_stack + "/gazebo_models/"
+
+    rviz_launch_arg = DeclareLaunchArgument(
+        'rviz', default_value='true',
+        description='Open RViz'
+    )
+
+    rviz_config_arg = DeclareLaunchArgument(
+        'rviz_config', default_value='navigation.rviz',
+        description='RViz config file'
+    )
+
+    sim_time_arg = DeclareLaunchArgument(
+        'use_sim_time', default_value='True',
+        description='Flag to enable use_sim_time'
+    )
+
+    # Path to the Slam Toolbox launch file
+    nav2_localization_launch_path = os.path.join(
+        get_package_share_directory('nav2_bringup'),
+        'launch',
+        'localization_launch.py'
+    )
+
+    nav2_navigation_launch_path = os.path.join(
+        get_package_share_directory('nav2_bringup'),
+        'launch',
+        'navigation_launch.py'
+    )
+
+    localization_params_path = os.path.join(
+        get_package_share_directory('navigation_stack'),
+        'config',
+        'amcl_localization.yaml'
+    )
+
+    navigation_params_path = os.path.join(
+        get_package_share_directory('navigation_stack'),
+        'config',
+        'navigation.yaml'
+    )
+
+    map_file_path = os.path.join(
+        get_package_share_directory('navigation_stack'),
+        'maps',
+        'my_map.yaml'
+    )
+
+    # Launch rviz
+    rviz_node = Node(
+        package='rviz2',
+        executable='rviz2',
+        arguments=['-d', PathJoinSubstitution([pkg_navigation_stack, 'rviz', LaunchConfiguration('rviz_config')])],
+        condition=IfCondition(LaunchConfiguration('rviz')),
+        parameters=[
+            {'use_sim_time': LaunchConfiguration('use_sim_time')},
+        ]
+    )
+
+    localization_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(nav2_localization_launch_path),
+        launch_arguments={
+                'use_sim_time': LaunchConfiguration('use_sim_time'),
+                'params_file': localization_params_path,
+                'map': map_file_path,
+        }.items()
+    )
+
+    navigation_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(nav2_navigation_launch_path),
+        launch_arguments={
+                'use_sim_time': LaunchConfiguration('use_sim_time'),
+                'params_file': navigation_params_path,
+        }.items()
+    )
+
+    launchDescriptionObject = LaunchDescription()
+
+    launchDescriptionObject.add_action(rviz_launch_arg)
+    launchDescriptionObject.add_action(rviz_config_arg)
+    launchDescriptionObject.add_action(sim_time_arg)
+    launchDescriptionObject.add_action(rviz_node)
+    launchDescriptionObject.add_action(localization_launch)
+    launchDescriptionObject.add_action(navigation_launch)
+
+    return launchDescriptionObject
+``` 
+    
+
+#### <mapping.launch.py>
+```python
+import os
+from launch import LaunchDescription
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
+from launch.conditions import IfCondition
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import LaunchConfiguration, PathJoinSubstitution, Command
+from launch_ros.actions import Node
+from ament_index_python.packages import get_package_share_directory
+
+def generate_launch_description():
+
+    pkg_navigation_stack = get_package_share_directory('navigation_stack')
+
+    gazebo_models_path, ignore_last_dir = os.path.split(pkg_navigation_stack)
+    os.environ["GZ_SIM_RESOURCE_PATH"] += os.pathsep + gazebo_models_path
+
+    rviz_launch_arg = DeclareLaunchArgument(
+        'rviz', default_value='true',
+        description='Open RViz'
+    )
+
+    rviz_config_arg = DeclareLaunchArgument(
+        'rviz_config', default_value='mapping.rviz',
+        description='RViz config file'
+    )
+
+    sim_time_arg = DeclareLaunchArgument(
+        'use_sim_time', default_value='True',
+        description='Flag to enable use_sim_time'
+    )
+
+    # Generate path to config file
+    interactive_marker_config_file_path = os.path.join(
+        get_package_share_directory('interactive_marker_twist_server'),
+        'config',
+        'linear.yaml'
+    )
+
+    # Path to the Slam Toolbox launch file
+    slam_toolbox_launch_path = os.path.join(
+        get_package_share_directory('slam_toolbox'),
+        'launch',
+        'online_async_launch.py'
+    )
+
+    slam_toolbox_params_path = os.path.join(
+        get_package_share_directory('navigation_stack'),
+        'config',
+        'slam_toolbox_mapping.yaml'
+    )
+
+    # Launch rviz
+    rviz_node = Node(
+        package='rviz2',
+        executable='rviz2',
+        arguments=['-d', PathJoinSubstitution([pkg_navigation_stack, 'rviz', LaunchConfiguration('rviz_config')])],
+        condition=IfCondition(LaunchConfiguration('rviz')),
+        parameters=[
+            {'use_sim_time': LaunchConfiguration('use_sim_time')},
+        ]
+    )
+
+    interactive_marker_twist_server_node = Node(
+        package='interactive_marker_twist_server',
+        executable='marker_server',
+        name='twist_server_node',
+        parameters=[interactive_marker_config_file_path],
+        output='screen',
+    )
+
+    slam_toolbox_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(slam_toolbox_launch_path),
+        launch_arguments={
+                'use_sim_time': LaunchConfiguration('use_sim_time'),
+                'slam_params_file': slam_toolbox_params_path,
+        }.items()
+    )
+
+    launchDescriptionObject = LaunchDescription()
+
+    launchDescriptionObject.add_action(rviz_launch_arg)
+    launchDescriptionObject.add_action(rviz_config_arg)
+    launchDescriptionObject.add_action(sim_time_arg)
+    launchDescriptionObject.add_action(rviz_node)
+    launchDescriptionObject.add_action(interactive_marker_twist_server_node)
+    launchDescriptionObject.add_action(slam_toolbox_launch)
+
+    return launchDescriptionObject
+
+```
+
 ## 5. 파일 확인
+DFKI-NI / mir_robot링크: https://github.com/DFKI-NI/mir_robot
+
+gzebo warehouse world file링크: 
+https://github.com/aws-robotics/aws-robomaker-small-warehouse-world
 
 ## 6. 빌드
 
