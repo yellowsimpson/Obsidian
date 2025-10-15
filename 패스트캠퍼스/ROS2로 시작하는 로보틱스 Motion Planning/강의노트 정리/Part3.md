@@ -51,8 +51,6 @@ dof = m(N−1−J)+∑ (i = 1 to J) fᵢ
 [[Chapter 1. 로봇의 정의와 구성요소.pdf]]
 ## 5. 조인트 예시2와 3
 
-
-
 ## 6. 엑추에이터와 URDF
 Actuator(액추에이터)
 - Mechanical(가장 많이 사용)
