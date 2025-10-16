@@ -24,4 +24,20 @@
 
 https://github.com/isaac-sim/IsaacLab/tree/main/source/isaaclab_tasks/isaaclab_tasks/manager_based/manipulation
 
+Isaac Sim 참고자료
+- https://github.com/isaac-sim/IsaacLab/tree/main
+- https://github.com/JEONGSE0/IsaacLab_avoid_obstacle
+- https://github.com/DarK404/UR_Isaac-sim
+- https://github.com/JonasFano/Isaac_Lab_UR5e_Lift_Cube
 
+RL 참고 자료
+- https://github.com/lihuang3/ur5_ROS-Gazebo
+- https://github.com/Geonhee-LEE/ur-reaching-reinforcement-learning
+- https://github.com/ammar-n-abbas/sim2real-ur-gym-gazebo
+- https://github.com/patsyuk03/URWithRobotiqTutorial
+- https://github.com/isaac-sim/IsaacLab/tree/main
+- https://github.com/JEONGSE0/IsaacLab_avoid_obstacle
+- https://github.com/DarK404/UR_Isaac-sim
+- https://github.com/JonasFano/Isaac_Lab_UR5e_Lift_Cube
+- https://github.com/lihuang3/ur5_ROS-Gazebo
+- 
