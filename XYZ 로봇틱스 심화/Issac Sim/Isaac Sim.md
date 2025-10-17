@@ -16,9 +16,6 @@
 아이작 심 깃허브: https://github.com/isaac-sim/IsaacSim
 아이작 랩 깃허브: https://github.com/isaac-sim/IsaacLab
 
-
-
-
 아이작 심 환경 설정: https://github.com/isaac-sim/IsaacLab/tree/main/source/isaaclab_tasks
 
 
@@ -40,4 +37,7 @@ RL 참고 자료
 - https://github.com/DarK404/UR_Isaac-sim
 - https://github.com/JonasFano/Isaac_Lab_UR5e_Lift_Cube
 - https://github.com/lihuang3/ur5_ROS-Gazebo
-- 
+
+
+
+
